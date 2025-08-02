@@ -1,0 +1,1101 @@
+{"spoken": "ax plus by plus cz equals d", "latex": "$ax + by + cz = d$"}
+{"spoken": "x plus 5y plus 10z equals zero", "latex": "$x + 5y + 10z = 0$"}
+{"spoken": "x minus two y minus one and z plus one dot product with one, five, ten", "latex": "$[x-2,y-1,z+1]\\cdot[1,5,10]$"}
+{"spoken": "x minus two plus five times y minus one plus ten times z plus one equals zero", "latex": "$ (x - 2) + 5(y - 1) + 10(z + 1) = 0 $"}
+{"spoken": "Ax plus By plus Cz equals D", "latex": "$Ax + By + Cz = D$"}
+{"spoken": "x plus y plus three z equals five", "latex": "$x + y + 3z = 5$"}
+{"spoken": "x plus z equals one", "latex": "$x + z = 1$"}
+{"spoken": "x plus y equals two", "latex": "$x + y = 2$"}
+{"spoken": "A inverse is one over determinant of A times the adjoint matrix", "latex": "$A^{-1} = \\frac{1}{\\text{det}(A)} \\cdot \\text{adj}(A)$"}
+{"spoken": "X equals A inverse B", "latex": "$X = A^{-1}B$"}
+{"spoken": "log two minus log one", "latex": "$\\log2-\\log1$"}
+{"spoken": "b minus a over n", "latex": "$\\frac{b - a}{n}$"}
+{"spoken": "a half times one plus two thirds plus a half times a half", "latex": "$1/2\\cdot1+2/3+1/2\\cdot1/2$"}
+{"spoken": "y0 plus 4y1 plus y2", "latex": "$\\displaystyle y_0 + 4y_1 + y_2$"}
+{"spoken": "a half plus n minus 1 plus a half ", "latex": "$\\frac{1}{2}+n-1+\\frac{1}{2}$"}
+{"spoken": "two pi r e to the minus r squared dr", "latex": "$2\\pi r e^{-r^2} dr$ "}
+{"spoken": "pi minus pi e to the minus r squared", "latex": "$\\pi - \\pi e^{-r^2}$"}
+{"spoken": "square root of pi over 2", "latex": "$\\frac{\\sqrt{\\pi}}{2}$"}
+{"spoken": "e to the minus b squared plus x squared", "latex": "$e^{-(b^2 + x^2)}$"}
+{"spoken": "e to the minus b squared times e to the minus x squared", "latex": "$e^{-b^2} e^{-x^2}$"}
+{"spoken": "minus b squared times the integral from minus infinity to infinity of e to the minus x squared dx", "latex": "$\\displaystyle -b^2 \\int_{-\\infty}^{\\infty} e^{-x^2} \\, dx$"}
+{"spoken": "integral from minus infinity to infinity e to the minus y squared dy", "latex": "$\\displaystyle \\int_{-\\infty}^{\\infty} e^{-y^2} dy$"}
+{"spoken": "pi x2 squared minus x1 squared", "latex": "$\\pi ({x_2}^{2} - {x_1}^{2})$"}
+{"spoken": "h of x equal to sine of x plus square root of 3 times cosine of x", "latex": "$h(x) = \\sin(x) + \\sqrt{3} \\cos(x)$"}
+{"spoken": "cosine x minus square root of 3 times sine x", "latex": "$\\cos(x) - \\sqrt{3} \\sin(x)$"}
+{"spoken": "square root of 3 times tan x", "latex": "$\\sqrt{3} \\tan(x)$"}
+{"spoken": "tan of x is equal to one divided by square root of three", "latex": "$\\tan(x) = \\frac{1}{\\sqrt{3}}$"}
+{"spoken": "pi over 6", "latex": "$\\frac{\\pi}{6}$"}
+{"spoken": "pi over 6 plus pi", "latex": "$\\frac{\\pi}{6} + \\pi$"}
+{"spoken": "minus five pi over six", "latex": "$-\\frac{5\\pi}{6}$"}
+{"spoken": "pi over 6 minus pi", "latex": "$\\frac{\\pi}{6} - \\pi$"}
+{"spoken": "sine of x plus square root of 3 times cosine x", "latex": "$\\sin(x) + \\sqrt{3} \\cos(x)$"}
+{"spoken": "h of x equals two times one-half sine x plus square root of three over two", "latex": "$h(x) = 2 \\frac{1}{2} \\sin(x) + \\frac{\\sqrt{3}}{2}$"}
+{"spoken": "pi over 3 sine x plus sine pi over 3 cosine x", "latex": "$\\displaystyle \\frac{\\pi}{3} \\sin(x) + \\sin\\frac{\\pi}{3} \\cos(x)$"}
+{"spoken": "two times sine of x plus pi over three", "latex": "$2\\sin(x) + \\frac{\\pi}{3}$"}
+{"spoken": "x equals minus pi over three", "latex": "$x = -\\frac{\\pi}{3}$"}
+{"spoken": "x equals 7 pi over 6", "latex": "$x = 7\\pi/6$"}
+{"spoken": "pi over 2 minus pi over 3 is pi over 6", "latex": "$\\pi/2 - \\pi/3 = \\pi/6$"}
+{"spoken": "negative sine x times x squared times the sine x", "latex": "$- \\sin x \\cdot x^{2} \\cdot \\sin x$"}
+{"spoken": "cosine x cosine x is cosine squared x", "latex": "$\\cos x \\cos x = \\cos^{2}x$"}
+{"spoken": "minus x squared sine squared x", "latex": "$ -x^2 \\sin^{2}x$"}
+{"spoken": "dy dx times dx dw times dw d theta", "latex": "$ \\frac{dy}{dx} \\times \\frac{dx}{dw} \\times \\frac{dw}{d\\theta} $"}
+{"spoken": "dw d theta is four theta to the third", "latex": "$\\frac{dw}{d\\theta} = 4\\theta^{3}$"}
+{"spoken": "cosine of theta to the fourth", "latex": "$\\cos(\\theta^{4})$"}
+{"spoken": "two cosine of theta to the fourth times negative sine", "latex": "$2\\cos(\\theta^{4}) (-\\sin) $"}
+{"spoken": "cosine of pi over two is equal to zero", "latex": "$\\cos(\\pi/2) = 0$"}
+{"spoken": "theta to the fourth equals pi over two", "latex": "$ \\theta^{4} = \\frac{\\pi}{2} $"}
+{"spoken": "theta is equal to pi over 2 to the 1 4th", "latex": "$\\theta = (\\frac{\\pi}{2}) ^ \\frac{1}{4}$"}
+{"spoken": "y cubed plus x cubed equals three xy", "latex": "$y^{3} + x^{3} = 3xy$"}
+{"spoken": "four thirds cubed plus two thirds cubed is equal to three times two thirds times four thirds", "latex": "$(4/3)^{3}+(2/3)^{3}=3\\times(2/3)\\times(4/3)$"}
+{"spoken": "y minus x squared over y squared minus x", "latex": "$ \\frac{y - x^{2}} {y^{2} - x}$"}
+{"spoken": "6 minus 16 over 4 minus 12", "latex": "$\\frac{6 - 16}{4 - 12}$"}
+{"spoken": "d over dx of tan x is equal to secant squared of x", "latex": "$\\frac{\\mathrm{d}}{\\mathrm{dx}}(\\tan x) = \\mathrm{\\sec^2(x)}$"}
+{"spoken": "pi over two", "latex": "$\\frac{\\pi}{2}$"}
+{"spoken": "y equals arctan x", "latex": "$y = \\arctan x$"}
+{"spoken": "dy dx is equal to minus 1 divided by sine y", "latex": "$\\frac{dy}{dx} = -\\frac{1}{\\sin y}$"}
+{"spoken": "square root of 1 minus x squared", "latex": "$\\sqrt{1 - x^{2}}$"}
+{"spoken": "f of x is equal to x to the pi plus pi to the x", "latex": "$f(x) = x^{\\pi} + \\pi^{x}$"}
+{"spoken": "g of x is equal to natural log of cosine of x", "latex": "$g(x) = \\ln(\\cos(x))$"}
+{"spoken": "pi times x to the pi minus 1", "latex": "$\\pi x^{\\pi - 1}$"}
+{"spoken": "x times pi to the x minus 1", "latex": "$x \\cdot \\pi^{x-1}$"}
+{"spoken": "1 over cosine x", "latex": "$\\frac{1}{\\cos x}$"}
+{"spoken": "e to the x squared", "latex": "$\\mathrm{e}^{x^{2}}$"}
+{"spoken": "natural log of e to the x squared", "latex": "$\\ln(e^{x^{2}})$"}
+{"spoken": "x squared times natural log of e", "latex": "$x^{2}\\cdot\\ln e$"}
+{"spoken": "natural log of e is equal to 1", "latex": "$\\ln(e)=1$"}
+{"spoken": "natural log of m times n is equal to the natural log of m plus natural log of n", "latex": "$\\ln(mn) = \\ln(m) + \\ln(n)$"}
+{"spoken": "e to the a equals m", "latex": "$e^\\mathrm{a} = m$"}
+{"spoken": "a is equal to natural log of m", "latex": "$a=\\ln m$"}
+{"spoken": "natural log of e to the a plus b", "latex": "$\\ln(e^{a+b})$"}
+{"spoken": "natural log of e to the x is x", "latex": "$\\ln(e^{x}) = x$"}
+{"spoken": "1 half natural log x plus 1 half", "latex": "$\\frac{1}{2}\\ln x + \\frac{1}{2}$"}
+{"spoken": "1 over 2x plus 1 over 2 times x plus 4", "latex": "$\\frac{1}{2x} + \\frac{1}{2(x + 4)}$"}
+{"spoken": "e to the x plus e to the minus x", "latex": "$e^{x} + e^{-x}$"}
+{"spoken": "1 plus x squared", "latex": "$1 + x^2$"}
+{"spoken": "1 plus 1 over 2", "latex": "$1 + \\frac{1}{2}$"}
+{"spoken": "e to the x minus e to the minus x over 2", "latex": "$e^{x} - e^{-x} \\over 2$"}
+{"spoken": "x squared plus y squared equals 1", "latex": "$x^{2} + y^{2} = 1$"}
+{"spoken": "x squared minus y squared", "latex": "$x^{2} - y^{2}$"}
+{"spoken": "cosh squared u", "latex": "$\\cosh^{2}u$"}
+{"spoken": "e to the u plus e to the minus u over 2 quantity squared", "latex": "$(\\frac{e^{u} + e^{-u}}{2})^2$"}
+{"spoken": "e to the u minus e to the minus u over 2 quantity squared", "latex": "$( \\frac {e^{u} - e^{-u}} {2} )^2$"}
+{"spoken": "2 times e to the u times e to the minus u", "latex": "$2 e^{u}e^{-u}$"}
+{"spoken": "2 plus e to the minus 2u minus e to the 2u minus 2", "latex": "$2 + e^{-2u} - e^{2u} - 2$"}
+{"spoken": "w of x plus one", "latex": "$\\displaystyle w(x) + 1$"}
+{"spoken": "w of x plus 2 times e to the w of x ", "latex": "$w(x) + 2e^{w(x)}$ "}
+{"spoken": "1 over w of x plus 2 times e to the w of x", "latex": "$\\frac{1}{w(x)} + 2e^{w(x)}$"}
+{"spoken": "w of one plus two times e to the w of one", "latex": "$w(1) + 2 e^{w(1)}$"}
+{"spoken": "1 half times x minus 1", "latex": "$\\frac{1}{2}(x - 1)$"}
+{"spoken": "1 over x0 plus delta x", "latex": "$ \\frac{1}{x_{0} +\\Delta x}$"}
+{"spoken": "minus 1 over x0 plus delta x times x0", "latex": "$\\displaystyle-\\frac{1}{x_{0} + \\Delta x x_{0}}$"}
+{"spoken": "minus 1 over 3 plus delta x times 3", "latex": "$-\\frac{1}{3} + \\Delta x \\times 3$"}
+{"spoken": "minus 1 over x0 squared x minus x0", "latex": "$-\\frac{1}{x_{0}^{2}}(x-x_{0})$"}
+{"spoken": "delta f is x plus delta x to the n minus x to the n divided by delta x", "latex": "$\\displaystyle \\Delta f = \\frac{(x + \\Delta x)^{n} - x^{n}}{\\Delta x}$"}
+{"spoken": "x to the n plus n x to the n minus 1 delta x", "latex": "$x^{n}+nx^{n-1}\\Delta x$"}
+{"spoken": "n x to the n minus one", "latex": "$nx^{n-1}$"}
+{"spoken": "minus 1 over x squared", "latex": "$-\\frac{1}{x^{2}}$"}
+{"spoken": "x plus 3 over x squared plus 1", "latex": "$\\frac{x + 3}{x^{2} + 1}$"}
+{"spoken": "4 plus 3 divided by 4 squared plus 1", "latex": "$\\frac{4+3}{4^{2}+1}$"}
+{"spoken": "1 minus cosine x over x", "latex": "$\\frac{1 - \\cos x}{x}$"}
+{"spoken": "the limit of 1 minus cosine x divided by x x goes to 0 is 0", "latex": "$\\lim_{x \\to 0} \\frac{1 - \\cos x}{x} = 0$"}
+{"spoken": "limit as x goes to x0 of f of x is equal to f of x0", "latex": "$\\lim_{x\\to x_{0}}f(x)=f(x_{0})$"}
+{"spoken": "sine a cos b plus cos a sin b", "latex": "$\\sin(a)\\cos(b)+\\cos(a)\\sin(b)$"}
+{"spoken": "cosine delta x minus 1 divided by delta x", "latex": "$\\cos\\Delta x - 1 \\over \\Delta x$"}
+{"spoken": "minus cosine x divided by delta x", "latex": "$-\\frac{\\cos x}{\\Delta x}$"}
+{"spoken": "sine delta x divided by delta x", "latex": "$\\frac{\\sin\\Delta x}{\\Delta x}$"}
+{"spoken": "cosine delta x minus 1 divided by delta x", "latex": "$\\frac{\\cos\\Delta x - 1}{\\Delta x}$"}
+{"spoken": "the limit as delta x goes to 0 of sine delta x over delta x", "latex": "$\\lim_{\\Delta x\\to 0} \\frac{\\sin \\Delta x}{\\Delta x}$"}
+{"spoken": "delta y over delta theta", "latex": "$\\frac{\\Delta y}{\\Delta \\theta}$"}
+{"spoken": "u prime v minus u v prime", "latex": "$u^{\\prime}v-uv^{\\prime}$"}
+{"spoken": "n x to the n minus 1", "latex": "$nx^{n-1}$"}
+{"spoken": "x to the n times sine of x", "latex": "$x^{n}\\sin(x)$"}
+{"spoken": "u times v of x plus delta x", "latex": "$uv(x + \\Delta x)$"}
+{"spoken": "delta of uv divided by delta x", "latex": "$\\frac{\\Delta (uv)}{\\Delta x}$"}
+{"spoken": "delta u divided by delta x times v of x plus delta x", "latex": "$\\frac{\\Delta u}{\\Delta x}\\cdot v(x+\\Delta x)$"}
+{"spoken": "u of x plus delta x times v of x plus delta x", "latex": "$u(x+\\Delta x)v(x+\\Delta x)$"}
+{"spoken": "u prime v minus uv prime divided by v squared", "latex": "$u^{\\prime}v - uv^{\\prime} \\over v^{2}$"}
+{"spoken": "v plus delta v", "latex": "$v+\\Delta v$"}
+{"spoken": "v to the minus 2 v prime minus v prime divided by v squared", "latex": "$v^{-2}v^{\\prime} - \\frac{v^{\\prime}}{v^2}$"}
+{"spoken": "10 times sine of t raised to the 9th power", "latex": "$10 \\sin^{9}(t)$"}
+{"spoken": "sine to the 9th of t cosine of t", "latex": "$\\sin^{9}(t)\\cos(t)$"}
+{"spoken": "D cubed x to the n", "latex": "$D^{3}x^{n}$"}
+{"spoken": "n times n minus 1", "latex": "$n\\times (n-1)$"}
+{"spoken": "D to the n plus 1 applied to x to the n", "latex": "$\\mathcal{D}^{n+1}(x^{n})$"}
+{"spoken": "length A squared equals length B squared plus one", "latex": "${a}^{2}={b}^{2} + 1$"}
+{"spoken": "length of A is square root of length B squared plus one", "latex": "$\\mathrm{|A|} = \\sqrt{\\mathrm{|B|^{2} + 1}}$"}
+{"spoken": "square root of 13 plus one is square root of 14", "latex": "$\\sqrt{{13}+1}=\\sqrt{14}$"}
+{"spoken": "the length of a is the square root of a one squared plus a two squared plus a three squared", "latex": "$|a|=\\sqrt{a_{1}^{2}+a_{2}^{2}+a_{3}^{2}}$"}
+{"spoken": " a dot b minus b dot a plus b dot b", "latex": "$a\\cdot b-b\\cdot a+b\\cdot b$"}
+{"spoken": "a dot a is length a squared", "latex": "$a\\cdot a = |a|^2$"}
+{"spoken": "cosine theta is PQ dot PR over length PQ length PR", "latex": "$\\cos(\\theta) = \\frac{{\\mathsf{PQ} \\cdot \\mathsf{PR}}}{{|\\mathsf{PQ}| \\cdot |\\mathsf{PR}|}}$"}
+{"spoken": "minus one squared plus one squared plus zero squared square root", "latex": "$\\sqrt{(-1)^{2} + 1^{2} + 0^{2}}$"}
+{"spoken": "x plus two y plus three z equals zero", "latex": "$x+2y+3z=0$"}
+{"spoken": "OP dot A equals zero", "latex": "$\\mathsf{OP}\\cdot \\mathsf{A}=0$"}
+{"spoken": "x times one plus y times two plus z times three", "latex": "$x\\cdot 1 + y\\cdot 2 + z\\cdot 3$"}
+{"spoken": "x equals r cosine theta", "latex": "$x=r\\cos \\theta$"}
+{"spoken": "y equals r sine theta", "latex": "$y=r\\sin \\theta$"}
+{"spoken": "one minus x squared minus y squared", "latex": "$1-x^{2}-y^{2}$"}
+{"spoken": "r squared cosine squared theta", "latex": "$r^{2}\\cos^{2}\\theta$"}
+{"spoken": "r squared sine squared theta", "latex": "$r^{2}\\sin^{2}\\theta$"}
+{"spoken": "the integral from zero to pi over two integral from zero to one of one minus r squared r dr d theta", "latex": "$\\displaystyle\\int_{0}^{\\frac{\\pi}{2}}\\int_{0}^{1}(1-r^{2})r dr d\\theta$"}
+{"spoken": "r minus r cubed", "latex": "$(r-r^{3})$"}
+{"spoken": "r to the four over four", "latex": " $\\frac{r^4}{4}$"}
+{"spoken": "one-half m v squared", "latex": "$\\frac{1}{2}mv^{2}$"}
+{"spoken": "one-half m r squared omega squared", "latex": "$\\frac{1}{2}mr^{2}\\omega^{2}$"}
+{"spoken": "x squared plus y squared", "latex": "$x^{2}+y^{2}$"}
+{"spoken": "pi a to the four over two", "latex": "$\\pi a^{4} \\over 2$"}
+{"spoken": "four a to the four cosine to the four theta", "latex": "$4a^4\\cos^{4}\\theta$"}
+{"spoken": "three halves of pi a to the fourth", "latex": "$\\frac{3}{2}(\\pi a^{4})$"}
+{"spoken": "y of t minus two equals t", "latex": "$y(t)-2=t$"}
+{"spoken": "z of t minus two equals minus 3t", "latex": "$z(t)-2=-3t$"}
+{"spoken": "minus one plus two t", "latex": "$\\displaystyle -1+2t$"}
+{"spoken": "y of t equals two plus t", "latex": "$y(t)=2+t$"}
+{"spoken": "z of t equals two minus 3t", "latex": "$z(t)=2-3t$"}
+{"spoken": "Q of t is Q0 plus t times the vector Q0 Q1", "latex": "$Q(t)=Q_{0}+t\\vec{Q_{0},Q_{1}}$"}
+{"spoken": "x plus 2y plus 4z equals seven", "latex": "$x+2y+4z=7$"}
+{"spoken": "minus one plus 2t plus twice two plus t plus four times two minus 3t", "latex": "$(-1+2t)+2(2+t)+4(2-3t)$"}
+{"spoken": "minus one plus four plus eight is eleven", "latex": "$-1+4+8=11$"}
+{"spoken": "one times two plus two times one plus four times minus three", "latex": "$1\\times2+2\\times1+4\\times(-3)$."}
+{"spoken": "a theta minus a sine theta", "latex": "$a\\theta-a\\sin \\theta $"}
+{"spoken": "x of theta is theta minus sine theta", "latex": "$x(\\theta) = \\theta-\\sin \\theta$"}
+{"spoken": "one minus theta squared over two", "latex": "$1-\\theta^{2}\\over2$"}
+{"spoken": "theta minus theta cubed over six", "latex": "$\\theta-\\frac{\\theta^{3}}{6}$"}
+{"spoken": "theta squared over two", "latex": "$\\frac{\\theta^2}{2}$"}
+{"spoken": "square root of one minus cosine t squared plus sine squared t", "latex": "$\\sqrt{1-\\cos^{2}t+\\sin^{2}t}$"}
+{"spoken": "square root of one minus two cosine t plus cosine squared t plus sine squared t", "latex": "$\\displaystyle\\sqrt{1-2\\cos t+\\cos ^{2}t+\\sin ^{2}t}$"}
+{"spoken": "cosine squared plus sine squared", "latex": "$\\cos ^{2}+\\sin ^{2}$"}
+{"spoken": "square root of two minus two cosine t", "latex": "$\\sqrt{2-2\\cos t}$"}
+{"spoken": "d by dt of r cross v is the zero vector", "latex": "$\\displaystyle\\frac{d}{dt}(\\mathbf{r}\\times\\mathbf{v})=\\mathbf{0}$"}
+{"spoken": "uv prime equals u prime v plus u v prime", "latex": "$(uv)^{\\prime}=u^{\\prime}v+uv^{\\prime}$"}
+{"spoken": "dr dt cross v plus r cross dv dt", "latex": "$\\displaystyle\\frac{d\\mathbf{r}}{dt}\\times \\mathbf{v}+\\mathbf{r}\\times \\frac{d\\mathbf{v}}{dt}$"}
+{"spoken": "the antiderivative of sine x cosine x", "latex": "$\\int{\\sin x \\cos x} dx$"}
+{"spoken": "C1 minus C2 plus a half is equal to zero", "latex": "$\\mathcal{C}_{1}-\\mathcal{C}_{2}+\\frac{1}{2}=0$"}
+{"spoken": "minus x squared over two", "latex": "$-\\frac{x^{2}}{2}$"}
+{"spoken": "A e to the minus x squared over two", "latex": "$Ae^{-\\frac{x^{2}}{2}}$"}
+{"spoken": "a times d by dx of e to the minus x squared over two", "latex": "$\\displaystyle a\\frac{d}{dx}(e^{-\\frac{x^{2}}{2}})$"}
+{"spoken": "h inverse of f of x plus c", "latex": "$h^{-1}(f(x))+c$"}
+{"spoken": "natural log of absolute y is equal to minus x squared over 2 plus c", "latex": "$\\ln(|y|)=-\\frac{x^{2}}{2}+c$"}
+{"spoken": "plus or minus a e to the minus x squared over two", "latex": "$\\pm ae^{-x^{2}/2}$"}
+{"spoken": "log y plus c one is equal to minus x squared over two plus c two", "latex": "$\\log y+c_{1}=-\\frac{x^{2}}{2}+c_2$"}
+{"spoken": "log y is equal to minus x squared over 2 plus c2 minus c1", "latex": "$\\log y=-\\frac{x^{2}}{2}+c_{2}-c_{1}$"}
+{"spoken": "a times e to the minus 0 squared over 2 is equal to 3", "latex": "$ae^{-\\frac{0^{2}}{2}}=3$"}
+{"spoken": "y is equal to 3e to the minus x squared over 2", "latex": "$y = 3e^{-x^{2}/2}$"}
+{"spoken": "twice the logarithm of x plus a constant", "latex": "$2\\log(x)+\\text{c}$"}
+{"spoken": "e to the log y is equal to e to the 2 log x plus c", "latex": "$e^{\\log y} = e^{2\\log(x)+c}$"}
+{"spoken": "e to the log x squared", "latex": "$(e^{\\log x})^2$"}
+{"spoken": "minus 1 divided by 2 y divided by x", "latex": "$-\\frac{1}{2(y/x)}$"}
+{"spoken": "dy dx is equal to minus x over 2y", "latex": "$\\frac{dy}{dx} = -\\frac{x}{2y}$"}
+{"spoken": "x squared over 2 plus y squared", "latex": "$\\frac{x^{2}}{2}+y^{2}$"}
+{"spoken": "y is equal to minus the square root of a squared minus x squared over two", "latex": "$y=-\\sqrt{a^{2}-\\frac{x^{2}}{2}}$"}
+{"spoken": " x to the 1 half times 2", "latex": "$x^{\\frac{1}{2}} \\times (2)$"}
+{"spoken": "dx over x to the p", "latex": "$\\frac{dx}{x^{p}}$"}
+{"spoken": "1 over 1 minus p", "latex": "$\\frac{1}{1-p}$"}
+{"spoken": "the integral from 1 to infinity dx over x", "latex": " $\\int_{1}^{\\infty} \\frac{dx}{x}$"}
+{"spoken": "y equals 1 over the square root of x", "latex": "$y=1/\\sqrt{x}$"}
+{"spoken": "y equals 1 over x minus 3 squared", "latex": "$y=\\frac{1}{(x-3)^{2}}$"}
+{"spoken": "1 plus a plus a squared", "latex": "$1+a+a^{2}$"}
+{"spoken": "one over one minus a", "latex": "$\\frac{1}{1-a}$"}
+{"spoken": "sum 1 over n squared n equals 1 to infinity", "latex": "$\\sum_{n=1}^{\\infty} 1/n^{2}$"}
+{"spoken": "pi squared over 6", "latex": "$\\frac{\\pi^{2}}{6}$"}
+{"spoken": "one over n cubed", "latex": "$\\frac{1}{n^{3}}$"}
+{"spoken": "one plus one over two plus all the way up to one over n minus one plus 1 over n", "latex": "$1+\\frac{1}{2}+\\mathrm{\\ldots}+\\frac{1}{n-1}+\\frac{1}{n}$"}
+{"spoken": "a half plus a third", "latex": "$\\frac{1}{2}+\\frac{1}{3}$"}
+{"spoken": "1 over n squared plus 1 square root", "latex": "$\\frac{1}{n^{2} + 1}$"}
+{"spoken": "sum one over n to the five-halves", "latex": "$\\sum\\frac{1}{n^{5/2}}$"}
+{"spoken": "one times one plus two times minus two plus minus three times one", "latex": "$1\\times1+2\\times(-2)+(-3)\\times1$"}
+{"spoken": "x plus 3y plus z equals zero", "latex": "$x+3y+z=0$"}
+{"spoken": " minus 2x minus z will be x plus 3y plus z", "latex": "$-2x-z\\operatorname{=}x+3y+z$"}
+{"spoken": "x equals minus 3t", "latex": "$x=-3t$"}
+{"spoken": "y equals 3t", "latex": "$y=3\\mathfrak{t}$"}
+{"spoken": "z equals negative 6t", "latex": "$z\\!=\\!-6t$"}
+{"spoken": "dr dt dot r plus r dot dr dt", "latex": "$\\displaystyle \\frac{dr}{dt}\\cdot{r}+r\\cdot\\frac{dr}{dt}$"}
+{"spoken": "d by dt of r dot r is zero", "latex": "$\\displaystyle \\frac{d}{dt}(\\mathbf{r}\\cdot\\mathbf{r})=0$"}
+{"spoken": "minus v dot v", "latex": "$-\\mathbf{v}\\cdot\\mathbf{v}$"}
+{"spoken": "f of x y equals one over x plus y", "latex": "$f(x,y)=\\frac{1}{x+y}$"}
+{"spoken": "f of x y equals one minus x squared minus y squared", "latex": "$f(x,y)=1-x^{2}-y^{2}$"}
+{"spoken": "z equals one minus x squared minus y squared", "latex": "$z=1-x^{2}-y^{2}$"}
+{"spoken": "x squared plus y squared equals one", "latex": "$x^{2}+y^{2}=1$"}
+{"spoken": "f prime at x0 times delta x", "latex": "$ f^{\\prime}(x_{0})\\Delta x$"}
+{"spoken": "d dy of y to the n times dy dx", "latex": "$\\displaystyle (\\frac{d}{dy}y^{n})\\frac{dy}{dx}$"}
+{"spoken": "m x to the n minus one", "latex": "$(mx^{m-1})$"}
+{"spoken": "n y to the n minus 1 ", "latex": "$(ny^{n-1})$"}
+{"spoken": "x to the m minus one", "latex": "$\\mathcal{x}^{m-1}$"}
+{"spoken": "x to the m over n times n minus 1", "latex": "$x^\\frac{m}{n}{(n-1)}$"}
+{"spoken": "minus one plus m over n", "latex": "$-1+\\frac{m}{n}$"}
+{"spoken": "a minus one", "latex": "$\\mathsf{a}-1$"}
+{"spoken": "a x to the a minus one", "latex": "$(ax^{a-1})$"}
+{"spoken": "y is equal to plus or minus square root of 1 minus x squared", "latex": "$y =\\pm\\sqrt{1-x^{2}}$"}
+{"spoken": "2 x plus 2 y y prime", "latex": "$2x+2yy^{\\prime}$"}
+{"spoken": "y to the fourth plus xy squared minus two is equal to zero", "latex": "$y^{4}+xy^{2}-2=0$"}
+{"spoken": "four y cubed y prime", "latex": "$4y^{3}y^{\\prime}$"}
+{"spoken": "minus y squared divided by 4y cubed plus 2xy", "latex": "$-\\frac{y^{2}}{4y^{3}+2xy}$"}
+{"spoken": "y to the fourth plus xy squared minus 2 is equal to zero", "latex": "$y^{4}+xy^{2}-2=0$"}
+{"spoken": " minus 1 squared divided by 4 times 1 cubed plus 2 times 1 times 1", "latex": "$\\frac{(-1)^2}{4\\times1^{3}+2\\times1\\times1}$"}
+{"spoken": "tan inverse x is equal to pi over two", "latex": "$\\operatorname{\\tan}^{-1}x=\\frac{\\pi}{2}$"}
+{"spoken": "d by dy tan y times dy dx", "latex": "$\\displaystyle \\frac{d}{dy}\\tan(y)\\frac{dy}{dx}$"}
+{"spoken": "d by dx of tan inverse of x", "latex": "$\\frac{d}{dx}(tan^{-1}(x))$"}
+{"spoken": " cosine squared of tan inverse x", "latex": "$\\cos^{2}(tan^{-1}x)$ "}
+{"spoken": "one over 1 plus x squared", "latex": "$\\frac{1}{1+x^{2}}$"}
+{"spoken": "d by dx of tan inverse x is equal to one over 1 plus x squared", "latex": "$\\frac{d}{dx}(tan^{-1}x)=\\frac{1}{1 + x^{2}}$"}
+{"spoken": "1 over square root of 1 minus x squared", "latex": "$\\frac{1}{\\sqrt{1-x^{2}}}$"}
+{"spoken": "a to the x1 plus x2 is a to the x1 times a to the x2", "latex": "$\\displaystyle a^{x_1 + x_2} = a^{x_{1}}\\cdot a^{x_{2}}$"}
+{"spoken": " a to the x plus delta x ", "latex": "$a^{x+\\Delta x}$"}
+{"spoken": "M of a is equal to the limit as delta x goes to 0 of a to the delta x minus 1 divided by delta x", "latex": "$M(a)=\\lim_{\\Delta x\\to 0}\\frac{a^{\\Delta x}-1}{\\Delta x}$"}
+{"spoken": " k times f prime of kx", "latex": "$k\\cdot f^{\\prime}(kx)$"}
+{"spoken": "e to the log x is equal to x", "latex": "$\\mathrm{e}^{\\log x}=x$"}
+{"spoken": "d by dx e to the w", "latex": "$\\frac{d}{dx}\\mathbf{e}^{w}$"}
+{"spoken": " e to the power log a to the power x", "latex": "$(e^{\\ln a})^{x}$"}
+{"spoken": "d by dx of a to the x is equal to d by dx of e to the x log a", "latex": "$\\frac{d}{dx}(a^{x})=\\frac{d}{dx}(e^{x}\\log a)$"}
+{"spoken": "log a times e to the x log a", "latex": "$\\log a\\,\\mathrm{e}^{x\\log a}$"}
+{"spoken": " The derivative with respect to x of 2 to the x is log 2 times 2 to the x", "latex": "$\\frac{d}{dx}(2^{x})=\\log{2}(2^{x})$"}
+{"spoken": "log 10 times 10 to the x", "latex": "$\\log 10\\times 10^{x}$"}
+{"spoken": "log u prime is equal to u primie over u", "latex": "$\\log u^{\\prime}=u^{\\prime}/u$"}
+{"spoken": "u prime is equal to u times log a", "latex": "$u^{\\prime}=u\\cdot\\log a$"}
+{"spoken": "v prime is equal to v times 1 plus log x", "latex": "$v^{\\prime}=v(1+\\log x)$"}
+{"spoken": "d by dx x to the x", "latex": "$(\\frac{d}{dx}(x^{x}))$"}
+{"spoken": "one plus one over n to the power n", "latex": "$(1+\\frac{1}{n})^{n}$"}
+{"spoken": "n log one plus one over n", "latex": "$n\\log(1+1/n)$"}
+{"spoken": "one plus one over k to the kth power", "latex": "$(1+\\frac{1}{k})^{k}$"}
+{"spoken": "ln of one plus one over k", "latex": "$\\ln(1+\\frac{1}{k})$"}
+{"spoken": "e to the r log x prime", "latex": "$\\mathrm{e}^{r}\\log x^{\\prime}$"}
+{"spoken": "u times r divided by x", "latex": "$u\\times\\mathbb{r}/x$"}
+{"spoken": "r x to the r minus one", "latex": "$rx^{r-1}$"}
+{"spoken": "y is ten x plus b", "latex": "$y=10x+b$"}
+{"spoken": "fifty t plus ten a plus b", "latex": "$50t+10a+b$"}
+{"spoken": "minus v to the minus 2 times v prime", "latex": "$-v^{-2}v^{\\prime}$"}
+{"spoken": "x to the ten plus eight x", "latex": "$x^{10}+8x$"}
+{"spoken": "e to the x tan inverse x", "latex": "$\\mathrm{e}^{x}{\\tan^{-1}x}$"}
+{"spoken": "x divided by 1 plus x squared", "latex": "$\\frac{x}{1+x^{2}}$"}
+{"spoken": "the limit as delta x goes to 0 of f of x plus delta x minus f of x divided by delta x", "latex": "$\\displaystyle \\lim_{\\Delta x\\to 0}\\frac{f(x+\\Delta x)-f(x)}{\\Delta x}$"}
+{"spoken": "one over one plus y squared times y prime", "latex": "$\\frac{1}{1+y^{2}}y^{\\prime}$"}
+{"spoken": "one divided by the square root of one plus x squared", "latex": "$1/\\sqrt{1+x^{2}}$"}
+{"spoken": " x zero plus f prime of x zero x minus x zero", "latex": "$\\displaystyle x_{0}+f^{\\prime}(x_{0})(x - x_{0})$"}
+{"spoken": "y equals cosine x", "latex": "$y=\\cos x$"}
+{"spoken": "y equals e to the x", "latex": "$y=\\mathrm{e}^{x}$"}
+{"spoken": "y equals one plus x", "latex": "$\\displaystyle y=1+x$"}
+{"spoken": "f prime is one over one plus x", "latex": "$f^{\\prime}=\\frac{1}{1+x}$"}
+{"spoken": "r one plus x to the r minus 1", "latex": "$(r\\cdot{1+x}^{r-1})$"}
+{"spoken": "e to the minus 3x divided by square root 1 plus x", "latex": "$e^{-3x}/\\sqrt{1+x}$"}
+{"spoken": "e to the minus three x one plus x to the minus a half", "latex": "$e^{-3x}(1+x^{-1/2})$"}
+{"spoken": "one minus three x minus a half of x plus three halves x squared.", "latex": "$1-3x-\\frac{1}{2}x+\\frac{3}{2}x^{2}$"}
+{"spoken": "t prime is equal to t divided by the square root of 1 minus v squared over c squared", "latex": "$t^{\\prime}= t/\\sqrt{1-v^{2}/c^{2}}$"}
+{"spoken": "v squared over c squared", "latex": "$\\frac{v^{2}}{c^{2}}$"}
+{"spoken": "t times 1 plus a half v squared over c squared", "latex": "$t(1+\\frac{1}{2}\\frac{v^{2}}{c^{2}})$"}
+{"spoken": "y equals one minus a half x squared", "latex": "$y=1-\\frac{1}{2}x^{2}$"}
+{"spoken": "one plus a half v squared over c squared", "latex": "$1+\\frac{1}{2}v^{2}/c^{2}$"}
+{"spoken": "f double prime of zero divided by two", "latex": "$f^{\\prime\\prime}(0)/2$"}
+{"spoken": "sine x is approximately x", "latex": "$\\sin x\\approx x$"}
+{"spoken": "cosine x is approximately one minus a half x squared", "latex": "$\\cos x\\approx 1-\\frac{1}{2}x^{2}$"}
+{"spoken": "e to the x is approximately one plus x plus a half x squared", "latex": "$e^{x}\\approx 1+x+\\frac{1}{2}x^{2}$"}
+{"spoken": " x minus a half x squared", "latex": "$x-\\frac{1}{2}x^{2}$"}
+{"spoken": "1 plus x to the power r", "latex": "$(1+x^{r})$"}
+{"spoken": "one plus rx plus r times r minus one divided by two x squared", "latex": "$1+rx+\\frac{r(r-1)}{2}x^{2}$"}
+{"spoken": " e to the minus three x one plus x to the minus a half", "latex": "$e^{-3x}(1+x)^{-1/2}$"}
+{"spoken": "one minus a half x plus a half times minus a half times minus three halves x squared", "latex": "$1-\\frac{1}{2}x+\\frac{1}{2}\\times(-\\frac{1}{2})\\times(-\\frac{3}{2})x^{2}$"}
+{"spoken": "f double prime is minus one over one plus x squared", "latex": "$f^{\\prime\\prime}=-\\frac{1}{1 + x^{2}}$"}
+{"spoken": "r one plus x to the r minus one", "latex": "$(r\\cdot 1+x^{r-1})$"}
+{"spoken": "r times r minus one x plus one to the r minus two", "latex": "$r(r-1)(x+1)^{r-2}$"}
+{"spoken": "3 times 1 minus x times 1 plus x", "latex": "$3(1-x)(1+x)$"}
+{"spoken": "one minus x times 1 plus x is zero", "latex": "$(1 - x)(1 + x) = 0$"}
+{"spoken": " x is plus or minus 1", "latex": "$x={}(\\pm1)$"}
+{"spoken": "f of x is three x minus x cubed", "latex": "$f(x)=3x-x^{3}$"}
+{"spoken": "one over x plus two the quantity squared.", "latex": "$\\frac{1}{({x+2})^2}$"}
+{"spoken": "negative two plus one", "latex": "$\\-2 + 1\\$"}
+{"spoken": "1 plus 1 over x", "latex": "$1+\\frac{1}{x}$"}
+{"spoken": "1 plus 2 over x", "latex": "$1+\\frac{2}{x}$"}
+{"spoken": "one minus one over x plus 2", "latex": "$1-\\frac{1}{x+2}$"}
+{"spoken": "one times log x minus x times the derivative of log x", "latex": "$1\\cdot\\log x-x\\cdot\\frac{\\mathrm{d}}{\\mathrm{dx}}\\log (x)$"}
+{"spoken": "log x minus one divided by log x squared", "latex": "$(\\log (x)-1)/\\log x^{2}$"}
+{"spoken": "e divided by log e", "latex": "$e/\\log e$"}
+{"spoken": " log e is 1", "latex": " $\\log(e) = {1}$"}
+{"spoken": " log x minus 1 divided by log x squared", "latex": "$\\log(x-1)/(\\log x)^{2}$"}
+{"spoken": "1 over log x minus 1 over log x squared", "latex": "$1/\\log x - 1/(\\log x^{2})$"}
+{"spoken": "1 over log 0 plus minus 1 over log 0 plus squared", "latex": "$\\displaystyle \\frac{1}{\\log(0^{+})}-\\frac{1}{(\\log(0^{+}))^{2}}$"}
+{"spoken": "one over minus infinity minus 1 over infinity", "latex": "$\\frac{1}{-\\infty}-\\frac{1}{\\infty}$"}
+{"spoken": "minus log x to the minus 2 times 1 over x plus 2 log x to the minus 3 1 over x", "latex": "$\\displaystyle -(\\log x)^{-2} \\cdot\\frac{1}{x}+2(\\log x)^{-3}\\frac{1}{x}$"}
+{"spoken": " x log x cubed ", "latex": "$x(\\log x)^3$"}
+{"spoken": "2 minus log x", "latex": "$2-\\log x$"}
+{"spoken": "e squared over two", "latex": "$\\frac{e^{2}}{2}$"}
+{"spoken": "one minus x", "latex": "$\\displaystyle 1-x$"}
+{"spoken": "x over 4", "latex": "$\\frac{x}{4}$"}
+{"spoken": "x squared over 16", "latex": "$x^{2}/16$"}
+{"spoken": "the derivative of 1 minus x squared is 2 times 1 minus x times of minus 1", "latex": "$\\displaystyle \\frac{d}{dx}\\left(1-x\\right)^{2}=2\\left(1-x\\right)(-1)$"}
+{"spoken": "2x over 8", "latex": "$\\frac{2x}{8}$"}
+{"spoken": "y is equal to v divided by x squared", "latex": "$y=\\frac{v}{x^{2}}$"}
+{"spoken": "A prime is 2x minus 4v over x squared", "latex": "$A^{\\prime}=2x-4v/x^{2}$"}
+{"spoken": "2x equals 2v over x squared", "latex": "$2x=2v/x^{2}$"}
+{"spoken": "x cubed is equal to 2v", "latex": "$x^{3}=2v$"}
+{"spoken": "x is equal to 2 to the 1 3rd v to the 1 3rd", "latex": "$x=2^{\\frac{1}{3}}v^{\\frac{1}{3}}$"}
+{"spoken": "x squared plus 4v over x", "latex": "$x^{2}+\\frac{4v}{x}$"}
+{"spoken": "2x minus 4v over x squared", "latex": "$\\displaystyle 2x-\\frac{4v}{x^{2}}$"}
+{"spoken": "x squared plus 4v over x", "latex": "$x^{2}+4v/x$"}
+{"spoken": "two to the one third v to the one third squared plus four v ", "latex": "$({2^{(1/3)}v^{(1/3)}})^{2}+4v$"}
+{"spoken": "a divided by v to the 2 3rds", "latex": "$\\frac{a}{v^{2/3}}$"}
+{"spoken": "2 to the 1 3rd v to the 1 3rd divided by 2 to the minus 2 3rds v to the 1 3rd", "latex": "$2^{1/3}v^{1/3}\\over 2^{-2/3}v^{1/3}$"}
+{"spoken": "2xy", "latex": "$(2xy)$"}
+{"spoken": "y prime is equal to minus 2xy divided by x squared", "latex": "$y^{\\prime}=-\\frac{2xy}{x^{2}}$"}
+{"spoken": "2x plus 4y plus 4x y prime", "latex": "$2x+4y+4xy^{\\prime}$"}
+{"spoken": "4x times minus 2y over x", "latex": "$4x\\cdot-\\frac{2y}{x}$"}
+{"spoken": "2x plus 4y", "latex": "$\\displaystyle 2x+4y$"}
+{"spoken": "8 minus 8y equals 0", "latex": "$8-8y=0.$"}
+{"spoken": "x over y is equal to 2", "latex": "$\\frac{x}{y}=2$"}
+{"spoken": "x squared plus 30 squared is equal to d squared", "latex": "$x^{2}+30^{2}=d^{2}$"}
+{"spoken": "d D dt is minus 80", "latex": "$\\frac{\\mathrm{d}}{\\mathrm{d}t}D=-80$"}
+{"spoken": "r divided by h is equal to four divided by ten", "latex": "$r/h=4/10$"}
+{"spoken": "dv dt is two", "latex": "$\\frac{dv}{dt} = 2$"}
+{"spoken": "two fifths h", "latex": "$\\frac{2}{5}h$"}
+{"spoken": "v is equal to a 3rd pi times 2 5ths", "latex": "$v=\\frac{1}{3}\\pi\\times\\frac{2}{5}$"}
+{"spoken": "h squared times h", "latex": "$\\mathbb{h}^{2}\\times\\mathbb{h}$"}
+{"spoken": "h squared times h", "latex": "$\\mathbb{h}^{2}\\times\\mathbb{h}$"}
+{"spoken": "3h squared times dh dt", "latex": "$\\displaystyle 3h^{2}\\frac{dh}{dt}$"}
+{"spoken": "2 is equal to pi over 3 times 2 5ths", "latex": "$2=\\frac{\\pi}{3}\\times\\frac{2}{5}$"}
+{"spoken": "dh dt is equal to 1 over 2pi", "latex": "$\\frac{dh}{dt}=\\frac{1}{2\\pi}$"}
+{"spoken": "dv dt is equal to dv dh times dh dt", "latex": "$dv/dt = \\frac{dv}{dh}\\times\\frac{dh}{dt}$"}
+{"spoken": "the square root of x squared plus y squared", "latex": "$\\sqrt{x^{2}+y^{2}}$"}
+{"spoken": "b minus y", "latex": "$\\mathcal{b}{-}y$"}
+{"spoken": "the square root of a minus x squared plus b minus y squared", "latex": "$\\sqrt{(a-x)^{2}+(b-y)^{2}}$"}
+{"spoken": "a minus x", "latex": "$\\mathcal{a}-x$"}
+{"spoken": "b minus y times y prime", "latex": "$(b - y)y^{\\prime}$"}
+{"spoken": "x divided by square root of x squared plus y squared ", "latex": "$x/\\sqrt{x^{2}+y^{2}}$"}
+{"spoken": "x squared equals 5", "latex": "$\\displaystyle x^{2}=5$"}
+{"spoken": "f of x equal to x squared minus 5", "latex": "$f(x)=x^{2}-5$"}
+{"spoken": "f of x equals 0", "latex": "$f(\\mathbf{x})=0$"}
+{"spoken": "y minus y0 is equal to m x minus x0", "latex": "$y-y_{0}=m(x-x_{0})$"}
+{"spoken": "x1 is equal to x0 minus y0 divided by m", "latex": "$x_{1}=x_{0}-\\frac{y_{0}}{m}$"}
+{"spoken": "x0 is equal to 2", "latex": "$x_0 = 2$"}
+{"spoken": "x0 squared minus 5", "latex": "$x_0^{2} - 5$ "}
+{"spoken": "minus a half x zero", "latex": "$-\\frac{1}{2}x_{0}$"}
+{"spoken": "five halves over x zero", "latex": "$\\frac{5}{2}\\over x_0$"}
+{"spoken": "x one is a half times two", "latex": "$\\displaystyle \\mathbb{x}_{1}=\\frac{1}{2}\\times 2$ "}
+{"spoken": "9 4ths plus 5 halves times 4 9ths", "latex": "$(9/4+5/2)\\times(4/9)$"}
+{"spoken": "square root of 5 minus xn", "latex": "$\\sqrt{5}-x_n$"}
+{"spoken": "one minus a half", "latex": "$1-\\frac{1}{2}$"}
+{"spoken": "x minus x1 in absolute value", "latex": "$|x-x_1|$ "}
+{"spoken": "e2 would be x minus x2 in absolute value", "latex": "$\\displaystyle \\mathbb{e}_2 = |x - x_{2}|$"}
+{"spoken": "y equals x squared minus 5", "latex": "$y=x^{2}-5$"}
+{"spoken": "the interval a less than x less than b", "latex": "$[a<x<b]$"}
+{"spoken": "f of b minus f of a divided by b minus a", "latex": "$(f(b)-f(a))/(b-a)$"}
+{"spoken": "f of b minus f of a over b minus a is equal to f prime of c", "latex": "$ \\frac{f(b)-f(a)}{b-a}=f^{\\prime}(c) $"}
+{"spoken": "f of b is equal to f of a plus f prime of c times b minus a", "latex": "$f(b)=f(a)+f^{\\prime}(c)(b - a)$"}
+{"spoken": "e to the x minus 1 plus x", "latex": "$e^{x}-1+x$"}
+{"spoken": " e to the 0 minus 1 plus 0", "latex": "$(e^{0}-1)+0$"}
+{"spoken": "f prime of x is e to the x", "latex": "$f^{\\prime}(x)=e^{x}$"}
+{"spoken": "e to the x is bigger than 1 plus x plus x squared over 2", "latex": "$e^{x}>(1+x+\\frac{x^{2}}{2})$"}
+{"spoken": "x squared over 2", "latex": "$\\frac{x^{2}}{2}$"}
+{"spoken": "x cubed over 3 times 2", "latex": "$\\frac{x^{3}}{3\\times 2}$"}
+{"spoken": "x to the fourth over four times three times two", "latex": "$x^{4}\\over{4\\times3\\times2}$"}
+{"spoken": "x to the 1 3rd", "latex": "$x^{\\frac{1}{3}}$"}
+{"spoken": "one-third x to the minus two thirds", "latex": "$\\frac{1}{3}x^{-\\frac{2}{3}}$"}
+{"spoken": "y is equal to 64 to the 1 3rd", "latex": "$y\\mathrel{\\mathop{=}}64^{1/3}$"}
+{"spoken": "dy is 1 3rd times 64 to the minus 2 3rds dx", "latex": "$dy=\\frac{1}{3}64^{-\\frac{2}{3}}dx$"}
+{"spoken": "dy is equal to 1 48th dx", "latex": "$dy=\\frac{1}{48}dx$"}
+{"spoken": "f prime of a times x minus a", "latex": "$f^{\\prime}(a)(x-a)$"}
+{"spoken": "f of x is x to the 1 3rd", "latex": "$f(x)=x^{1/3}$"}
+{"spoken": "4 plus 1 over 48 times x minus a", "latex": "$(4+\\frac{1}{48}(x-a))$"}
+{"spoken": "one over a plus one", "latex": "$\\frac{1}{a+1}$"}
+{"spoken": "1 over negative x times the derivative with respect to x of negative x", "latex": "$\\displaystyle \\frac{1}{-x}\\frac{d}{dx}(-x)$"}
+{"spoken": "integral of secant squared x dx", "latex": "$\\int \\sec^{2}xdx$"}
+{"spoken": "sine inverse x", "latex": "$\\sin^{-1}x$"}
+{"spoken": "the integral of dx over 1 plus x squared", "latex": "$\\int\\frac{dx}{1+x^{2}}$"}
+{"spoken": "f of x equals g of x plus a constant", "latex": "$f(x)=g(x)+\\text{constant}$"}
+{"spoken": "u is equal to x to the fourth plus two", "latex": "$u=x^{4}+2$."}
+{"spoken": "1 24 x to the 4th plus 2 to the power 6 plus c", "latex": "$\\frac{1}{24}x^{4}+2^{6}+c$"}
+{"spoken": "the integral of u to the minus a half du", "latex": "$\\int u^{-\\frac{1}{2}}\\mathrm{d}u$"}
+{"spoken": "half one plus x squared to the minus a half times two x", "latex": "${\\frac{1}{2}}(1+x^{2})^{-\\frac{1}{2}}2x$"}
+{"spoken": "square root of 1 plus x squared plus c", "latex": "$\\sqrt{1+x^{2}}+c$"}
+{"spoken": "6 e to the 6x", "latex": "$6\\mathrm{e}^{6x}$"}
+{"spoken": "x e to the minus x squared", "latex": "$xe^{-x^{2}}$"}
+{"spoken": "sine x cosine x dx", "latex": "$\\sin x\\cos xdx$"}
+{"spoken": "2 cosine x times minus sine x", "latex": "$2\\cos x\\cdot(-\\sin x)$"}
+{"spoken": "the integral of sine x cosine x dx is equal to negative a half cosine squared x plus c", "latex": "$\\int\\sin x\\cos xdx=-\\frac{1}{2}\\cos^{2}x+C$"}
+{"spoken": " sine squared x ", "latex": "$\\sin^{2}x$"}
+{"spoken": "a half sine squared plus cosine squared", "latex": "$\\frac{1}{2}\\sin^{2}+\\cos^{2}$"}
+{"spoken": "one over u", "latex": "$\\frac{1}{u}$"}
+{"spoken": "log x plus c", "latex": "$\\log x+c$"}
+{"spoken": "2b over n", "latex": "$\\frac{2b}{n}$"}
+{"spoken": "b over n times 2b over n squared", "latex": "$(b/n)\\times(2b/n^{2})$"}
+{"spoken": " b over n times n b over n squared", "latex": "$(b/n)\\times(nb/n^{2})$"}
+{"spoken": "1 3rd n cubed", "latex": "$\\frac{1}{3}n^{3}$"}
+{"spoken": "n plus 1 squared times n plus 1", "latex": "$(n+1)^{2}(n+1)$"}
+{"spoken": " n plus 1 cubed divided by n cubed", "latex": "$(n+1)^{3}/n^{3}$"}
+{"spoken": "the integral from 0 to b x squared dx", "latex": "$\\int_{0}^{b}x^{2}dx$"}
+{"spoken": "1 3rd n cubed", "latex": "$\\frac{1}{3}n^{3}$"}
+{"spoken": "the sum of a i i equals 1 to n is a 1 plus a 2 plus dot dot dot plus a n", "latex": "$\\sum^{n}_{i=1}a_{i}=a_{1}+a_{2}+\\cdots+a_{n}$"}
+{"spoken": "1 over n cubed times the sum i squared. i equals 1 to n", "latex": "$\\frac{1}{n^{3}}\\sum_{i=1}^{n}{i}^{2}$"}
+{"spoken": "b over n times i b over n squared", "latex": "$\\frac{b}{n}\\times(\\frac{ib}{n})^{2}$"}
+{"spoken": "b cubed over n cubed", "latex": "$\\frac{b^{3}}{n^{3}}$"}
+{"spoken": "f of x is equal to x", "latex": "$f(\\mathbf{x})=\\mathbf{x}$"}
+{"spoken": "f of x is x cubed", "latex": "$\\displaystyle f(x)=x^{3}$"}
+{"spoken": "b minus a over n", "latex": "$\\frac{b-a}{n}$"}
+{"spoken": "e to the r times 1 minus t", "latex": "$e^{r}(1 - t)$"}
+{"spoken": "i over 365 f of t dt", "latex": "$\\displaystyle \\frac{i}{365}f(t)dt$"}
+{"spoken": "f of b minus f of a", "latex": "$\\displaystyle f(b)-f(a)$"}
+{"spoken": "b cubed over 3 minus a cubed over 3", "latex": "$\\frac{b^{3}}{3}-\\frac{a^{3}}{3}$"}
+{"spoken": "minus cosine pi", "latex": "$-\\cos\\pi$"}
+{"spoken": "x of b minus x of a", "latex": "$x(b)-x(a)$"}
+{"spoken": "integral from 0 to 2pi of sine x dx", "latex": "$\\int_{0}^{2\\pi}\\sin xdx$"}
+{"spoken": "minus cosine 2pi", "latex": "$-\\cos2\\pi$"}
+{"spoken": "minus the integral from b to a of f of x dx", "latex": "$\\displaystyle -\\int_{b}^{a}f(x)dx$"}
+{"spoken": "e to the b minus e to the zero", "latex": "$e^{b}-e^{0}$"}
+{"spoken": "the integral from 0 to b e to the x dx is greater than or equal to the integral from 0 to b 1 plus x dx", "latex": "$\\int_{0}^{b}e^xdx\\geq\\int_{0}^{b}(1 + x)dx$"}
+{"spoken": "e to the b minus 1 is greater than or equal to b plus b squared over 2", "latex": "$e^{b}-1\\geq b+\\frac{b^{2}}{2}$"}
+{"spoken": "b greater than or equal to 0", "latex": "$b\\geq 0$"}
+{"spoken": "u equals x cubed plus 2", "latex": "$u=x^{3}+2$"}
+{"spoken": "du is equal to 2x dx", "latex": "$du\\mathrel{\\mathop{=}}2xdx$"}
+{"spoken": "dx is equal to f of b minus f of a", "latex": "$dx=f(b)-f(a)$"}
+{"spoken": "one over b minus a ", "latex": "$\\frac{1}{b-a}$"}
+{"spoken": "f of 4 minus f of 0 is equal to f prime of c times 4 minus 0", "latex": "$f(4)-f(0)=f^{\\prime}(c)(4 - 0)$"}
+{"spoken": "1 over 1 plus c times 4", "latex": "$\\frac{1}{1 + c}(4)$"}
+{"spoken": " y equals one over one plus x", "latex": "$y=\\frac{1}{1+x}$"}
+{"spoken": "dt over t squared", "latex": "$\\frac{dt}{t^{2}}$"}
+{"spoken": "the integral from 0 to x of f of t dt", "latex": "$\\left(\\int_{0}^{x}f(t)dt\\right)$"}
+{"spoken": "1 over t squared", "latex": "$\\frac{1}{t^2}$"}
+{"spoken": "g of x is 1 minus 1 over x", "latex": "$g(x)=1-\\frac{1}{x}$"}
+{"spoken": "f prime of x is equal to g prime of x", "latex": "$f^{\\prime}(x)\\mathrel{\\mathop{}}=g^{\\prime}(x)$"}
+{"spoken": "f of b minus f of a and that's equal to g of b plus c minus g of a plus c", "latex": "$f(b)-f(a)\\stackrel{{\\scriptstyle\\text{def}}}{{=}}g(b+c)-g(a+c)$"}
+{"spoken": "f of x is equal to minus 1 over x", "latex": "$\\mathcal{f}(x)=-\\frac{1}{x}$"}
+{"spoken": "L of x equals the integral from 1 to x dt over t", "latex": "$L(x)=\\int_{1}^{x}\\frac{dt}{t}$"}
+{"spoken": " integral from 0 to x of e to the minus t squared dt", "latex": "$\\int_{0}^{x}e^{-t^{2}}dt$"}
+{"spoken": "the integral from x to 1 with a minus sign dt over 2", "latex": "$\\displaystyle \\int_{x}^{1}{-}\\frac{dt}{2}$"}
+{"spoken": "minus 2x e to the minus x squared", "latex": "$-2xe^{-x^{2}}$"}
+{"spoken": "f prime of 0 is e to the minus 0 squared which is 1", "latex": "$\\displaystyle f^{\\prime}(0)=e^{-0^{2}}=1$"}
+{"spoken": "f of minus x is equal to minus f of x", "latex": "$f(-x)=-f(x)$"}
+{"spoken": "square root of pi over 2", "latex": "$\\sqrt{\\pi}/{2}$"}
+{"spoken": "2 over the square root of pi times the integral from 0 to x e to the minus t squared dt", "latex": "$\\displaystyle \\frac{2}{\\sqrt{\\pi}}\\int_{0}^{x}e^{-t^{2}}dt$"}
+{"spoken": "2 over the square root of pi", "latex": "$\\frac{2}{\\sqrt{\\pi}}$"}
+{"spoken": "f of x minus g of x times dx", "latex": "$(f(x)-g(x))dx$"}
+{"spoken": "x equals y squared", "latex": "$\\displaystyle x=y^{2}$"}
+{"spoken": "y equals x minus 2", "latex": "$\\displaystyle y=x-2$"}
+{"spoken": "y squared minus y minus 2 is equal to 0", "latex": "$y^{2}-y-2~{}=~{}0$"}
+{"spoken": "y minus two times y plus one is equal to zero", "latex": "$(y-2)(y+1)=0$"}
+{"spoken": "y equals x minus 2", "latex": "$\\displaystyle y=x-2$"}
+{"spoken": "x equals y squared", "latex": "$\\displaystyle x=y^{2}$"}
+{"spoken": "y plus 2 minus y squared is equal to 0", "latex": "$y+2-y^{2}~{}=~{}0$"}
+{"spoken": "y squared over 2 plus 2y", "latex": "$\\frac{y^{2}}{2}+2y$"}
+{"spoken": "pi y squared", "latex": "$\\pi y^{2}$"}
+{"spoken": "a squared minus x squared minus two ax ", "latex": "$a^{2}-x^{2}-2ax$"}
+{"spoken": "2ax minus x squared", "latex": "$2ax-x^{2}$"}
+{"spoken": "pi times ax squared", "latex": "$\\pi ax^{2}$"}
+{"spoken": "12 3rds minus 8 3rds pi a cubed", "latex": "$(\\frac{12}{3}-\\frac{8}{3})\\pi a^{3}$"}
+{"spoken": "pi A x squared minus x cubed over 3", "latex": "$\\pi(ax^{2}-\\frac{x^{3}}{3})$"}
+{"spoken": "2 pi a x minus x cubed", "latex": "$2\\pi(ax-x^{3})$"}
+{"spoken": "x equals square root a", "latex": "$x=\\sqrt{a}$"}
+{"spoken": "pi over 2a squared ", "latex": "$\\frac{\\pi}{2a}^{2}$"}
+{"spoken": "a hundred minus thirty y", "latex": "$100-30{y}$"}
+{"spoken": "delta x divided by b minus a is 1 over n", "latex": "$\\frac{\\Delta x}{b-a}=\\frac{1}{n}$"}
+{"spoken": "1 over b minus a the integral from a to b f of x dx", "latex": "$\\displaystyle \\frac{1}{b-a}\\int_{a}^{b}f(x)dx$"}
+{"spoken": "the integral from negative 1 to 1 square root of 1 minus x squared dx", "latex": "$\\int_{-1}^{1}\\sqrt{1-x^{2}}dx$"}
+{"spoken": "pi over 4", "latex": "$\\frac{\\pi}{4}$"}
+{"spoken": "negative one over pi times cosine pi", "latex": "$-\\frac{1}{\\pi}\\cos\\pi$"}
+{"spoken": "y equals x squared", "latex": "$\\displaystyle y=x^{2}$"}
+{"spoken": "pi x squared", "latex": "$\\pi x^{2}$"}
+{"spoken": "a hundred pi y minus 30 pi y squared", "latex": "$100\\pi y-30\\pi y^{2}$"}
+{"spoken": "y less than x less than 1 minus x squared", "latex": "$y<x<1-x^{2}$"}
+{"spoken": "y is equal to 1 minus x squared", "latex": "$y=1-x^{2}$"}
+{"spoken": "two pi r", "latex": "$\\displaystyle 2\\pi r$"}
+{"spoken": "minus pi e to the minus r squared", "latex": "$-\\pi e^{-r^{2}}$"}
+{"spoken": "two pi r e to the minus r squared", "latex": "$2\\pi re^{-r^{2}}$"}
+{"spoken": "c pi times e to the minus r one squared minus e to the minus r two squared", "latex": "$\\displaystyle c\\pi(e^{-r_{1}^{2}}-e^{-r_{2}^{2}})$"}
+{"spoken": "1 minus e to the minus a squared", "latex": "$1-e^{-a^{2}}$"}
+{"spoken": "a half to the fourth power minus a half to the ninth power", "latex": "$(1/2)^{4}-(1/2)^{9}$"}
+{"spoken": "y n minus 2 plus y n minus 1 over 2", "latex": "$\\displaystyle \\frac{y_{n-2}+y_{n-1}}{2}$"}
+{"spoken": "y zero plus four y one plus y two divided by six", "latex": "$(y_{0}+4y_{1}+y_{2})/6$"}
+{"spoken": "y2 plus 4y3 plus y4 divided by 6", "latex": "$(y_2 + 4y_3 + y_4)\\over 6$"}
+{"spoken": "2y n minus 2 4 yn 1 yn", "latex": "$2y_{n - 2}+4y_{n - 1}+y_n$"}
+{"spoken": "cosine of two theta is cosine square root of theta minus the sine squre root of theta", "latex": "$\\cos(2\\theta)=\\cos^{2}(\\theta)-\\sin^{2}(\\theta)$"}
+{"spoken": "cosine squared theta minus the sin squared of theta", "latex": "$\\cos^{2}\\theta-\\sin^{2}\\theta$"}
+{"spoken": "cosine squared of theta minus the quantity 1 minus cosine squared of theta", "latex": "$\\cos^{2}(\\theta)-(1-\\cos^{2}(\\theta)) $"}
+{"spoken": "sine squared of theta is 1 minus cosine of 2 theta divided by 2", "latex": "$\\sin^{2}(\\theta)=(1-\\cos(2\\theta))\\over 2$"}
+{"spoken": "integrals of the form sine to the nth power of x cosine to the nth power of x dx", "latex": "$\\displaystyle \\int \\sin^{n}(x) \\cos^{m}(x)dx $"}
+{"spoken": "sine to the nth power of x times the cosine of x ", "latex": "$\\sin ^{n}(x)\\cos (x)$"}
+{"spoken": "u to the n plus one", "latex": "$\\mathcal{u}^{n+1}$"}
+{"spoken": "minus u cubed over three", "latex": "$-u^{3}\\over 3$"}
+{"spoken": "minus cosine cubed of x over three", "latex": "$-\\cos^{3}(x)\\over 3 $"}
+{"spoken": "u minus u cubed over 3", "latex": "$u-\\frac{u^{3}}{3}$"}
+{"spoken": "cosine of x plus cosine cubed of x over three", "latex": "$\\cos(x)+ {\\cos^{3}(x)\\over 3}$"}
+{"spoken": "one plus the coisine of two theta over two", "latex": "$\\frac{1+\\cos(2\\theta)}{2}$"}
+{"spoken": "sine squared times cosine squared", "latex": "$\\sin^{2}\\cos^{2}$"}
+{"spoken": "a minus b times a plus b is a squared minus b squared", "latex": "$(a-b)(a+b)= a^{2}-b^{2}$"}
+{"spoken": "a quarter minus one eighth", "latex": "$\\frac{1}{4}-\\frac{1}{8}$"}
+{"spoken": "one half sine of two x squared", "latex": "$\\frac{1}{2}\\sin^{2}(2x)$"}
+{"spoken": "1 quarter of 1 minus the cosine of 4x divided by 2", "latex": " $\\frac{1}{4}(\\frac{1 - \\cos(4x)}{2})$"}
+{"spoken": "y equals a sin theta", "latex": "$y=a\\sin \\theta$"}
+{"spoken": "sine of 2 theta is twice the sine of theta times the cosine of theta", "latex": " $\\sin(2\\theta)=2\\sin(\\theta)\\cos(\\theta)$"}
+{"spoken": "sine of theta cosine of theta over 2", "latex": "$\\frac{\\sin(\\theta)\\cos(\\theta)}{2}$"}
+{"spoken": "square root of a squared minus y squared", "latex": "$\\sqrt{a^{2}-y^{2}}$"}
+{"spoken": "a squared theta over 2 ", "latex": "$a^{2}\\theta \\over2$"}
+{"spoken": "the arcsine of y over a divided by two", "latex": "$\\frac{\\arcsin(\\frac{y}{a})}{2}$."}
+{"spoken": "a squared sine of theta cosine of theta", "latex": "$a^{2}\\sin(\\theta)\\cos(\\theta)$"}
+{"spoken": "a sine of theta a cosine of theta over two", "latex": "$a\\sin(\\theta)a\\cos(\\theta)\\over 2$"}
+{"spoken": "a squared theta zero divided by two plus b times the square root of a squared minus b squared over two", "latex": "${a^{2}\\theta_{0}\\over 2}+{b\\sqrt{a^{2} - b^{2}}\\over 2}$"}
+{"spoken": "a squared theta over 2", "latex": "$a^{2}\\theta/2$"}
+{"spoken": "1 plus sine squared over cosine squared", "latex": "$1 + \\sin^{2}\\over \\cos^2$"}
+{"spoken": "the tangent of x is sine x divided by cosine x", "latex": "$\\tan(x)=\\sin(x)/\\cos(x)$"}
+{"spoken": "cosine squared plus sine squared is one", "latex": "$\\cos^{2}+\\sin^{2}=1$"}
+{"spoken": "one over cosine squared of x which is secant squared", "latex": " $1/\\cos^{2}(x) = \\sec^{2}(x)$"}
+{"spoken": "one over the cosine times the tangent of x", "latex": "${1\\over\\cos(x)}\\tan(x)$"}
+{"spoken": "u equals the cosine of x", "latex": "$u=\\cos {x}$"}
+{"spoken": "du is minus the sine of x dx", "latex": "$\\mathrm{d}u = -\\mathrm{\\sin(x)}\\mathrm{d}x$"}
+{"spoken": "sine x dx is minus du divided by u", "latex": "$\\sin xdx=-\\frac{du}{u}$"}
+{"spoken": "the secant of x plus the tangent of x ", "latex": "$\\operatorname{\\sec}(x)+\\tan(x)$"}
+{"spoken": "secant squared is one plus tangent squared", "latex": "$\\displaystyle \\sec^2 = 1 + \\tan^{2}$"}
+{"spoken": "the secant squared the x plus x times dx that is du", "latex": "$\\displaystyle\\ (\\sec^2(x) +\\ x )\\ dx = \\ du\\ \\$"}
+{"spoken": "u plus u cubed over 3 plus a constant", "latex": "$\\displaystyle u+\\frac{u^{3}}{3} + \\text{const.}$"}
+{"spoken": "the integral of dx over x squared times the square root of 1 plus x squared", "latex": "$\\int\\frac{dx}{x^{2}\\sqrt{1+x^{2}}}$"}
+{"spoken": "minus one over u plus a constant", "latex": "$-\\frac{1}{u}+\\text{const.}$"}
+{"spoken": "1 over the square root of x squared minus 1", "latex": "$1\\over \\sqrt{x^{2} - 1}$"}
+{"spoken": "square root of a squared minus x squared", "latex": "$\\sqrt{a^{2}-x^{2}}$"}
+{"spoken": " x is a times the sine of theta", "latex": "$x=a\\sin(\\theta)$"}
+{"spoken": "dx over x squared plus 4x", "latex": "$\\frac{dx}{x^{2}+4x}$"}
+{"spoken": "x squared plus 4x is u squared minus 4", "latex": "$x^{2}+4x=u^{2}-4$"}
+{"spoken": "4 times the tangent squared of theta", "latex": "$4\\tan^{2}(\\theta)$"}
+{"spoken": "square root of u squared minus 4", "latex": "$\\sqrt{u^{2}-4}$"}
+{"spoken": "du is 2 secant theta tangent theta d theta.", "latex": "$du=2\\sec \\theta \\tan \\theta d\\theta $"}
+{"spoken": "natural logarithm of x plus 2 over 2 ", "latex": "$\\ln({\\frac{x+2}{2}})$"}
+{"spoken": "e of x divided by q of x", "latex": "$\\frac{e^x}{q(x)}$"}
+{"spoken": "natural log of x minus 1 plus 3 times natural log of x plus 3", "latex": "$\\ln(x-1)+3\\ln(x+3)$"}
+{"spoken": "3 times x minus 1", "latex": "$3\\times(x-1)$"}
+{"spoken": "four x plus two minus three", "latex": "$(4x+2-3)$"}
+{"spoken": "b times x plus two times x minus one", "latex": "$b(x+2)(x-1)$"}
+{"spoken": "1 over x minus 1 plus 3 over x plus 2", "latex": "$\\frac{1}{x-1}+\\frac{3}{x+2}$"}
+{"spoken": "a times x minus 1 times x plus 2", "latex": "$a(x-1)(x+2)$"}
+{"spoken": "minus eight minus one divided by minus two minus one is equal to b", "latex": "$\\frac{-8-1}{-2-1}=b$"}
+{"spoken": "four x minus one", "latex": "$(4x\\ -\\ 1)$"}
+{"spoken": "four minus one divided by one plus two is equal to a", "latex": "$\\frac{4-1}{1+2}=a$"}
+{"spoken": "x minus one times x minus two times x plus five", "latex": "$(x-1)(x-2)(x+5)$"}
+{"spoken": "x plus five", "latex": "$\\displaystyle x+5$"}
+{"spoken": "b over x minus 1 squared", "latex": "$\\frac{b}{(x-1)^{2}}$"}
+{"spoken": "negative a, plus 1, plus 1 3rd.", "latex": "$-a+1+\\frac{1}{3}$"}
+{"spoken": "1 squared divided by 1 squared plus 1,", "latex": "$1^{2}/(1^{2}+1)$"}
+{"spoken": " a times x squared plus 1", "latex": "$ax^{2}+1$"}
+{"spoken": "x cubed plus one", "latex": "$\\mathcal{x}^3+{1}$"}
+{"spoken": "x plus 1 times x squared plus x plus 1", "latex": "$(x+1)(x^{2}+x+1)$"}
+{"spoken": "half the argtangent", "latex": "$\\displaystyle \\frac{1}{2}\\arctan $"}
+{"spoken": "d by dx of natrual log of x squared plus 1 is 2x over x squared plus 1", "latex": "$\\frac{d}{dx}(\\ln(x^{2}+1))=\\frac{2x}{x^{2}+1}$"}
+{"spoken": "x cubed plus x squared minus 2x", "latex": "$x^{3}+x^{2}-2x$"}
+{"spoken": "b3 x plus c3 x squared plus 4 cubed", "latex": "$b_3 x+c_3 x^{2}+4^{3}$"}
+{"spoken": "r of x is equal to a11 x to the 11th plus a10 x to the 10th", "latex": "$r(x)=a_{11}x^{11}+a_{10}x^{10}$"}
+{"spoken": "x is equal to two tan u", "latex": "$x=2\\tan u$ "}
+{"spoken": "dx is 2 secant squared u du", "latex": "$dx= 2\\sec^{2}udu$"}
+{"spoken": "cosine squared of two u", "latex": "$\\cos^{2}(2u)$"}
+{"spoken": "u is a log x", "latex": "$u=\\log x$"}
+{"spoken": "u prime is one over x", "latex": "$u^{\\prime}= 1/x$"}
+{"spoken": "x log x minus x plus c", "latex": "$x\\log x-x+C$"}
+{"spoken": "log x squared", "latex": "$(\\log x)^{2}$"}
+{"spoken": "u prime is 2 log x times 1 over x", "latex": "$u^{\\prime}=2\\log x\\times 1/x$"}
+{"spoken": "u prime is n times log x to the n minus 1 times 1 over x", "latex": "$u^{\\prime}=n(\\log x)^{n-1}\\cdot\\frac{1}{x}$"}
+{"spoken": "log x to the zero power dx", "latex": "$\\log x^{0}dx$"}
+{"spoken": "x log x squared minus twice f one of x", "latex": "$x(\\log x)^{2}-2f_{1}(x)$"}
+{"spoken": "x to the n e to the x dx", "latex": "$x^{n}e^{x}dx$"}
+{"spoken": "n times g n minus 1 of x", "latex": "$n\\cdot g_{n-1}(x)$"}
+{"spoken": "x e to the x minus e to the x", "latex": "$\\displaystyle \\operatorname{xe^{x} - e^{x}}$"}
+{"spoken": "y log y squared minus 2y log y minus y", "latex": "$\\displaystyle y (\\log y)^{2}-2y\\log y-y$"}
+{"spoken": "2 pi e x dx", "latex": "$2\\pi exdx$"}
+{"spoken": "e times two pi times x", "latex": "$e^{(2\\pi x)}$"}
+{"spoken": "the integral of 2 pi x e minus e to the x dx", "latex": "$\\int2\\pi x (e - e^x)dx$"}
+{"spoken": "2 pi e integral of x dx from 0 to 1 minus 2 pi integral from 0 to 1 of x e to the x dx", "latex": "$\\displaystyle 2\\pi e\\int _{0}^{1} xdx - 2\\pi \\int _{0}^{1}xe^{x}dx$"}
+{"spoken": "delta x squared plus delta y squared", "latex": "$\\Delta x^{2}+\\Delta y^{2}$"}
+{"spoken": "1 plus dy dx the quantity squared", "latex": "$1+(\\frac{dy}{dx})^{2}$"}
+{"spoken": "the integral from a to b of the square root of 1 plus dy dx squared dx", "latex": "$\\int_{a}^{b}\\sqrt{1 +(\\frac{dy}{dx})^{2}}dx$"}
+{"spoken": "square root of 1 plus f prime of x squared dx", "latex": "$\\displaystyle \\sqrt{1+f^{\\prime}(x)^{2}}dx$"}
+{"spoken": "square root of 1 plus m squared", "latex": "$\\sqrt{1+m^{2}}$"}
+{"spoken": " the integral from 0 to 10 of the square root of 1 plus m squared dx", "latex": "$\\int_{0}^{10}\\sqrt{1+m^{2}}dx$"}
+{"spoken": "y equals square root of 1 minus x squared", "latex": "$y=\\sqrt{1-x^{2}}$"}
+{"spoken": "square root of 1 plus y prime squared dx", "latex": "$\\sqrt{1+(y^{\\prime})^2}dx$"}
+{"spoken": "1 plus the quantity minus x over square root of 1 minus x squared, squared", "latex": "$1+(-\\frac{x}{\\sqrt{1-x^{2}}})^{2}$"}
+{"spoken": " x squared over 1 minus x squared", "latex": "$\\frac{x^{2}}{1-x^{2}}$"}
+{"spoken": "sine inverse of a", "latex": "$\\sin^{-1}(a)$"}
+{"spoken": "y prime is 2x", "latex": "$y^{\\prime}=2x$"}
+{"spoken": "the square root of 1 plus the quantity 2x squared dx.", "latex": "$\\sqrt{1+(2x)^{2}}dx$"}
+{"spoken": "the integral from 0 to a of square root of 1 plus 4x squared dx", "latex": "$\\int_{0}^{a}\\sqrt{1+4x^{2}}dx$"}
+{"spoken": "dx is equal to a half secant squared u du", "latex": "$dx\\mathrel{\\mathop{}}=\\frac{1}{2}\\sec^{2}udu$"}
+{"spoken": "x equals a half tan u", "latex": "$x=\\frac{1}{2}\\tan u$"}
+{"spoken": " x squared over a squared minus x squared", "latex": "$x^{2}/a^{2}-x^{2}$"}
+{"spoken": "square root a squared minus x squared", "latex": "$\\sqrt{a^{2}-x^{2}}$"}
+{"spoken": "the square root of a squared over a squared minus x squared dx", "latex": "$\\sqrt{\\frac{a^{2}}{a^{2}-x^{2}}}dx$"}
+{"spoken": "x, y is equal to a cosine pi over 2, a sine pi over 2", "latex": "$\\displaystyle (x,y)=(a\\cos\\frac{\\pi}{2},a\\sin\\frac{\\pi}{2}).$"}
+{"spoken": " sine of pi over 2 is 1", "latex": "$\\sin\\frac{\\pi}{2}=1$"}
+{"spoken": " t equals pi over 2", "latex": "${t}=\\frac{\\pi}{2}$"}
+{"spoken": "t equals pi", "latex": "$\\mathcal{t}=\\pi$"}
+{"spoken": "ds squared is dx squared plus dy squared", "latex": "$ds^{2}=dx^{2}+dy^{2}$"}
+{"spoken": "the square root of minus a sine t squared plus a cosine t squared dt", "latex": "$\\displaystyle \\sqrt{-a\\sin^{2}(t)+a\\cos^{2}(t)}\\,dt$"}
+{"spoken": "the square root of a squared ", "latex": "$(\\sqrt{a^{2}})$"}
+{"spoken": "delta x delta t squared plus delta y delta t the quantity squared", "latex": "$\\displaystyle (\\frac{\\Delta x}{\\Delta t})^{2}+(\\frac{\\Delta y}{\\Delta t})^{2}$"}
+{"spoken": "d over dt squared", "latex": "$(\\frac{d}{dt})^{2}$"}
+{"spoken": "x is 2 sine t", "latex": "$x=2\\sin t$"}
+{"spoken": " 1 quarter of x squared plus y squared", "latex": "$1/4(x^{2}+y^{2})$"}
+{"spoken": "2 sine pi over 2", "latex": "$2\\sin\\frac{\\pi}{2}$"}
+{"spoken": "2 cosine t squared plus sine t", "latex": "$2(\\cos t)^{2}+\\sin t$"}
+{"spoken": "the square root of 4 cosine squared t plus sine squared t", "latex": "$\\sqrt{4\\cos^{2}t+\\sin^{2}t}$"}
+{"spoken": " y squared equals 1", "latex": "$\\displaystyle y^{2}=1$"}
+{"spoken": "ds squared equals dx squared plus dy squared", "latex": "$dx^{2}=dx^{2}+dy^{2}$"}
+{"spoken": "2pi times 2sine t", "latex": "$2\\pi\\cdot 2\\sin t$"}
+{"spoken": "theta equals negative pi over 4", "latex": "$\\theta=-\\frac{\\pi}{4}$"}
+{"spoken": "theta equals seven pi over four", "latex": "$\\theta=7\\pi/4$"}
+{"spoken": " r equals square root of 2", "latex": "$r=\\sqrt{2}$"}
+{"spoken": "r equals one over sine theta", "latex": "$r=1/\\sin\\theta$"}
+{"spoken": " x minus a squared plus y squared is equal to a squared", "latex": "$x-a^{2}+y^{2}~{}=~{}a^{2}$"}
+{"spoken": "r squared minus two a r cosine theta equals zero", "latex": "$r^{2}-2a\\,r\\cos\\theta=0$"}
+{"spoken": "minus pi over two is less than theta is less than pi over two", "latex": "$-\\frac{\\pi}{2}<\\theta<\\frac{\\pi}{2}$"}
+{"spoken": "pi a squared", "latex": "$(\\pi a^{2})$"}
+{"spoken": " delta theta divided by 2pi", "latex": "$\\Delta\\theta/2\\pi$"}
+{"spoken": "r is equal to 2a cosine theta", "latex": "$r\\mathrel{\\mathop{}}=2a\\,\\cos\\theta$"}
+{"spoken": "cosine of plus or minus pi over 2 is equal to 0", "latex": "$\\cos(\\pm\\frac{\\pi}{2})=0$"}
+{"spoken": "4a squared divided by 2", "latex": "$4a^{2}/2$"}
+{"spoken": " integral from minus pi over two pi over two cosine squared theta d theta", "latex": "$\\displaystyle \\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}\\cos^{2}\\theta d\\theta$"}
+{"spoken": " cosine 2 theta divided by 2", "latex": "$\\cos2\\theta \\over 2$"}
+{"spoken": "a squared times pi over 2 minus minus pi over 2", "latex": "$a^{2}(\\pi/2)-(-\\pi/2)$"}
+{"spoken": "sine pi", "latex": "$\\sin\\pi$"}
+{"spoken": " 2 cosine theta is equal to negative 1", "latex": "$2\\cos\\theta~{}=~{}-1$"}
+{"spoken": "r plus 2r cosine theta equals 1", "latex": "$r+2r\\cos\\theta=1$"}
+{"spoken": "one minus two r cosine theta", "latex": "$1-2r\\cos\\theta$"}
+{"spoken": "r squared equals 1 minus 2x squared", "latex": "$r^{2}=1-2x^{2}$"}
+{"spoken": "minus 3x squared plus y squared", "latex": "$-3x^{2}+y^{2}$"}
+{"spoken": "1 over a plus b cosine theta", "latex": "$\\frac{1}{a+b\\cos\\theta}$"}
+{"spoken": "dA dt is equal to a half r squared d theta dt", "latex": "$\\frac{dA}{dt}=\\frac{1}{2}r^{2}\\frac{d\\theta}{dt}$"}
+{"spoken": "e x plus 2 cubed", "latex": "$e(x+2)^{3}$"}
+{"spoken": "Ax plus b divided by x squared plus 2", "latex": "$(Ax+b)/(x^{2}+2)$"}
+{"spoken": "A2x plus B2 x squared plus 2 squared plus c over x plus d", "latex": "$\\frac{A2x + B2}{(x^{2}+2)^{2}}+\\frac{C}{x}+D$"}
+{"spoken": "u prime is equal to 1 over 1 plus x squared", "latex": "$u^{\\prime}=\\frac{1}{1+x^{2}}$"}
+{"spoken": "v is equal to x squared over two", "latex": "$v=\\frac{x^{2}}{2}$"}
+{"spoken": "x squared over 2 tan inverse x", "latex": "$\\frac{x^{2}}{2}\\tan^{-1}x$"}
+{"spoken": "a half x minus a half tan inverse x", "latex": "$\\frac{1}{2}x-\\frac{1}{2}\\tan^{-1}x$"}
+{"spoken": "x log x", "latex": "$x\\log{x}$"}
+{"spoken": " x to the 10th minus 1", "latex": "$x^{10}-1$"}
+{"spoken": "x squared minus 1", "latex": "$\\displaystyle x^{2}-1$"}
+{"spoken": "f of x divided by g of x", "latex": "$\\frac{f(x)}{g(x)}$"}
+{"spoken": " f of x divided by x minus a", "latex": "$\\frac{f(x)}{x-a}$"}
+{"spoken": "sine five x divided by sine two x", "latex": "$\\sin 5x/\\sin 2x$"}
+{"spoken": "five cosine five x divided by two cosine two x", "latex": "$5\\cos(5x)/2\\cos(2x)$"}
+{"spoken": "cosine x minus 1 divided by x squared", "latex": "$(\\cos x-1)/x^{2}$"}
+{"spoken": "sine of five x divided by sine of 2x", "latex": "$\\sin(5x)/\\sin(2x)$"}
+{"spoken": "1 minus x squared over 2", "latex": "$1-x^{2}/2$"}
+{"spoken": "a 3rd x to the minus 2 3rds", "latex": "$\\frac{1}{3}x^{-2/3}$"}
+{"spoken": "x to the x is equal to e to the x log x", "latex": "$x^{x}=e^{x\\log x}$"}
+{"spoken": " sine x over x squared", "latex": "$\\sin(x)/x^{2}$"}
+{"spoken": "1 plus 2 over x plus 1 over x to the 5th power", "latex": "$1+2/x+1/x^{5}$"}
+{"spoken": "1 over 1 over x", "latex": "$\\frac{1}{1/x}$"}
+{"spoken": " x to the 5th over x to the 4th", "latex": "$\\frac{x^{5}}{x^{4}}$"}
+{"spoken": "one over x to the power p", "latex": "$\\frac{1}{x^{p}}$"}
+{"spoken": "dx over x to the pth power", "latex": "$\\frac{dx}{x^{p}}$"}
+{"spoken": " 1 over minus p plus 1", "latex": "$\\frac{1}{p-1}$"}
+{"spoken": "integral from 0 to infinity dx over the square root of x squared plus 10", "latex": "$\\displaystyle \\int_{0}^{\\infty}\\frac{dx}{\\sqrt{x^{2}+10}}$"}
+{"spoken": "integral from 0 to 1 dx over square root of x squared plus 10", "latex": "$\\int_{0}^{1}\\frac{dx}{\\sqrt{x^{2}+10}}$"}
+{"spoken": " 1 over the square root of x cubed plus 3 ", "latex": "$1/\\sqrt{x^{3}+3}$"}
+{"spoken": "1 over the square root of x cubed", "latex": "$\\frac{1}{\\sqrt{x^{3}}}$"}
+{"spoken": "one over x to the three halves", "latex": "$\\frac{1}{x^{3/2}}$"}
+{"spoken": " x to the one half times two", "latex": "$x^{\\frac{1}{2}}(2)$"}
+{"spoken": "1 over x squared", "latex": "$\\frac{1}{x^{2}}$"}
+{"spoken": "y equals 1 over x", "latex": "$y=\\frac{1}{x}$"}
+{"spoken": " y equals one over x to the one-half", "latex": "$\\operatorname{y}=\\frac{1}{x^{1/2}}$"}
+{"spoken": " y equals 1 over x minus 3 squared", "latex": "$y=\\frac{1}{(x-3)^{2}}$"}
+{"spoken": "the integral from zero to infinity dx over x minus three squared", "latex": "$\\displaystyle \\int_{0}^{\\infty}\\frac{dx}{(x-3)^{2}}$"}
+{"spoken": "1 plus a plus a squared", "latex": "$\\mathrm{{1}+a+a^{2}}$"}
+{"spoken": "1 over 1 minus a", "latex": "$\\frac{1}{1-a}$"}
+{"spoken": " sum 1 over n squared n equals 1 to infinity", "latex": "$\\sum_{n=1}^{\\infty}{1/n^{2}}$"}
+{"spoken": "pi squared over 6", "latex": "$\\frac{\\pi^{2}}{6}$"}
+{"spoken": " 1 over n cubed", "latex": "$\\frac{1}{n^{3}}$"}
+{"spoken": "1 plus 1 over 2 plus all the way up to 1 over n minus 1 plus 1 over n", "latex": "$1+\\frac{1}{2}+\\mathrm{\\ldots}+\\frac{1}{n-1}+\\frac{1}{n}$"}
+{"spoken": "sum 1 over n squared plus 1 square root", "latex": "$\\sum\\frac{1}{\\sqrt{n^{2} + 1}}$ "}
+{"spoken": "1 over n to the 5th square root", "latex": "$(1/\\sqrt{n^{5}})$"}
+{"spoken": "n plus 1 times c n plus 1 divided by n plus 1", "latex": "$(n+1)c_{n+1}/(n+1)$"}
+{"spoken": "1 over 1 minus x", "latex": "$\\frac{1}{1-x}$"}
+{"spoken": "s times one minus x", "latex": "$s\\cdot(1-x)$"}
+{"spoken": " minus r less than x less than r", "latex": "$-r<x<r$"}
+{"spoken": " sum a n x to the n", "latex": "$\\sum {a_n}x^{n}$"}
+{"spoken": " a1 x squared over 2", "latex": "$\\frac{\\mathbb{a_1} x^{2}}{2}$"}
+{"spoken": "a zero plus a one x plus a two x squared plus a three x cubed plus dot dot dot", "latex": "$\\displaystyle \\mathcal{a}_{0}+\\mathcal{a}_{1}x+\\mathcal{a}_{2}x^{2}+\\mathcal{a}_{3}x^{3}+\\cdots$"}
+{"spoken": " a n is equal to f nth derivative divided by n factorial", "latex": "$a_n\\mathrel{\\mathop{}}=\\frac{f^{n}}{n!}$"}
+{"spoken": "the sum n equals 0 to infinity of 1 divided by n factorial x to the n", "latex": "$\\sum_{n=0}^{\\infty}\\frac{1}{n!}x^{n}$"}
+{"spoken": " x minus x cubed over 3 factorial plus x to the 5th over 5 factorial", "latex": "$x-\\frac{x^{3}}{3!}+\\frac{x^{5}}{5!}$"}
+{"spoken": "x to the seventh over seven factorial", "latex": "$x^{7}/7!$"}
+{"spoken": "x to the fourth over four factorial", "latex": "$x^{4}/4!$"}
+{"spoken": "1 over 2 factorial times x squared plus 1 over 3 factorial times x cubed ", "latex": "$\\displaystyle{1\\over2!}x^{2}+{1\\over3!}x^{3}$"}
+{"spoken": "1 over 1 plus x", "latex": "$\\frac{1}{1+x}$"}
+{"spoken": "x over 2n plus 1", "latex": "$\\frac{x}{2n+1}$"}
+{"spoken": "x times the sine of x", "latex": "$x\\mathinner{\\sin\\left(x\\right)}$"}
+{"spoken": "x squared minus x to the fourth over three factorial plus x to the sixth over five factorial", "latex": "$x^{2}-\\frac{x^{4}}{3!}+\\frac{x^{6}}{5!}$"}
+{"spoken": "the integral from zero to x of dt over one plus x", "latex": "$\\int_{0}^{x}\\frac{dt}{1+x}$"}
+{"spoken": " 1 minus t plus t squared minus t cubed ", "latex": "$1-t+t^{2}-t^{3}$"}
+{"spoken": "x minus x squared over two plus x cubed over three minus x to the fourth over four", "latex": "$x-x^{2}/2+x^{3}/3-x^{4}/4$"}
+{"spoken": "x equals minus t squared", "latex": "$x=-t^{2}$"}
+{"spoken": "t to the fourth over two factorial", "latex": "$\\frac{t^{4}}{2!}$"}
+{"spoken": "two over the square root of pi ", "latex": "$2/\\sqrt{\\pi}$"}
+{"spoken": " integral of e to the minus t squared dt from 0 to x", "latex": "$\\int_{0}^{x}(e^{-t^{2}})dt$"}
+{"spoken": "x minus x cubed over 3 ", "latex": "$x-\\frac{x^{3}}{3}$"}
+{"spoken": "5 times 2 factorial", "latex": "$5\\cdot2!$"}
+{"spoken": "minus x to the seventh over seven times three factorial", "latex": "$-\\frac{x^{7}}{7\\cdot3!}$"}
+{"spoken": "z of t minus two equals minus three t", "latex": "$z(t-2)=-3t$"}
+{"spoken": "minus one plus two t", "latex": "$\\displaystyle -1+2t$"}
+{"spoken": "x plus two y plus four z equals seven", "latex": "$x+2y+4z=7$"}
+{"spoken": "x of t plus twice y of t plus four z of t", "latex": "$x(t)+2y(t)+4z(t)$"}
+{"spoken": "minus one plus two t plus twice two plus t plus four times two minus three t", "latex": "$-1+2t+2(2+t)+4(2-3t)$"}
+{"spoken": " minus 8t plus 11 equals 7", "latex": "$-8t+11=7$"}
+{"spoken": " minus one plus two t will be zero", "latex": "$-1+2t=0\\operatorname{}$"}
+{"spoken": "a minus a cosine theta", "latex": "$a-a\\cos\\theta$"}
+{"spoken": "x of theta is theta minus sine theta", "latex": "$x(\\theta)=\\theta-\\sin\\theta$"}
+{"spoken": "t squared over two ", "latex": "$\\frac{t^{2}}{2}$"}
+{"spoken": "theta minus theta cubed over six", "latex": "$\\theta-\\frac{\\theta-\\theta^{3}}{6}$"}
+{"spoken": " t minus sine t", "latex": "$t-\\sin t$"}
+{"spoken": "square root of one minus cosine t squared plus sine squared t", "latex": "$\\sqrt{1-\\cos^{2}t+\\sin^{2}t}$"}
+{"spoken": " square root of one minus two cosine t plus cosine squared t plus sine squared t", "latex": "$\\displaystyle \\sqrt{1-2\\cos t+\\cos^{2}t+\\sin^{2}t}$"}
+{"spoken": "square root of two minus two cosine t", "latex": "$\\sqrt{2-2\\cos t}$"}
+{"spoken": "F equals ma", "latex": "$\\mathcal{F}=\\mathcal{ma}$"}
+{"spoken": " v divided by magnitude of v", "latex": "$v/||v||$"}
+{"spoken": " uv prime equals u prime v plus u v prime ", "latex": "$(uv)^{\\prime}=u^{\\prime}v+uv^{\\prime}$"}
+{"spoken": "dr dt cross v plus r cross dv dt", "latex": "$\\displaystyle\\frac{d\\mathbf{r}}{dt}\\times\\mathbf{v}+\\mathbf{r}\\times\\frac{d\\mathbf{v}}{dt}$"}
+{"spoken": "determinant of A is not zero", "latex": "$\\det(A)\\neq0$"}
+{"spoken": " x plus 3y plus z equals zero", "latex": "$x+3y+z=0.$"}
+{"spoken": " x plus y equals zero", "latex": "$x+y=0$"}
+{"spoken": " minus 2x minus z will be x plus 3y plus z", "latex": "$-2x-z\\operatorname{=}x+3y+z$"}
+{"spoken": "x plus y plus two z", "latex": "$\\displaystyle x+y+2z$"}
+{"spoken": "dr dt dot r plus r dot dr dt", "latex": "$\\frac{dr}{dt}\\cdot r+r\\cdot\\frac{dr}{dt}$"}
+{"spoken": "r dot v is zero", "latex": "$\\displaystyle \\mathbf{r}\\cdot\\mathbf{v}=0$"}
+{"spoken": "r is perpendicular to v", "latex": "$\\displaystyle \\textbf{r}\\operatorname{\\perp} \\mathcal{v}$"}
+{"spoken": "dr dt is v dot v plus r dot dv dt is going to be zero", "latex": "$ \\frac{dr}{dt}=v{{\\cdot}}v+r\\cdot\\frac{dv}{dt}=0$"}
+{"spoken": " f of x y equals one over x plus y", "latex": "$f(x,y)=\\frac{1}{x+y}$"}
+{"spoken": "z equals f of x y", "latex": "${z}=f(x,y)$"}
+{"spoken": "f of x, y equals one minus x squared minus y squared", "latex": "$f(x,y)=1-x^{2}-y^{2}$"}
+{"spoken": "z equals one minus x squared minus y squared", "latex": "$z=1-x^{2}-y^{2}$"}
+{"spoken": "f of x y equals minus y", "latex": "$f(x,y)=-y$"}
+{"spoken": "x squared plus y squared equals zero", "latex": "$x^{2}+y^{2}=0$"}
+{"spoken": "f prime at x0 times delta x", "latex": "$f^{\\prime}(x_{0})\\times\\Delta x$"}
+{"spoken": "x0 plus h", "latex": "$\\mathcal{x}_{0}+h$"}
+{"spoken": " z0 plus a times x minus x0 plus b times y minus y0", "latex": "$z_0+a(x-x_0)+b(y-y_0)$"}
+{"spoken": " x squared minus 2xy", "latex": "$x^{2}-2xy$"}
+{"spoken": " x minus y squared", "latex": "$(x -y^{2})$"}
+{"spoken": "2x minus 2y", "latex": "$\\displaystyle 2x-2y$"}
+{"spoken": " twice x minus y", "latex": "$2\\mathrm{(x - y)}$"}
+{"spoken": " x minus y plus one squared", "latex": "$(x-y+1)^{2}$"}
+{"spoken": "axi plus b", "latex": "$\\mathtt{ax_i+b}$"}
+{"spoken": " yi minus axi", "latex": "$y_{i}-ax_{i}$ "}
+{"spoken": "xi squared times a plus xi times b ", "latex": "$x_i^2\\times a+x_i\\times b$"}
+{"spoken": "sum of xi yi", "latex": "$\\mathsf{\\sum_{i}(x_{i} y_{i})}$"}
+{"spoken": " y equals a constant times exponential of a times x", "latex": "$y=\\text{c}\\exp(ax)$"}
+{"spoken": "a x squared plus b x plus c", "latex": "$ax^{2}+bx+c$"}
+{"spoken": "a x squared plus b xy plus c y squared", "latex": "$ay^{2}+bxy+cy^{2}$"}
+{"spoken": "x squared plus 2xy", "latex": "$x^{2}+2xy$"}
+{"spoken": "a times x squared plus b over a xy", "latex": "$a(x^{2}+\\frac{b}{a}xy)$"}
+{"spoken": "b squared over 4a y squared", "latex": "$\\frac{b^2}{4a}y^{2}$"}
+{"spoken": "a times x squared plus a times 2xb over 2ay", "latex": "$ax^{2}+a\\frac{2xb}{2ay}$"}
+{"spoken": "b squared over 4 a squared y squared plus cy squared minus b squared over 4 a y squared", "latex": "$\\displaystyle \\frac{b^{2}}{4a^{2}}y^{2}+cy^{2}-\\frac{b^{2}}{4a}y^{2}$"}
+{"spoken": "one over four a", "latex": "$\\frac{1}{4a}$"}
+{"spoken": "four ac minus b squared y squared", "latex": "$4ac-b^{2}y^{2}$"}
+{"spoken": "u equals x plus b over two ay", "latex": "$u =x+\\frac{b}{2a}y$ "}
+{"spoken": "four a c minus b squared equals zero", "latex": "$4ac-b^{2}=0$"}
+{"spoken": " f of x equals x to the five", "latex": "$f(x)=x^{5}$"}
+{"spoken": " a times x plus b over 2a times y squared", "latex": "$\\displaystyle a(x+\\frac{b}{2a}y)^{2}$"}
+{"spoken": "y squared times a times x over y squared", "latex": "$y^{2}a(x/y)^{2}$"}
+{"spoken": "a t squared plus b t plus c", "latex": "$at^{2}+bt+c$"}
+{"spoken": "ax over y squared plus bx over y plus c", "latex": "$a(x/y)^{2}+b(x/y)+c$ "}
+{"spoken": "w sub y is bx plus 2cy", "latex": "$w_y=bx+{2}cy$"}
+{"spoken": " x minus x zero squared", "latex": "$(x-x_{0})^{2}$"}
+{"spoken": "f sub xy times change in x times change in y plus one half of fyy times y minus y0 squared", "latex": "$\\displaystyle f_{xy}\\cdot\\Delta x\\cdot\\Delta y+\\frac{1}{2}f_{yy}(y-y_{0})^{2}$"}
+{"spoken": " f of x y equals x plus y plus 1 over xy", "latex": "$f(x,y)=x+y+\\frac{1}{xy}$"}
+{"spoken": "two over x cubed y", "latex": "$\\operatorname{\\frac{2}{(x^{3}y)}}$"}
+{"spoken": " two over xy cubed", "latex": "$\\frac{2}{xy^{3}}$"}
+{"spoken": "dy equals f prime of x times dx", "latex": "$dy=f^{\\prime}(x)dx$"}
+{"spoken": "dy over dx is going to be one over cosine y", "latex": "$\\mathrm{\\frac{\\mathrm{d}y}{dx}}\\rightarrow\\frac{1}{\\cos y}$"}
+{"spoken": "one over square root of one minus x squared", "latex": "$\\frac{1}{\\sqrt{(1-x^{2})}}$"}
+{"spoken": "df equals f sub x dx plus f sub y dy plus f sub z dz", "latex": "$df=f_{x}dx+f_{y}dy+f_{z}dz$"}
+{"spoken": "partial f partial x dx plus partial f partial y dy plus partial f over partial z dz", "latex": "$\\displaystyle \\frac{\\partial f}{\\partial x}dx+\\frac{\\partial f}{\\partial y}dy+\\frac{\\partial f}{\\partial z}dz$"}
+{"spoken": "delta y plus fz delta z ", "latex": "$\\displaystyle \\Delta y+f(z)\\Delta z$"}
+{"spoken": "df dt equals f sub x dx dt plus f sub y dy dt plus f sub z dz dt", "latex": "$\\frac{df}{dt}=f_{x}\\frac{dx}{dt}+f_{y}\\frac{dy}{dt}+f_{z}\\frac{dz}{dt}$ "}
+{"spoken": "df is f sub x dx plus f sub y dy plus f sub z dz", "latex": "$\\displaystyle df = f_{x}dx+f_{y}dy+f_{z}dz$"}
+{"spoken": " f sub x times x prime of t dt", "latex": "$f_{x}x^{\\prime}(t)dt$"}
+{"spoken": "f sub z z prime of t dt", "latex": "$f_{z}z^{\\prime}(t)dt$"}
+{"spoken": " x squared y plus z", "latex": "$\\mathsf{x}^{2}y+z$"}
+{"spoken": "w sub y is x squared times dy dt", "latex": "$w_{y}={x}^2\\frac{dy}{dt}$"}
+{"spoken": "2t e to the t plus t squared e to the t plus cosine t", "latex": "$2te^{t}+t^{2}e^{t}+\\cos t$"}
+{"spoken": "derivative of t squared is 2t ", "latex": "$\\displaystyle \\frac{d}{dt}t^{2}=2 t$"}
+{"spoken": "t squared times the derivative of e to the t ", "latex": "$\\displaystyle t^{2}\\cdot \\frac{d}{dt}{e}^{t}$"}
+{"spoken": "one over v times du dt ", "latex": "$\\displaystyle \\frac{1}{v}\\frac{du}{dt}$ "}
+{"spoken": " minus u over v squared times dv dt", "latex": "$-\\frac{u}{v^{2}}\\frac{dv}{dt}$"}
+{"spoken": "x sub u times du plus x sub v times dv", "latex": "$x_{u}du+x_{v}dv$"}
+{"spoken": " dy is y sub u du plus y sub v dv", "latex": "$\\displaystyle \\mathrm{d}y\\,\\ =y_u \\mathrm{d}u + y_{v}\\,\\mathrm{d}v$"}
+{"spoken": " f sub x times x sub u plus f sub y times y sub u ", "latex": "$\\displaystyle f_{x}x_{u}+f_{y}y_{u}$"}
+{"spoken": " f sub x times cosine theta plus f sub y times sine theta", "latex": "$f_{x}\\cdot\\cos \\theta+f_{y}\\cdot\\sin \\theta$"}
+{"spoken": "a one x plus a two y plus a three z equals c", "latex": "$a_1x+a_2y+a_3z=c$"}
+{"spoken": "x squared plus y squared minus z squared equals four ", "latex": "$x^{2}+y^{2}-z^{2}=4$"}
+{"spoken": "4x plus 2y minus 2z", "latex": "$4x+2y-2z$"}
+{"spoken": "two delta y minus two delta z equals zero", "latex": "$2\\Delta y-2\\Delta z= $"}
+{"spoken": "x minus two", "latex": "$\\displaystyle x-2$"}
+{"spoken": "two times y minus one minus two times z minus one equals zero", "latex": "$2(y-1)-2(z-1)=0$"}
+{"spoken": " y of s equals y0 plus b times s", "latex": "$y(s)=y_{0}+bs$"}
+{"spoken": "gradient w dot u", "latex": "$\\nabla w \\cdot \\mathbf{u}$"}
+{"spoken": "PV equals nRT", "latex": "$\\mathrm{PV}=\\mathrm{nRT}$"}
+{"spoken": "square root of x squared plus y squared", "latex": "$\\sqrt{x^{2}+y^{2}}$"}
+{"spoken": "f sub z equals lambda g sub z", "latex": "$f_{z}=\\lambda g_{z}$"}
+{"spoken": "f sub y equals lambda g sub y", "latex": "$f_{y}=\\lambda g_{y}$"}
+{"spoken": "f sub y is 2y ", "latex": "$f_{y}=2{y}$"}
+{"spoken": "g sub y is x", "latex": "$g_{y}=x$"}
+{"spoken": "g equals c", "latex": "$g = c$"}
+{"spoken": "x squared plus nine over x squared", "latex": "$x^{2}+\\frac{9}{x^{2}}$"}
+{"spoken": "2x minus lambda y equals zero", "latex": "$2x-\\lambda y=0$"}
+{"spoken": "lambda minus two times xy equals zero", "latex": "$\\lambda-2xy=0$"}
+{"spoken": "negative four plus lambda squared", "latex": "$-4+\\lambda^{2}$"}
+{"spoken": "lambda squared equals four", "latex": "$\\lambda^{2}=4$"}
+{"spoken": "lambda is plus or minus two", "latex": "$\\lambda=\\pm2$"}
+{"spoken": " x squared equals three", "latex": "$\\displaystyle x^{2}=3$"}
+{"spoken": "one half of a1u1 ", "latex": "$\\frac{1}{2}a_1u_1$"}
+{"spoken": "partial f over partial u one", "latex": "$\\partial f \\over \\partial u_{1}$"}
+{"spoken": "2x dx ", "latex": "$2x, \\mathrm{d}x$"}
+{"spoken": "x equals two", "latex": "$\\mathcal{x}=2$"}
+{"spoken": "y plus 3z squared", "latex": "$y+3z^{2}$"}
+{"spoken": "dz equals minus one over six times four dx plus dy", "latex": "$dz=-\\frac{1}{6}(4dx+dy)$"}
+{"spoken": "partial z over partial x is minus four over six", "latex": "$\\displaystyle \\frac{\\partial z}{\\partial x} = -\\frac{4}{6}$"}
+{"spoken": "dz equals minus four sixth dx", "latex": "$dz=-4x^{6}dx$"}
+{"spoken": "partial z over partial x is minus gx over gz", "latex": "$\\frac{\\partial z}{\\partial x} = -\\frac{{g}_{x}}{{g}_{z}}$"}
+{"spoken": "b is a over cosine theta", "latex": "$\\displaystyle \\mathcal{b} = \\frac{a}{\\cos\\theta}$"}
+{"spoken": "one half of a squared tangent theta", "latex": "$\\frac{1}{2}a^{2}\\tan\\theta$"}
+{"spoken": "zero equals dA equals cosine theta dB minus B sine theta d theta", "latex": "$0=dA=\\cos\\theta dB-B\\sin\\theta d\\theta$"}
+{"spoken": " a equals one half ab sine theta", "latex": "$A=\\frac{1}{2}ab\\sin\\theta$"}
+{"spoken": "one half of ab times sine theta times tangent theta plus cosine theta d theta.", "latex": "$\\displaystyle \\frac{1}{2}ab\\sin \\theta\\tan \\theta+\\cos \\theta\\, d\\theta$"}
+{"spoken": "dg is g sub x dx plus g sub y dy plus g sub z dz", "latex": "$dg =g_{x}dx+g_{y}dy+g_{z}dz$"}
+{"spoken": " minus fx gz over gx plus fz", "latex": "$-f_x\\frac{gz}{gx}+fz$"}
+{"spoken": "minus g sub z over g sub x, plus partial f over partial z", "latex": "$-\\frac{g_{z}}{g_{x}}+\\frac{\\partial f}{\\partial z}$"}
+{"spoken": "gradient F dot product with u", "latex": "$\\nabla F\\cdot\\mathbf{u}$"}
+{"spoken": " partial h partial y is less than zero", "latex": "$\\partial h/\\partial y<0$"}
+{"spoken": "the integral of x squared is x squared times y", "latex": "$\\int x^{2}dx = x^{2}y$"}
+{"spoken": "the integral of y squared is y cubed over three", "latex": "$\\int y^{2}dy=\\frac{y^{3}}{3}$"}
+{"spoken": "one minus x squared minus one-third ", "latex": "$1-x^{2}-\\frac{1}{3}$"}
+{"spoken": "two thirds x minus one-third x cubed ", "latex": "$\\frac{2}{3}x-\\frac{1}{3}x^{3}$"}
+{"spoken": "y is square root of one minus x squared", "latex": "$y=\\sqrt{1-x^{2}}$"}
+{"spoken": "y minus x squared y minus y cubed over three ", "latex": "$y-x^{2}y-\\frac{y^{3}}{3}$"}
+{"spoken": " root of one minus x squared minus x squared root of one minus x squared minus y minus x squared to the three halves over three", "latex": "$\\displaystyle \\sqrt{1-x^{2}}-x^{2}\\sqrt{1 - x^{2}}-\\frac{(1-x^{2})^\\frac{3}{2}}{3}$"}
+{"spoken": "square root of one minus x squared will be cosine theta", "latex": "$\\sqrt{1-x^{2}}=\\cos\\theta$"}
+{"spoken": "x squared to a three halves", "latex": "$x^{3/2}$ "}
+{"spoken": " two thirds times the integral from zero to pi over two of cosine to the four theta d theta", "latex": "$\\displaystyle \\frac{2}{3}\\int_{0}^{\\pi/2}\\cos^{4}\\theta d\\theta$"}
+{"spoken": "one plus cosine two theta over two", "latex": "$\\frac{1+ \\cos{(2\\theta)}}{2}$"}
+{"spoken": " one quarter plus one half cosine two theta plus one quarter cosine squared two theta ", "latex": "$\\displaystyle 1/4+1/2\\cos2\\theta+1/4\\cos^{2}2\\theta$ "}
+{"spoken": " integral from zero to one of integral from x to square root of x of e to the y over y dy dx", "latex": "$\\displaystyle \\int_{0}^{1}\\int_{x}^{\\sqrt{x}}\\frac{e^{y}}{y}dydx$"}
+{"spoken": " integral from zero to one of e to the y minus y e to the y dy", "latex": "$\\int_{0}^{1}e^{y}-ye^{y}dy$"}
+{"spoken": "r minus r cubed", "latex": "$(r-r^{3})$"}
+{"spoken": " one-half mr squared omega squared", "latex": "$\\frac{1}{2}mr^{2}\\omega^{2}$"}
+{"spoken": "x squared plus y squared", "latex": "$x^{2}+y^{2}$"}
+{"spoken": "pi a to the 4 over 2", "latex": "$\\frac{\\pi a^{4}}{2}$"}
+{"spoken": "r equals 2a cosine theta", "latex": "$r=2a\\cos\\theta$"}
+{"spoken": "4a to the four cosine to the four theta", "latex": "$4a^{4}\\cos^{4}\\theta$"}
+{"spoken": " three halves of pi a to the fourth", "latex": "$\\frac{3}{2}(\\pi a^{4})$"}
+{"spoken": "x over a squared plus y over b squared equals one", "latex": "$x/a^{2}+y/b^{2}=1$"}
+{"spoken": "u squared plus v squared less than 1", "latex": "$u^{2}+v^{2}<1$"}
+{"spoken": "u equals x over a", "latex": "$u = \\frac{\\mathcal{x}}{\\mathcal{a}}$"}
+{"spoken": "du is one over a dx", "latex": "$\\mathrm{d}u = \\frac{1}{a}\\mathrm{d}x$"}
+{"spoken": " dv is one over b dy", "latex": "$\\displaystyle dv = \\frac{1}{b} \\,dy$"}
+{"spoken": "du dv is one over ab dx dy", "latex": "$\\mathrm{d}u\\mathrm{d}v= \\frac{1}{ab}\\mathrm{d}x\\mathrm{d}y$"}
+{"spoken": "u equals 3x minus 2y ", "latex": "$u=3x-2y,$"}
+{"spoken": "v equals x plus y", "latex": "$\\displaystyle v=x+y$"}
+{"spoken": "v sub x delta x plus v sub y delta y", "latex": "$v_{x}\\Delta x+v_{y}\\Delta y$"}
+{"spoken": "x equals r cosine theta", "latex": "$x=r\\cos\\theta$"}
+{"spoken": "r cosine squared theta plus r sine squared theta", "latex": "$r\\cos^{2}\\theta+r\\sin^{2}\\theta$"}
+{"spoken": "y equals t squared", "latex": "$y=t^{2}.$"}
+{"spoken": "the integral along C of F dot dr", "latex": "$\\int_{C}\\mathbf{F}\\cdot d\\mathbf{r}$"}
+{"spoken": "negative t squared plus 2t squared", "latex": "$-t^{2}+2t^{2}$"}
+{"spoken": "integral from zero to one of t squared dt", "latex": "$\\int_{0}^{1}t^{2}dt$"}
+{"spoken": "dr dt times dt", "latex": "$\\frac{dr}{dt}\\times dt$"}
+{"spoken": "M dx plus N dy", "latex": "$M\\,dx+N\\,dy$"}
+{"spoken": "negative y is minus t squared", "latex": "$ -y=-t^{2}$"}
+{"spoken": "dy equals 2x dx.", "latex": "$dy=2xdx$"}
+{"spoken": "y equals sine squared theta", "latex": "$y=\\sin^{2}\\theta$"}
+{"spoken": "y equals x squared", "latex": "$\\displaystyle y=x^{2}$"}
+{"spoken": "dy equals 2x dx", "latex": "$dy=2xdx$"}
+{"spoken": "F dot t dS", "latex": "$(F\\cdot t dS)$"}
+{"spoken": " x cubed plus y to the fifth", "latex": "$x^{3}+y^{5}$"}
+{"spoken": "xi plus yj", "latex": "$x\\mathbf{i}+y\\mathbf{j}$"}
+{"spoken": " integral of x dx plus y dy", "latex": "$\\int x\\,dx+y\\,dy$"}
+{"spoken": "2pi a squared", "latex": "$2\\pi a^{2}$"}
+{"spoken": "dx is negative a sine theta d theta", "latex": "$dx=-a\\sin\\theta d\\theta$"}
+{"spoken": " integral from 0 to 2pi of a squared times sine squared theta plus cosine squared theta d theta", "latex": "$\\displaystyle \\int_{0}^{2\\pi}a^{2}(\\sin^{2}\\theta+\\cos^{2}\\theta)d\\theta$"}
+{"spoken": "one-half of sine two theta", "latex": "$\\frac{1}{2}(\\sin2\\theta)$"}
+{"spoken": " f sub x dx plus f sub y dy", "latex": "$f_{x}dx+f_{y}dy$"}
+{"spoken": "dx becomes x prime of t dt", "latex": "$\\displaystyle d\\mathbf{x}=\\mathbf{x}^{\\prime}(t)dt$"}
+{"spoken": "dy becomes y prime of t dt", "latex": "$dy=y^{\\prime}(t)dt$"}
+{"spoken": " the integral of f sub x times dx  dt plus f sub y times dy dt", "latex": "$\\int f_{x}\\frac{dx}{dt}+f_{y}\\frac{dy}{dt}$ "}
+{"spoken": " integral from t0 to t1 of dF dt dt", "latex": "$\\displaystyle \\int_{t_{0}}^{t_{1}}\\frac{dF}{dt}dt$"}
+{"spoken": "three y squared plus four x squared", "latex": "$3y^{2}+4x^{2}$"}
+{"spoken": "four x squared plus eight xy", "latex": "$4x^{2}+8xy$"}
+{"spoken": " four thirds x one cubed", "latex": "$\\frac{4}{3}x_{1}^{3}$"}
+{"spoken": "y cubed plus 4x1 squared y ", "latex": "$y^{3}+4x_1^{2}y$"}
+{"spoken": "f of x one and y one is four thirds x one cubed plus y one cubed plus four x one squared y one", "latex": "$\\displaystyle f(x_{1},y_{1})=\\frac{4}{3}x_{1}^{3}+y_{1}^{3}+4x_{1}^{2}y_{1}$"}
+{"spoken": "4 x squared plus 8xy", "latex": "$4x^{2}+8xy$"}
+{"spoken": "f sub y is three y squared plus four x squared", "latex": "$f_{y}=3y^{2}+4x^{2}$"}
+{"spoken": "line integral along C of y e to the minus x dx plus one-half of x squared minus e to the minus x dy", "latex": "$\\displaystyle \\oint_{C}({y}e^{-x})dx+(\\frac{1}{2}x^{2}-e^{-x})dy$"}
+{"spoken": "x equals two plus cosine theta", "latex": "$x=2+\\cos\\theta$"}
+{"spoken": "dx equals minus sine theta d theta", "latex": "$dx=-\\sin\\theta d\\theta$"}
+{"spoken": "Nx minus My dA", "latex": "$\\displaystyle (Nx - My)dA$"}
+{"spoken": "y equals f2 of x", "latex": "$y =\\mathcal{f}_{2}(x)$"}
+{"spoken": "integral from b to a of M of x and f2 of x dx", "latex": "$\\displaystyle \\int_{b}^{a}M(x)(f_{2}(x))dx$"}
+{"spoken": "M of x f two of x minus M of x f one of x", "latex": "$\\displaystyle (M(x)f_{2}(x))-(M(x)f_{1}(x))$"}
+{"spoken": "square root of x squared plus y squared", "latex": "$\\sqrt{x^{2}+y^{2}}$"}
+{"spoken": "the double integral of P sub x plus Q sub y dA", "latex": "$\\iint(P_{x}+Q_{y})dA$ "}
+{"spoken": "minus yi plus xj over x squared plus y squared", "latex": "$\\frac{-yi+{xj}}{x^{2}+y^{2}}$"}
+{"spoken": "u equals one plus t squared", "latex": "$u=1+t^{2}$"}
+{"spoken": "the curl of f which is Nx minus My", "latex": "$\\displaystyle \\operatorname{\\nabla}\\times F=Nx-My$"}
+{"spoken": "xy minus x squared", "latex": "$xy-x^{2}$"}
+{"spoken": "z equals x squared plus y squared", "latex": "$z=x^{2}+y^{2}$"}
+{"spoken": "z equals four minus x squared minus y squared", "latex": "$z=4-x^{2}-y^{2}$"}
+{"spoken": "two x squared plus two y squared less than four", "latex": "$2x^{2}+2y^{2}<4$"}
+{"spoken": "y is square root of two minus x squared", "latex": "$y=\\sqrt{2-x^{2}}$"}
+{"spoken": " plus minus root of two minus x squared", "latex": "$\\pm\\sqrt{2-x^{2}}$"}
+{"spoken": "x squared plus y squared plus z squared less than one", "latex": "$x^{2}+y^{2}+z^{2}<1$"}
+{"spoken": " z equals one minus y", "latex": "$\\displaystyle z=1-y$"}
+{"spoken": "z equals square root of one minus x squared minus y squared", "latex": "$z=\\sqrt{1-x^{2}-y^{2}}$"}
+{"spoken": "one minus y is less than square root of one minus x squared minus y squared", "latex": "$1-y<\\sqrt{1-x^{2}-y^{2}}$"}
+{"spoken": "negative square root of two y minus two y squared", "latex": "$-\\sqrt{2y-2y^{2}}$"}
+{"spoken": "rho times cosine phi", "latex": "$\\rho\\cos \\phi$"}
+{"spoken": "rho sine phi cos theta", "latex": "$\\rho\\sin\\phi\\cos\\theta$"}
+{"spoken": "rho sine phi sine theta. ", "latex": "$\\rho\\sin\\phi\\sin\\theta$"}
+{"spoken": " z is rho cos phi", "latex": "$z=\\rho\\cos\\phi$"}
+{"spoken": " rho is the square root of r squared plus z squared", "latex": "$\\rho=\\sqrt{r^{2}+z^{2}}$"}
+{"spoken": "phi equals pi over four", "latex": "$\\phi=\\frac{\\pi}{4}$"}
+{"spoken": " z equals r", "latex": "$\\mathcal{z}=\\mathcal{r}$"}
+{"spoken": "a squared sine phi d phi d theta", "latex": "$\\displaystyle a^{2}\\sin\\phi d\\phi d\\theta$"}
+{"spoken": "rho squared sine phi d rho d phi d theta", "latex": "$\\rho^2\\sin \\phi d\\rho d\\phi d\\theta$"}
+{"spoken": " z equals one over root two", "latex": "$z=1/\\sqrt{2}$"}
+{"spoken": "rho equals one over root two cosine phi", "latex": "$\\rho=\\frac{1}{\\sqrt{2}}\\cos{\\phi}$"}
+{"spoken": "one over root two times secant phi", "latex": "$\\frac{1}{\\sqrt{2}}\\cdot\\sec\\phi$"}
+{"spoken": "cos phi equals one over root two", "latex": "$\\cos\\phi=\\frac{1}{\\sqrt{2}}$"}
+{"spoken": "phi equals pi over four", "latex": "$\\phi=\\frac{\\pi}{4}$"}
+{"spoken": "two pi over three minus five pi over six root two", "latex": "$2\\pi/3-5\\pi/6\\sqrt{2}$"}
+{"spoken": "rho cubed over three", "latex": "$\\rho^{3}/3$"}
+{"spoken": "sine phi secant cubed phi", "latex": "$\\sin\\phi\\sec^{3}\\phi$"}
+{"spoken": " z over rho cubed delta dV", "latex": "$\\frac{z}{\\rho^{3}}\\Delta dV$"}
+{"spoken": "rho cosine phi over rho cubed", "latex": "$\\frac{\\rho\\cos\\phi}{\\rho^{3}}$"}
+{"spoken": "minus c times x y z over rho cubed", "latex": "$-\\frac{c(x,y,z)}{\\rho^{3}}$"}
+{"spoken": "xi yj zk ", "latex": "$\\displaystyle xi+yj+zk$"}
+{"spoken": "square root of x squared plus y squared plus z squared is equal to a ", "latex": "$\\sqrt{x^{2}+y^{2}+z^{2}}=a$"}
+{"spoken": "four pi a squared", "latex": "$4\\pi a^{2}$"}
+{"spoken": "z squared over a", "latex": "$\\frac{\\mathbb{z}^{2}}{a}$"}
+{"spoken": "dS equals a squared sine phi d phi d theta", "latex": "$dS=a^{2}\\sin\\phi d\\phi d\\theta$"}
+{"spoken": "cosine squared phi sine phi d phi", "latex": "$\\cos^{2}\\phi \\sin\\phi d\\phi $"}
+{"spoken": "four thirds pi a cubed", "latex": "$\\frac{4}{3}\\pi a^{3}$"}
+{"spoken": " f of x plus delta x and y", "latex": "$f(x+\\Delta x,y)$"}
+{"spoken": "f of x, y plus delta x times f sub x ", "latex": "$f(x,y)+\\Delta x\\cdot f_{x}$"}
+{"spoken": "f sub y times delta y", "latex": "$\\displaystyle f_y \\times\\Delta y$"}
+{"spoken": "z equals x squared plus y squared ", "latex": "$z=x^{2}+y^{2}$"}
+{"spoken": "partial r over partial u times delta u", "latex": "$\\displaystyle \\frac{\\partial r}{\\partial u}\\cdot\\Delta u$"}
+{"spoken": "z equals a cosine phi", "latex": "$z=a\\,\\cos\\phi$"}
+{"spoken": "delta A equals delta S times the cosine of alpha", "latex": "$\\Delta A=\\Delta S(\\cos\\alpha)$"}
+{"spoken": "delta S is going to be one over cosine alpha", "latex": "$\\Delta S=\\frac{1}{\\cos\\alpha}$"}
+{"spoken": "three times little n will be negative big N", "latex": "$3\\mathrm{n}=\\mathrm{-}\\mathrm{N}$"}
+{"spoken": "n over n dot i dy dz", "latex": "$\\displaystyle \\frac{n}{n\\cdot i}{dy}{dz}$"}
+{"spoken": "z minus f of x y", "latex": "$z-f(x,y)$"}
+{"spoken": "P sub x plus Q sub y plus R sub z", "latex": "$P_{x}+Q_{y}+R_{z}$ "}
+{"spoken": "four thirds pi a cubed", "latex": "$\\frac{4}{3}\\pi a^{3}$"}
+{"spoken": "partial u over partial x squared plus partial squared u over partial y squared plus partial squared u over partial z squared", "latex": "$\\displaystyle \\frac{\\partial u}{\\partial x^{2}}+\\frac{\\partial^{2}u}{\\partial y^ {2}}+\\frac{\\partial^{2}u}{\\partial z^{2}}$"}
+{"spoken": " partial u partial t is minus div F, which is therefore positive k times divergence of grad u", "latex": "$\\displaystyle \\frac{\\partial\\mathbf{u}}{\\partial t}=\\operatorname{-\\nabla}\\mathbf{F}=k\\operatorname{\\nabla}(\\operatorname{\\nabla}\\mathbf{u})$"}
+{"spoken": "dx is 3t2 dt", "latex": "$dx=3t^{2}dt$"}
+{"spoken": "dy will be 2t dt", "latex": "$\\displaystyle \\mathrm{d}\\mathrm{y}=2{t}{\\mathrm{d}t}$"}
+{"spoken": "the integral of yz dx plus xz dy plus xy dz", "latex": "$\\int yz\\,dx+xz\\,dy+xy\\,dz$"}
+{"spoken": "dx is 3t squared dt", "latex": "$\\displaystyle dx={3t}^{2}dt$"}
+{"spoken": "xy is t to the five", "latex": "$xy=t^{5}$"}
+{"spoken": "six t to the five", "latex": "$\\displaystyle 6t^{5}$"}
+{"spoken": "b y z squared minus 4z cubed ", "latex": "$byz^{2}-4z^{3}$"}
+{"spoken": "x squared plus z cubed", "latex": "$x^{2}+z^{3}$"}
+{"spoken": "three yz squared minus four z cubed", "latex": "$3yz^{2}-4z^{3}$"}
+{"spoken": " f sub x is two xy", "latex": "$f_{x}=2xy$"}
+{"spoken": "f equals x squared y plus g", "latex": "$f=x^{2}y+g$"}
+{"spoken": "yz cubed plus h of z", "latex": "$yz^{3}+h(z)$"}
+{"spoken": "zero plus three yz squared", "latex": "$0+3yz^{2}$"}
+{"spoken": "R sub y minus Q sub z times i plus P sub z minus R sub x times j ", "latex": "$(R_{y}-Q_{z})i+(P_{z}-R_{x})j$"}
+{"spoken": "partial over partial y of r minus partial partial z of q", "latex": "$\\displaystyle \\frac{\\partial}{\\partial y}(R)-\\frac{\\partial}{\\partial z}(Q)$"}
+{"spoken": "two to the n ", "latex": "$2^{\\mathcal{n}}$"}
+{"spoken": " 6 times 1 plus 4 plus 9 plus 16 plus 25 plus 36", "latex": "$6\\times(1+4+9+16+25+36)$"}
+{"spoken": "r over t times t", "latex": "$\\frac{r}{t}t$"}
+{"spoken": "two plus a half divided by two is one and a quarter.", "latex": "$(2+\\frac{1}{2})\\div2=1+\\frac{1}{4}$"}
+{"spoken": "x is c times the expected value of r", "latex": "$x =c\\cdot\\operatorname*{\\mathbb{E}}[r]$"}
+{"spoken": "u minus expected value of r over u minus x", "latex": "$\\displaystyle u - \\operatorname*{\\mathbb{E}}\\left[r\\right]\\over{u-x}$"}
+{"spoken": "1 over C squared plus 1", "latex": "$\\frac{1}{C^{2}+1}$"}
+{"spoken": " 1 over 2c squared", "latex": "$\\frac{1}{2c^{2}}$"}
+{"spoken": "z is c natural log of c plus 1", "latex": "$z=c\\ln(c)+1$"}
+{"spoken": "c minus 1 times the sum j equals 1 to n expected value of tj", "latex": "$(c-1)\\cdot\\sum_{j=1}^{n}\\mathbb{E}[t_j]$ "}
+{"spoken": "e to the minus c log of c plus c minus 1", "latex": "$e^{-(c\\log(c)+c-1)}$"}
+{"spoken": " negative c minus one", "latex": "$\\displaystyle -(c-1)$"}
+{"spoken": "dy dx equal y squared", "latex": "$\\frac{dy}{dx}=y^{2}$"}
+{"spoken": " y of x equals minus 1 over x plus c", "latex": "$y(x)=-\\frac{1}{x+c}$"}
+{"spoken": " y of x equals 1 over 1 minus x", "latex": "$y(x)=\\frac{1}{1-x}$"}
+{"spoken": "y dot plus ty equals to t", "latex": "$y\\dot{+}ty=t$"}
+{"spoken": "y of 0 equals to 3", "latex": "$y(0)=3$"}
+{"spoken": " u equals exponential of t squared over 2", "latex": "$u=\\exp(t^{2}/2)$"}
+{"spoken": " exponential of minus t squared over 2", "latex": "$\\exp(-t^{2}/2)$"}
+{"spoken": "3 equals to 1 plus c", "latex": "$3=1+c,$"}
+{"spoken": "exponential of t squared over 2 minus 1", "latex": "$\\exp(t^{2}/2)-1$"}
+{"spoken": " b modulus r ", "latex": "$b\\mod r$"}
+{"spoken": "pi over 2", "latex": "$\\frac{\\pi}{2}$"}
+{"spoken": "3i pi over 6 ", "latex": "$3i(\\pi/6)$"}
+{"spoken": "3 sine pi over 6", "latex": "$3\\sin(\\pi/6)$"}
+{"spoken": " 3 root of 3 over 2", "latex": "$3\\sqrt{\\frac{3}{2}}$"}
+{"spoken": "a plus ib ", "latex": "$a+\\mathrm{i}b$"}
+{"spoken": " 1 over minus 2 plus 3i", "latex": "$\\frac{1}{-2+3i}$"}
+{"spoken": " reverse tan of minus 3 over 2", "latex": "$\\tan^{-1}(-\\frac{3}{2})$"}
+{"spoken": "exponential 2n pi", "latex": "$\\exp(2n\\pi)$"}
+{"spoken": "0 modulus 2 pi", "latex": "$0\\mod2\\pi$"}
+{"spoken": "n equals to 2", "latex": "$(n\\!=\\!2)$"}
+{"spoken": "i dot i minus one", "latex": "$i(i-1)$"}
+{"spoken": "1 over k squared plus omega squared", "latex": "$\\frac{1}{k^{2}+\\omega^{2}}$"}
+{"spoken": "k sine omega t", "latex": "$k\\sin\\omega t$"}
+{"spoken": "cosine omega t plus three sine omega t", "latex": "$\\cos\\omega t+3\\sin\\omega t$"}
+{"spoken": " plus minus three omega cosine omega t", "latex": "$\\pm3\\omega\\cos\\omega t$"}
+{"spoken": " exponential of minus three t", "latex": "$\\exp(-3t)$"}
+{"spoken": " 8 root 4 minus 5i", "latex": "$8\\sqrt{4}-5{i}$"}
+{"spoken": " root 4 plus or minus 5i", "latex": "$\\mathrm{\\sqrt{4}}\\pm5i$"}
+{"spoken": "e 4t cosine 5t ", "latex": "$\\displaystyle e^{4t}\\cos(5t)$ "}
+{"spoken": "C1 exponential lambda 1 plus C2 exponential lambda 2", "latex": "$\\displaystyle C_{1}\\exp(\\lambda_{1})+C_{2}\\exp(\\lambda_{2})$"}
+{"spoken": "x dot of 0 equals to 0", "latex": "$\\dot{x}(0)={0}$"}
+{"spoken": "lambda1 c1 plus lambda2 c2 equals to 0", "latex": "$\\lambda_{1}C_{1}+\\lambda_{2}C_{2}=0$"}
+{"spoken": "log of minus c2 over c1", "latex": "$\\log{((-c_{2})/{c_{1}})}$"}
+{"spoken": " minus c2 over c1 is less than 1", "latex": "$-\\frac{c2}{c1}<1$"}
+{"spoken": " P D equals D squared plus 4i", "latex": "$P(D)=D^{2}+4i$"}
+{"spoken": "x dot dot plus 4x equal f0", "latex": "$x\\ddot{x}+4x=f0$"}
+{"spoken": " s squared plus 4", "latex": "$(s^{2}+4)$"}
+{"spoken": " s squared equal minus 4", "latex": "$s^{2}=-4$"}
+{"spoken": " 4 minus omega squared", "latex": "$4-\\omega^{2}$"}
+{"spoken": "exponential i omega t", "latex": "$\\exp(i\\omega t)$"}
+{"spoken": "omega equals to 2t", "latex": "$\\omega\\mathrm{=}2\\mathrm{t}$"}
+{"spoken": " delta t minus 2 exponential of t squared sine t cos 2t", "latex": "$\\delta(t-2)\\exp(t^{2})\\sin t\\cos 2t$"}
+{"spoken": "delta t exponential of t squared dt", "latex": "$\\delta(t)\\exp(t^{2})dt$"}
+{"spoken": "3u t minus 2u t minus 1", "latex": "$3u(t)-2u(t-1)$"}
+{"spoken": " exponential t squared dt", "latex": "$\\exp(t^{2})dt$"}
+{"spoken": "4 sine 2 cos 4", "latex": "$4\\sin2\\cos4$"}
+{"spoken": " f of t equals three u t", "latex": "$f(t)=3u(t)$"}
+{"spoken": " minus two u of t minus one", "latex": "$-2u(t-1)$"}
+{"spoken": " seven x dots plus three x equals f of t", "latex": "$7x\\dot{+}3x=f(t)$"}
+{"spoken": "minus 3C1 minus 1 half C2 equals to 0", "latex": "$-3C_{1}-\\frac{1}{2}C_{2}=0$"}
+{"spoken": "C2 exponential minus one half t minus exponential minus three t", "latex": "$\\displaystyle {C_2}(\\exp(-\\frac{1}{2}t)-\\exp(-3t))$"}
+{"spoken": " c1 equals minus 2", "latex": "$\\mathrm{c_1}=-2$"}
+{"spoken": "one minus exponential of minus two t", "latex": "$1-\\exp(-2t)$"}
+{"spoken": " i squared equals negative one", "latex": "$i^{2}=-1$"}
+{"spoken": "a squared plus b squared ", "latex": "$a^{2}+b^{2}$ "}
+{"spoken": "two plus i divided by one minus 3i", "latex": "$\\frac{2+i}{1-3i}$"}
+{"spoken": "one squared plus three squared", "latex": "$1^{2}+3^{2}$"}
+{"spoken": " r cosine theta plus i times r sine theta", "latex": "$r\\cos\\theta+i\\times r\\sin\\theta$"}
+{"spoken": "a to the x times a to the y equals a to the x plus y", "latex": "$a^{x}\\times a^{y}=a^{x+y}$"}
+{"spoken": "dy dt equals a times y", "latex": "$\\frac{dy}{dt}=ay$"}
+{"spoken": "e to the i theta two", "latex": "$e^{i\\theta_{2}}$"}
+{"spoken": "sine of theta one plus theta two", "latex": "$\\sin(\\theta_{1}+\\theta_{2})$"}
+{"spoken": "e to the i theta times r2 e to the i theta two", "latex": "$e^{i\\theta}\\times r_{2}e^{i\\theta_{2}}$"}
+{"spoken": "e to the i theta one plus theta two", "latex": "$e^{i(\\theta_{1}+\\theta_{2})}$"}
+{"spoken": "e to the negative x cosine x", "latex": "$e^{-x}\\cos x$"}
+{"spoken": "e to the i omega t divided by two plus three i", "latex": "$e^{i\\omega t}/(2+3i)$"}
+{"spoken": "e to the i omega t divided by root 13 e to the i phi", "latex": "$\\frac{e^{i\\omega t}}{\\sqrt{13}e^{i\\phi}}$"}
+{"spoken": "1 over root 13 cosine omega t minus phi", "latex": "$\\displaystyle \\frac{1}{\\sqrt{13}}\\cos(\\omega t-\\phi)$"}
+{"spoken": " 1 over 13 2 times cosine omega t plus 3 sine omega t", "latex": "$\\displaystyle \\frac{1}{13}(2\\cos\\omega t+3\\sin\\omega t)$"}
+{"spoken": "tan inverse 3 over 2", "latex": "$\\tan^{-1}(3/2)$"}
+{"spoken": " 3 pi over 2 omega", "latex": "$(3\\pi/2\\omega)$"}
+{"spoken": "y i minus y hat i", "latex": "$\\mathcal{y}_{i}-\\hat{\\mathcal{y}}_{i}$"}
+{"spoken": "y prime equals negative y divided by x squared plus y squared", "latex": "$y^{\\prime}=-\\frac{y}{x^{2}+y^{2}}$"}
+{"spoken": "y is equal to negative one over two m", "latex": "$y=-\\frac{1}{2m}$"}
+{"spoken": " r squared is equal to one over four m squared", "latex": "$r^{2}=\\frac{1}{4m^{2}}$"}
+{"spoken": "d1 plus d2", "latex": "$\\mathcal{d}_{1}+\\mathcal{d}_{2}$"}
+{"spoken": "z minus y over n", "latex": "$\\frac{z-y}{n}$"}
+{"spoken": "y over n times a half is y over two n", "latex": "$\\frac{y}{n}\\times\\frac{1}{2}=\\frac{y}{2n}$"}
+{"spoken": "z minus y over 2n", "latex": "$z-\\frac{y}{2n}$"}
+{"spoken": "y over 2n plus z minus y over 2n", "latex": "$\\frac{y}{2n}+z-\\frac{y}{2n}$"}
+{"spoken": "one half plus one over two n", "latex": "$\\frac{1}{2}+\\frac{1}{2n}$"}
+{"spoken": "p to the k times 1 minus p to the n minus k power", "latex": "$p^{k}(1-p)^{n-k}$"}
+{"spoken": "2 to the minus n minus k", "latex": "$2^{-(n-k)}$"}
+{"spoken": " 2 to the alpha log p over alpha plus 1 minus alpha log 1 minus p over 1 minus alpha times n", "latex": "$2^{(\\alpha \\log (\\frac{p}{\\alpha}) + (1-\\alpha) \\log (\\frac{1-p}{1-\\alpha})) \\cdot n}$"}
+{"spoken": "hundred over square root two pi alpha one minus alpha n", "latex": "$100/\\sqrt{2\\pi\\alpha(1-\\alpha)n}$"}
+{"spoken": "1 over square root 2 pi P1 minus Pn", "latex": "$1/\\sqrt{2\\pi p(1-p)n}$"}
+{"spoken": "1 over square root 50 pi", "latex": "$\\frac{1}{\\sqrt{50\\pi}}$"}
