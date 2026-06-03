@@ -1,0 +1,27 @@
+# Git and Python environment
+.git
+.venv
+venv
+__pycache__
+*.pyc
+
+# Local/generated outputs
+logs
+mlruns
+storage
+tmp_eval
+checkpoints
+
+# DVC / large artifacts
+data
+models
+
+# Not needed inside Docker image
+notebooks
+reports
+*.ipynb
+
+# OS/editor
+.DS_Store
+.vscode
+.idea

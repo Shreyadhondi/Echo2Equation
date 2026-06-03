@@ -1,0 +1,46 @@
+model:
+  # Pretrained MathT5 model used as the base model for fine-tuning
+  model_name: "jmeadows17/MathT5-base"
+  tokenizer_name: "jmeadows17/MathT5-base"
+
+  # Maximum token lengths for spoken input and LaTeX output
+  max_input_length: 256
+  max_target_length: 256
+
+
+training:
+  # Number of fine-tuning epochs
+  epochs: 2
+
+  batch_size: 16
+  learning_rate: 3e-4
+  weight_decay: 0.01
+  seed: 42
+
+  logging_steps: 10
+  save_strategy: "epoch"
+  evaluation_strategy: "epoch"
+  report_to: "mlflow"
+
+
+paths:
+  # Final merged dataset
+  raw_dataset: "data/full_dataset.jsonl"
+
+  # Tokenized train/val/test splits
+  tokenized_dataset: "data/tokenized_splits"
+
+  # Final trained model path used by backend API
+  model_output_dir: "models/matht5_model"
+
+  # Training logs
+  log_dir: "logs/backend/matht5_training_logs"
+
+  # MLflow tracking
+  mlflow_tracking_uri: "mlruns"
+  mlflow_experiment_name: "Echo2Equation-MathT5"
+
+
+misc:
+  use_cuda: true
+  early_stopping_patience: 2

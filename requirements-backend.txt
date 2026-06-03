@@ -1,0 +1,27 @@
+# Backend runtime dependencies for Docker inference service
+
+fastapi==0.116.1
+uvicorn[standard]==0.35.0
+python-multipart==0.0.20
+pydantic==2.11.7
+python-dotenv==1.1.1
+
+# CPU-friendly PyTorch for Docker runtime
+
+transformers==4.41.1
+tokenizers==0.19.1
+safetensors==0.5.3
+sentencepiece==0.2.0
+accelerate==1.9.0
+
+numpy==2.2.6
+
+psycopg2-binary==2.9.10
+SQLAlchemy==2.0.42
+
+faster-whisper==1.2.0
+ffmpeg-python==0.2.0
+soundfile==0.13.1
+
+prometheus-client==0.22.1
+prometheus-fastapi-instrumentator==7.1.0

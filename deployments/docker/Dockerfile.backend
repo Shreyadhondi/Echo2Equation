@@ -1,0 +1,30 @@
+# ---- Base image (Python)
+FROM python:3.11-slim
+
+# ---- System dependencies
+# ffmpeg is needed for audio decoding/transcription
+# libpq-dev/build-essential help with PostgreSQL-related Python packages
+RUN apt-get update && apt-get install -y --no-install-recommends \
+      build-essential libpq-dev curl ffmpeg \
+    && rm -rf /var/lib/apt/lists/*
+
+# ---- Set working directory in the container
+WORKDIR /app
+
+# ---- Copy backend runtime requirements first for caching
+COPY requirements-backend.txt /app/requirements-backend.txt
+
+# ---- Install CPU-only PyTorch for portable Docker inference
+RUN pip install --no-cache-dir torch==2.7.1 --index-url https://download.pytorch.org/whl/cpu
+
+# ---- Install remaining backend dependencies
+RUN pip install --no-cache-dir -r /app/requirements-backend.txt
+
+# ---- Copy project code
+COPY . /app
+
+# ---- Expose FastAPI port
+EXPOSE 8000
+
+# ---- Run FastAPI using Uvicorn
+CMD ["uvicorn", "backend.api:app", "--host", "0.0.0.0", "--port", "8000"]

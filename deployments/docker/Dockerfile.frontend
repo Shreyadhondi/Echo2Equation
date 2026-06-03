@@ -1,0 +1,11 @@
+# Serve the static frontend using Nginx
+FROM nginx:1.27-alpine
+
+# Copy frontend files into Nginx default web root
+COPY frontend/ /usr/share/nginx/html/
+
+# Expose HTTP port
+EXPOSE 80
+
+# Start Nginx
+CMD ["nginx", "-g", "daemon off;"]

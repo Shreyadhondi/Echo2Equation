@@ -1,0 +1,2443 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>MathT5 Preview</title>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+  body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 24px; }
+  .meta { margin-bottom: 12px; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #ddd; padding: 10px; vertical-align: top; }
+  th { background: #f7f7f7; position: sticky; top: 0; z-index: 1; }
+  tr:nth-child(even) { background: #fafafa; }
+  .ok { background: #e9f7ef; }
+  .bad { background: #fdecea; }
+  code { background: #f5f5f5; padding: 2px 4px; border-radius: 4px; }
+</style>
+</head>
+<body>
+  <div class="meta">
+    <h2>MathT5 Preview</h2>
+    <div>Model dir: <code>models/matht5_model</code></div>
+    <div>Test file: <code>data/tokenized_splits/tokenized_test.jsonl</code></div>
+    <div>Samples: 200 &nbsp;|&nbsp; Beams: 5</div>
+    <div><b>Exact match</b> — raw: 47/200 = 23.50% &nbsp;|&nbsp; cleaned: 135/200 = 67.50%</div>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Spoken</th>
+        <th>Ground Truth</th>
+        <th>Predicted (raw)</th>
+        <th>Predicted (cleaned)</th>
+        <th>Raw LaTeX (GT / Pred)</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr class="bad">
+        <td>1</td>
+        <td>sum over b from 4 to 9 of b^2</td>
+        <td>$\sum_{b=4}^{9} b^2$</td>
+        <td>$\ sum_{ b=4}^{ 9} b^ 2$</td>
+        <td>$\sum_{b=4}^{9} b^{2}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\sum_{b=4}^{9} b^2$</code></div>
+          <div><b>PR:</b> <code>$\sum_{b=4}^{9} b^{2}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>2</td>
+        <td>-19 times cos of z</td>
+        <td>$-19 \cos(z)$</td>
+        <td>$-19 \ cos(z)$</td>
+        <td>$-19 \cos(z)$</td>
+        <td>
+          <div><b>GT:</b> <code>$-19 \cos(z)$</code></div>
+          <div><b>PR:</b> <code>$-19 \cos(z)$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>3</td>
+        <td>16 times 17 minus 12</td>
+        <td>$16 \times 17 - 12$</td>
+        <td>$16 \ times 17 - 12$</td>
+        <td>$16 \times 17 - 12$</td>
+        <td>
+          <div><b>GT:</b> <code>$16 \times 17 - 12$</code></div>
+          <div><b>PR:</b> <code>$16 \times 17 - 12$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>4</td>
+        <td>e raised to -1z</td>
+        <td>$e^{-1z}$</td>
+        <td>$e^{ -1z} $</td>
+        <td>$e^{-1z}$</td>
+        <td>
+          <div><b>GT:</b> <code>$e^{-1z}$</code></div>
+          <div><b>PR:</b> <code>$e^{-1z}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>5</td>
+        <td>1 plus c</td>
+        <td>$1 + c$</td>
+        <td>$1 + c$</td>
+        <td>$1 + c$</td>
+        <td>
+          <div><b>GT:</b> <code>$1 + c$</code></div>
+          <div><b>PR:</b> <code>$1 + c$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>6</td>
+        <td>strong duality equality</td>
+        <td>$p^* = d^*$</td>
+        <td>$\ nabla f(x^ *) \ cdot \ nabla f(x^ *)\ nabla f(x^ *)^ *$</td>
+        <td>$\nabla f(x^*) \cdot \nabla f(x^*)\nabla f(x^*)^*$</td>
+        <td>
+          <div><b>GT:</b> <code>$p^* = d^*$</code></div>
+          <div><b>PR:</b> <code>$\nabla f(x^*) \cdot \nabla f(x^*)\nabla f(x^*)^*$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>7</td>
+        <td>product of 8 and -14</td>
+        <td>$8 \times -14$</td>
+        <td>$8 \ times -14$</td>
+        <td>$8 \times -14$</td>
+        <td>
+          <div><b>GT:</b> <code>$8 \times -14$</code></div>
+          <div><b>PR:</b> <code>$8 \times -14$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>8</td>
+        <td>multiply 9 by 9</td>
+        <td>$9 \times 9$</td>
+        <td>$9 \ times 9$</td>
+        <td>$9 \times 9$</td>
+        <td>
+          <div><b>GT:</b> <code>$9 \times 9$</code></div>
+          <div><b>PR:</b> <code>$9 \times 9$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>9</td>
+        <td>subtract 11 from 69</td>
+        <td>$69 - 11$</td>
+        <td>$69 - 11$</td>
+        <td>$69 - 11$</td>
+        <td>
+          <div><b>GT:</b> <code>$69 - 11$</code></div>
+          <div><b>PR:</b> <code>$69 - 11$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>10</td>
+        <td>e raised to 17z</td>
+        <td>$e^{17z}$</td>
+        <td>$e^{ 17z} $</td>
+        <td>$e^{17z}$</td>
+        <td>
+          <div><b>GT:</b> <code>$e^{17z}$</code></div>
+          <div><b>PR:</b> <code>$e^{17z}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>11</td>
+        <td>r plus 9</td>
+        <td>$r + 9$</td>
+        <td>$r + 9$</td>
+        <td>$r + 9$</td>
+        <td>
+          <div><b>GT:</b> <code>$r + 9$</code></div>
+          <div><b>PR:</b> <code>$r + 9$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>12</td>
+        <td>20 per 7</td>
+        <td>$\frac{20}{7}$</td>
+        <td>$\ frac{ 20}{ 7} $</td>
+        <td>$\frac{20}{7}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\frac{20}{7}$</code></div>
+          <div><b>PR:</b> <code>$\frac{20}{7}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>13</td>
+        <td>total from p equals 1 to 9 of p^2</td>
+        <td>$\sum_{p=1}^{9} p^2$</td>
+        <td>$\ sum_{ p=1}^{ 9} p^ 2$</td>
+        <td>$\sum_{p=1}^{9} p^{2}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\sum_{p=1}^{9} p^2$</code></div>
+          <div><b>PR:</b> <code>$\sum_{p=1}^{9} p^{2}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>14</td>
+        <td>10 minus k</td>
+        <td>$10 - k$</td>
+        <td>$10 - k$</td>
+        <td>$10 - k$</td>
+        <td>
+          <div><b>GT:</b> <code>$10 - k$</code></div>
+          <div><b>PR:</b> <code>$10 - k$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>15</td>
+        <td>P Y equals 0.52</td>
+        <td>$P(Y) = 0.52$</td>
+        <td>$P(Y) = 0.52$</td>
+        <td>$P(Y) = 0.52$</td>
+        <td>
+          <div><b>GT:</b> <code>$P(Y) = 0.52$</code></div>
+          <div><b>PR:</b> <code>$P(Y) = 0.52$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>16</td>
+        <td>perplexity equals exponential of cross entropy</td>
+        <td>$PP = e^{H(p,q)}$</td>
+        <td>$P = \ exp\ left( \ frac{ 1}{ T} \ right)$</td>
+        <td>$P = \exp\left( \frac{1}{T} \right)$</td>
+        <td>
+          <div><b>GT:</b> <code>$PP = e^{H(p,q)}$</code></div>
+          <div><b>PR:</b> <code>$P = \exp\left( \frac{1}{T} \right)$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>17</td>
+        <td>total from c equals 5 to 10 of c^2</td>
+        <td>$\sum_{c=5}^{10} c^2$</td>
+        <td>$\ sum_{ c=5}^{ 10} c^ 2$</td>
+        <td>$\sum_{c=5}^{10} c^{2}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\sum_{c=5}^{10} c^2$</code></div>
+          <div><b>PR:</b> <code>$\sum_{c=5}^{10} c^{2}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>18</td>
+        <td>natural log of e to the x is x</td>
+        <td>$\ln(e^{x}) = x$</td>
+        <td>$\ ln e^{ x} = x$</td>
+        <td>$\ln e^{x} = x$</td>
+        <td>
+          <div><b>GT:</b> <code>$\ln(e^{x}) = x$</code></div>
+          <div><b>PR:</b> <code>$\ln e^{x} = x$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>19</td>
+        <td>tan theta is sin theta over cos theta</td>
+        <td>$\tan\theta = \frac{\sin\theta}{\cos\theta}$</td>
+        <td>\ tan\ theta = \ sin\ theta \ over \ cos\ theta</td>
+        <td>$\tan\theta = \sin\theta \over \cos\theta$</td>
+        <td>
+          <div><b>GT:</b> <code>$\tan\theta = \frac{\sin\theta}{\cos\theta}$</code></div>
+          <div><b>PR:</b> <code>$\tan\theta = \sin\theta \over \cos\theta$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>20</td>
+        <td>log base 3 of 22</td>
+        <td>$\log_{3}{22}$</td>
+        <td>$\ log_{ 3}{ 22} $</td>
+        <td>$\log_{3}{22}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\log_{3}{22}$</code></div>
+          <div><b>PR:</b> <code>$\log_{3}{22}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>21</td>
+        <td>logarithm base 10 of y</td>
+        <td>$\log_{10}{y}$</td>
+        <td>$\ log_{ 10}{ y} $</td>
+        <td>$\log_{10}{y}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\log_{10}{y}$</code></div>
+          <div><b>PR:</b> <code>$\log_{10}{y}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>22</td>
+        <td>37 over 6</td>
+        <td>$\frac{37}{6}$</td>
+        <td>$\ frac{ 37}{ 6} $</td>
+        <td>$\frac{37}{6}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\frac{37}{6}$</code></div>
+          <div><b>PR:</b> <code>$\frac{37}{6}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>23</td>
+        <td>-12 less than -2</td>
+        <td>$-2 - -12$</td>
+        <td>$-2 - -12$</td>
+        <td>$-2 - -12$</td>
+        <td>
+          <div><b>GT:</b> <code>$-2 - -12$</code></div>
+          <div><b>PR:</b> <code>$-2 - -12$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>24</td>
+        <td>number of parameters in a convolutional layer equals kernel height times kernel width times input channels times output channels plus output channels</td>
+        <td>$Params = K_h \times K_w \times C_{in} \times C_{out} + C_{out}$</td>
+        <td>$Params = K_h \ times K_w \ times C_{ in} \ times C_{ out} + C_{ out} $</td>
+        <td>$Params = K_{h} \times K_{w} \times C_{in} \times C_{out} + C_{out}$</td>
+        <td>
+          <div><b>GT:</b> <code>$Params = K_h \times K_w \times C_{in} \times C_{out} + C_{out}$</code></div>
+          <div><b>PR:</b> <code>$Params = K_{h} \times K_{w} \times C_{in} \times C_{out} + C_{out}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>25</td>
+        <td>fraction of -3 by -19</td>
+        <td>$\frac{-3}{-19}$</td>
+        <td>$\ frac{ -3}{ -19} $</td>
+        <td>$\frac{-3}{-19}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\frac{-3}{-19}$</code></div>
+          <div><b>PR:</b> <code>$\frac{-3}{-19}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>26</td>
+        <td>csc r times 1</td>
+        <td>$1 \csc(r)$</td>
+        <td>$1 \ csc(r)$</td>
+        <td>$1 \csc(r)$</td>
+        <td>
+          <div><b>GT:</b> <code>$1 \csc(r)$</code></div>
+          <div><b>PR:</b> <code>$1 \csc(r)$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>27</td>
+        <td>exponential of 4q</td>
+        <td>$e^{4q}$</td>
+        <td>$e^{ 4q} $</td>
+        <td>$e^{4q}$</td>
+        <td>
+          <div><b>GT:</b> <code>$e^{4q}$</code></div>
+          <div><b>PR:</b> <code>$e^{4q}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>28</td>
+        <td>multiply 3 by 10</td>
+        <td>$3 \times 10$</td>
+        <td>$3 \ times 10$</td>
+        <td>$3 \times 10$</td>
+        <td>
+          <div><b>GT:</b> <code>$3 \times 10$</code></div>
+          <div><b>PR:</b> <code>$3 \times 10$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>29</td>
+        <td>cube of p</td>
+        <td>$p^3$</td>
+        <td>$p^ 3$</td>
+        <td>$p^{3}$</td>
+        <td>
+          <div><b>GT:</b> <code>$p^3$</code></div>
+          <div><b>PR:</b> <code>$p^{3}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>30</td>
+        <td>wien&#x27;s displacement law is lambda max times t equals constant</td>
+        <td>$\lambda_{max} T = b$</td>
+        <td>$\ lambda max(t) = C$</td>
+        <td>$\lambda max(t) = C$</td>
+        <td>
+          <div><b>GT:</b> <code>$\lambda_{max} T = b$</code></div>
+          <div><b>PR:</b> <code>$\lambda max(t) = C$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>31</td>
+        <td>logarithm base 7 of 40</td>
+        <td>$\log_{7}{40}$</td>
+        <td>$\ log_{ 7}{ 40} $</td>
+        <td>$\log_{7}{40}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\log_{7}{40}$</code></div>
+          <div><b>PR:</b> <code>$\log_{7}{40}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>32</td>
+        <td>-19 decreased by -17</td>
+        <td>$-19 - -17$</td>
+        <td>$-19 - -17$</td>
+        <td>$-19 - -17$</td>
+        <td>
+          <div><b>GT:</b> <code>$-19 - -17$</code></div>
+          <div><b>PR:</b> <code>$-19 - -17$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>33</td>
+        <td>A minus empty set equals A</td>
+        <td>$A - \varnothing = A$</td>
+        <td>$A - \ varnothing = A$</td>
+        <td>$A - \varnothing = A$</td>
+        <td>
+          <div><b>GT:</b> <code>$A - \varnothing = A$</code></div>
+          <div><b>PR:</b> <code>$A - \varnothing = A$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>34</td>
+        <td>b plus 1</td>
+        <td>$b + 1$</td>
+        <td>$b + 1$</td>
+        <td>$b + 1$</td>
+        <td>
+          <div><b>GT:</b> <code>$b + 1$</code></div>
+          <div><b>PR:</b> <code>$b + 1$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>35</td>
+        <td>square root of 1 plus f prime of x squared dx</td>
+        <td>$\displaystyle \sqrt{1+f^{\prime}(x)^{2}}dx$</td>
+        <td>$\ sqrt{ 1+f^{\ prime} (x)^{ 2}} dx$</td>
+        <td>$\sqrt{1+f^{\prime} (x)^{2}} dx$</td>
+        <td>
+          <div><b>GT:</b> <code>$\displaystyle \sqrt{1+f^{\prime}(x)^{2}}dx$</code></div>
+          <div><b>PR:</b> <code>$\sqrt{1+f^{\prime} (x)^{2}} dx$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>36</td>
+        <td>formula for inductor energy is half L i squared</td>
+        <td>$E = \frac{1}{2} L i^2$</td>
+        <td>$E = \ frac{ 1}{ 2} L i^ 2$</td>
+        <td>$E = \frac{1}{2} L i^{2}$</td>
+        <td>
+          <div><b>GT:</b> <code>$E = \frac{1}{2} L i^2$</code></div>
+          <div><b>PR:</b> <code>$E = \frac{1}{2} L i^{2}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>37</td>
+        <td>logarithm base 9 of 29</td>
+        <td>$\log_{9}{29}$</td>
+        <td>$\ log_{ 9}{ 29} $</td>
+        <td>$\log_{9}{29}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\log_{9}{29}$</code></div>
+          <div><b>PR:</b> <code>$\log_{9}{29}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>38</td>
+        <td>6 multiplied with sec of n</td>
+        <td>$6 \sec(n)$</td>
+        <td>$6 \ sec(n)$</td>
+        <td>$6 \sec(n)$</td>
+        <td>
+          <div><b>GT:</b> <code>$6 \sec(n)$</code></div>
+          <div><b>PR:</b> <code>$6 \sec(n)$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>39</td>
+        <td>sin of z multiplied by 4</td>
+        <td>$4 \sin(z)$</td>
+        <td>$4 \ sin(z)$</td>
+        <td>$4 \sin(z)$</td>
+        <td>
+          <div><b>GT:</b> <code>$4 \sin(z)$</code></div>
+          <div><b>PR:</b> <code>$4 \sin(z)$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>40</td>
+        <td>14 divided by 1</td>
+        <td>$\frac{14}{1}$</td>
+        <td>$\ frac{ 14}{ 1} $</td>
+        <td>$\frac{14}{1}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\frac{14}{1}$</code></div>
+          <div><b>PR:</b> <code>$\frac{14}{1}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>41</td>
+        <td>-5 added with -3</td>
+        <td>$-5 + -3$</td>
+        <td>$-5 + -3$</td>
+        <td>$-5 + -3$</td>
+        <td>
+          <div><b>GT:</b> <code>$-5 + -3$</code></div>
+          <div><b>PR:</b> <code>$-5 + -3$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>42</td>
+        <td>19 multiplied by 3</td>
+        <td>$19 \times 3$</td>
+        <td>$19 \ times 3$</td>
+        <td>$19 \times 3$</td>
+        <td>
+          <div><b>GT:</b> <code>$19 \times 3$</code></div>
+          <div><b>PR:</b> <code>$19 \times 3$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>43</td>
+        <td>15 over 11</td>
+        <td>$\frac{15}{11}$</td>
+        <td>$\ frac{ 15}{ 11} $</td>
+        <td>$\frac{15}{11}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\frac{15}{11}$</code></div>
+          <div><b>PR:</b> <code>$\frac{15}{11}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>44</td>
+        <td>n plus 18</td>
+        <td>$n + 18$</td>
+        <td>$n + 18$</td>
+        <td>$n + 18$</td>
+        <td>
+          <div><b>GT:</b> <code>$n + 18$</code></div>
+          <div><b>PR:</b> <code>$n + 18$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>45</td>
+        <td>quotient of 28 and 7</td>
+        <td>$\frac{28}{7}$</td>
+        <td>$\ frac{ 28}{ 7} $</td>
+        <td>$\frac{28}{7}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\frac{28}{7}$</code></div>
+          <div><b>PR:</b> <code>$\frac{28}{7}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>46</td>
+        <td>seven multiplied by x squared</td>
+        <td>$7x^2$</td>
+        <td>$7x^ 2$</td>
+        <td>$7x^{2}$</td>
+        <td>
+          <div><b>GT:</b> <code>$7x^2$</code></div>
+          <div><b>PR:</b> <code>$7x^{2}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>47</td>
+        <td>11 multiplied with 17</td>
+        <td>$11 \times 17$</td>
+        <td>$11 \ times 17$</td>
+        <td>$11 \times 17$</td>
+        <td>
+          <div><b>GT:</b> <code>$11 \times 17$</code></div>
+          <div><b>PR:</b> <code>$11 \times 17$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>48</td>
+        <td>find 3D point X by minimizing squared differences between observed and projected points</td>
+        <td>$X = \arg\min_X \sum_i \|x_i - P_i X\|^2$</td>
+        <td>$J(\ theta) = \ mathbb{ E} _{ s,a|\ mathbb{ E} _{ s,a|} $</td>
+        <td>$J(\theta) = \mathbb{E}_{s,a|\mathbb{E}_{s,a|}}$</td>
+        <td>
+          <div><b>GT:</b> <code>$X = \arg\min_X \sum_i \|x_i - P_i X\|^2$</code></div>
+          <div><b>PR:</b> <code>$J(\theta) = \mathbb{E}_{s,a|\mathbb{E}_{s,a|}}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>49</td>
+        <td>sec of q multiplied by 19</td>
+        <td>$19 \sec(q)$</td>
+        <td>$19 \ sec(q)$</td>
+        <td>$19 \sec(q)$</td>
+        <td>
+          <div><b>GT:</b> <code>$19 \sec(q)$</code></div>
+          <div><b>PR:</b> <code>$19 \sec(q)$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>50</td>
+        <td>x cubed is equal to 2v</td>
+        <td>$x^{3}=2v$</td>
+        <td>$x^{ 3} =2v$</td>
+        <td>$x^{3} =2v$</td>
+        <td>
+          <div><b>GT:</b> <code>$x^{3}=2v$</code></div>
+          <div><b>PR:</b> <code>$x^{3} =2v$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>51</td>
+        <td>integral of secant x times tangent x is secant x plus constant</td>
+        <td>$\int \sec x \tan x \, dx = \sec x + C$</td>
+        <td>\ int \ sec x \ tan x \ , dx = \ sec x + C</td>
+        <td>$\int \sec x \tan x \, dx = \sec x + C$</td>
+        <td>
+          <div><b>GT:</b> <code>$\int \sec x \tan x \, dx = \sec x + C$</code></div>
+          <div><b>PR:</b> <code>$\int \sec x \tan x \, dx = \sec x + C$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>52</td>
+        <td>4 multiplied by 2 plus 6</td>
+        <td>$4 \times 2 + 6$</td>
+        <td>$4 \ times 2 + 6$</td>
+        <td>$4 \times 2 + 6$</td>
+        <td>
+          <div><b>GT:</b> <code>$4 \times 2 + 6$</code></div>
+          <div><b>PR:</b> <code>$4 \times 2 + 6$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>53</td>
+        <td>sum from t equals 3 to 8 of t^2</td>
+        <td>$\sum_{t=3}^{8} t^2$</td>
+        <td>$\ sum_{ t=3}^{ 8} t^ 2$</td>
+        <td>$\sum_{t=3}^{8} t^{2}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\sum_{t=3}^{8} t^2$</code></div>
+          <div><b>PR:</b> <code>$\sum_{t=3}^{8} t^{2}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>54</td>
+        <td>summation x equals 4 to 10 of x^1</td>
+        <td>$\sum_{x=4}^{10} x^1$</td>
+        <td>$\ sum_{ x=4}^{ 10} x^ 1$</td>
+        <td>$\sum_{x=4}^{10} x^{1}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\sum_{x=4}^{10} x^1$</code></div>
+          <div><b>PR:</b> <code>$\sum_{x=4}^{10} x^{1}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>55</td>
+        <td>cot of t multiplied by 20</td>
+        <td>$20 \cot(t)$</td>
+        <td>$20 \ cot(t)$</td>
+        <td>$20 \cot(t)$</td>
+        <td>
+          <div><b>GT:</b> <code>$20 \cot(t)$</code></div>
+          <div><b>PR:</b> <code>$20 \cot(t)$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>56</td>
+        <td>1 minus 5 times 17</td>
+        <td>$1 - 5 \times 17$</td>
+        <td>$1 - 5 \ times 17$</td>
+        <td>$1 - 5 \times 17$</td>
+        <td>
+          <div><b>GT:</b> <code>$1 - 5 \times 17$</code></div>
+          <div><b>PR:</b> <code>$1 - 5 \times 17$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>57</td>
+        <td>10 squared</td>
+        <td>$10^2$</td>
+        <td>$10^ 2$</td>
+        <td>$10^{2}$</td>
+        <td>
+          <div><b>GT:</b> <code>$10^2$</code></div>
+          <div><b>PR:</b> <code>$10^{2}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>58</td>
+        <td>10 cos of k</td>
+        <td>$10 \cos(k)$</td>
+        <td>$10 \ cos(k)$</td>
+        <td>$10 \cos(k)$</td>
+        <td>
+          <div><b>GT:</b> <code>$10 \cos(k)$</code></div>
+          <div><b>PR:</b> <code>$10 \cos(k)$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>59</td>
+        <td>q by t equals k a delta t by d</td>
+        <td>$\frac{Q}{t} = \frac{kA\Delta T}{d}$</td>
+        <td>$\ frac{ q}{ t} =k\ frac{\ Delta t}{ d} $</td>
+        <td>$\frac{q}{t} =k\frac{\Delta t}{d}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\frac{Q}{t} = \frac{kA\Delta T}{d}$</code></div>
+          <div><b>PR:</b> <code>$\frac{q}{t} =k\frac{\Delta t}{d}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>60</td>
+        <td>2y squared plus 6y minus 8 equals 0</td>
+        <td>$2y^2 + 6y - 8 = 0$</td>
+        <td>$2y^ 2 + 6y - 8 = 0$</td>
+        <td>$2y^{2} + 6y - 8 = 0$</td>
+        <td>
+          <div><b>GT:</b> <code>$2y^2 + 6y - 8 = 0$</code></div>
+          <div><b>PR:</b> <code>$2y^{2} + 6y - 8 = 0$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>61</td>
+        <td>pi a to the four over two</td>
+        <td>$\pi a^{4} \over 2$</td>
+        <td>$\ frac{\ pi a^{ 4}}{ 2} $</td>
+        <td>$\frac{\pi a^{4}}{2}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\pi a^{4} \over 2$</code></div>
+          <div><b>PR:</b> <code>$\frac{\pi a^{4}}{2}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>62</td>
+        <td>cot of v multiplied by 6</td>
+        <td>$6 \cot(v)$</td>
+        <td>$6 \ cot(v)$</td>
+        <td>$6 \cot(v)$</td>
+        <td>
+          <div><b>GT:</b> <code>$6 \cot(v)$</code></div>
+          <div><b>PR:</b> <code>$6 \cot(v)$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>63</td>
+        <td>sigma x from 5 to 6 of x^2</td>
+        <td>$\sum_{x=5}^{6} x^2$</td>
+        <td>$\ sum_{ x=5}^{ 6} x^ 2$</td>
+        <td>$\sum_{x=5}^{6} x^{2}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\sum_{x=5}^{6} x^2$</code></div>
+          <div><b>PR:</b> <code>$\sum_{x=5}^{6} x^{2}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>64</td>
+        <td>tan t times 4</td>
+        <td>$4 \tan(t)$</td>
+        <td>$4 \ tan(t)$</td>
+        <td>$4 \tan(t)$</td>
+        <td>
+          <div><b>GT:</b> <code>$4 \tan(t)$</code></div>
+          <div><b>PR:</b> <code>$4 \tan(t)$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>65</td>
+        <td>logarithm to the base 3 of r^2</td>
+        <td>$\log_{3}{r^2}$</td>
+        <td>$\ log_{ 3}{ r^ 2} $</td>
+        <td>$\log_{3}{r^{2}}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\log_{3}{r^2}$</code></div>
+          <div><b>PR:</b> <code>$\log_{3}{r^{2}}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>66</td>
+        <td>-12 plus b</td>
+        <td>$-12 + b$</td>
+        <td>$-12 + b$</td>
+        <td>$-12 + b$</td>
+        <td>
+          <div><b>GT:</b> <code>$-12 + b$</code></div>
+          <div><b>PR:</b> <code>$-12 + b$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>67</td>
+        <td>W equals KE final minus KE initial</td>
+        <td>$W = \Delta KE$</td>
+        <td>$W = KE f - KE i$</td>
+        <td>$W = KE f - KE i$</td>
+        <td>
+          <div><b>GT:</b> <code>$W = \Delta KE$</code></div>
+          <div><b>PR:</b> <code>$W = KE f - KE i$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>68</td>
+        <td>k plus 5</td>
+        <td>$k + 5$</td>
+        <td>$k + 5$</td>
+        <td>$k + 5$</td>
+        <td>
+          <div><b>GT:</b> <code>$k + 5$</code></div>
+          <div><b>PR:</b> <code>$k + 5$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>69</td>
+        <td>cos p times 16</td>
+        <td>$16 \cos(p)$</td>
+        <td>$16 \ cos(p)$</td>
+        <td>$16 \cos(p)$</td>
+        <td>
+          <div><b>GT:</b> <code>$16 \cos(p)$</code></div>
+          <div><b>PR:</b> <code>$16 \cos(p)$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>70</td>
+        <td>integral of cosecant x times cotangent x is negative cosecant x plus constant</td>
+        <td>$\int \csc x \cot x \, dx = -\csc x + C$</td>
+        <td>\ int \ csc x \ cot x \ , dx = -\ csc x + C</td>
+        <td>$\int \csc x \cot x \, dx = -\csc x + C$</td>
+        <td>
+          <div><b>GT:</b> <code>$\int \csc x \cot x \, dx = -\csc x + C$</code></div>
+          <div><b>PR:</b> <code>$\int \csc x \cot x \, dx = -\csc x + C$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>71</td>
+        <td>MSE is average of squared differences between y and y hat</td>
+        <td>$MSE = \frac{1}{n}\sum_{i=1}^n (y_i - \hat{y}_i)^2$</td>
+        <td>$MSE = \ sum_{ i=1}^ n (y_i - \ hat{ y} _i)^ 2$</td>
+        <td>$MSE = \sum_{i=1}^{n} (y_{i} - \hat{y}_{i})^{2}$</td>
+        <td>
+          <div><b>GT:</b> <code>$MSE = \frac{1}{n}\sum_{i=1}^n (y_i - \hat{y}_i)^2$</code></div>
+          <div><b>PR:</b> <code>$MSE = \sum_{i=1}^{n} (y_{i} - \hat{y}_{i})^{2}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>72</td>
+        <td>P of A is 0.35</td>
+        <td>$P(A) = 0.35$</td>
+        <td>$P(A) = 0.35$</td>
+        <td>$P(A) = 0.35$</td>
+        <td>
+          <div><b>GT:</b> <code>$P(A) = 0.35$</code></div>
+          <div><b>PR:</b> <code>$P(A) = 0.35$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>73</td>
+        <td>difference of squares formula is a squared minus b squared equals a plus b times a minus b</td>
+        <td>$a^2 - b^2 = (a + b)(a - b)$</td>
+        <td>$a^ 2 - b^ 2 = (a + b)(a - b)$</td>
+        <td>$a^{2} - b^{2} = (a + b)(a - b)$</td>
+        <td>
+          <div><b>GT:</b> <code>$a^2 - b^2 = (a + b)(a - b)$</code></div>
+          <div><b>PR:</b> <code>$a^{2} - b^{2} = (a + b)(a - b)$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>74</td>
+        <td>P of Z is 0.88</td>
+        <td>$P(Z) = 0.88$</td>
+        <td>$P(Z) = 0.88$</td>
+        <td>$P(Z) = 0.88$</td>
+        <td>
+          <div><b>GT:</b> <code>$P(Z) = 0.88$</code></div>
+          <div><b>PR:</b> <code>$P(Z) = 0.88$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>75</td>
+        <td>9n minus 6 equals 0</td>
+        <td>$9n - 6 = 0$</td>
+        <td>$9n - 6 = 0$</td>
+        <td>$9n - 6 = 0$</td>
+        <td>
+          <div><b>GT:</b> <code>$9n - 6 = 0$</code></div>
+          <div><b>PR:</b> <code>$9n - 6 = 0$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>76</td>
+        <td>7 multiplied by 8 plus 1</td>
+        <td>$7 \times 8 + 1$</td>
+        <td>$7 \ times 8 + 1$</td>
+        <td>$7 \times 8 + 1$</td>
+        <td>
+          <div><b>GT:</b> <code>$7 \times 8 + 1$</code></div>
+          <div><b>PR:</b> <code>$7 \times 8 + 1$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>77</td>
+        <td>cosine x minus 1 divided by x squared</td>
+        <td>$(\cos x-1)/x^{2}$</td>
+        <td>$\ cos x-\ frac{ 1}{ x^{ 2}} $</td>
+        <td>$\cos x-\frac{1}{x^{2}}$</td>
+        <td>
+          <div><b>GT:</b> <code>$(\cos x-1)/x^{2}$</code></div>
+          <div><b>PR:</b> <code>$\cos x-\frac{1}{x^{2}}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>78</td>
+        <td>95 divided by 9</td>
+        <td>$\frac{95}{9}$</td>
+        <td>$\ frac{ 95}{ 9} $</td>
+        <td>$\frac{95}{9}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\frac{95}{9}$</code></div>
+          <div><b>PR:</b> <code>$\frac{95}{9}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>79</td>
+        <td>sum from q equals 3 to 10 of q^2</td>
+        <td>$\sum_{q=3}^{10} q^2$</td>
+        <td>$\ sum_{ q=3}^{ 10} q^ 2$</td>
+        <td>$\sum_{q=3}^{10} q^{2}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\sum_{q=3}^{10} q^2$</code></div>
+          <div><b>PR:</b> <code>$\sum_{q=3}^{10} q^{2}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>80</td>
+        <td>subtract 4 from 63</td>
+        <td>$63 - 4$</td>
+        <td>$63 - 4$</td>
+        <td>$63 - 4$</td>
+        <td>
+          <div><b>GT:</b> <code>$63 - 4$</code></div>
+          <div><b>PR:</b> <code>$63 - 4$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>81</td>
+        <td>1 times 8</td>
+        <td>$1 \times 8$</td>
+        <td>$1 \ times 8$</td>
+        <td>$1 \times 8$</td>
+        <td>
+          <div><b>GT:</b> <code>$1 \times 8$</code></div>
+          <div><b>PR:</b> <code>$1 \times 8$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>82</td>
+        <td>e to the power of 5b</td>
+        <td>$e^{5b}$</td>
+        <td>$e^{ 5b} $</td>
+        <td>$e^{5b}$</td>
+        <td>
+          <div><b>GT:</b> <code>$e^{5b}$</code></div>
+          <div><b>PR:</b> <code>$e^{5b}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>83</td>
+        <td>18x plus 15 equals 0</td>
+        <td>$18x + 15 = 0$</td>
+        <td>$18x + 15 = 0$</td>
+        <td>$18x + 15 = 0$</td>
+        <td>
+          <div><b>GT:</b> <code>$18x + 15 = 0$</code></div>
+          <div><b>PR:</b> <code>$18x + 15 = 0$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>84</td>
+        <td>5n minus 10 equals 0</td>
+        <td>$5n - 10 = 0$</td>
+        <td>$5n - 10 = 0$</td>
+        <td>$5n - 10 = 0$</td>
+        <td>
+          <div><b>GT:</b> <code>$5n - 10 = 0$</code></div>
+          <div><b>PR:</b> <code>$5n - 10 = 0$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>85</td>
+        <td>quotient of -18 and 15</td>
+        <td>$\frac{-18}{15}$</td>
+        <td>$\ frac{ -18}{ 15} $</td>
+        <td>$\frac{-18}{15}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\frac{-18}{15}$</code></div>
+          <div><b>PR:</b> <code>$\frac{-18}{15}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>86</td>
+        <td>square of x plus y plus z equals x squared plus y squared plus z squared plus 2xy plus 2yz plus 2zx</td>
+        <td>$(x + y + z)^2 = x^2 + y^2 + z^2 + 2xy + 2yz + 2zx$</td>
+        <td>$(x + y + z)^ 2 = x^ 2 + y^ 2 + z^ 2 + 2xy + 2yz + 2zx$</td>
+        <td>$(x + y + z)^{2} = x^{2} + y^{2} + z^{2} + 2xy + 2yz + 2zx$</td>
+        <td>
+          <div><b>GT:</b> <code>$(x + y + z)^2 = x^2 + y^2 + z^2 + 2xy + 2yz + 2zx$</code></div>
+          <div><b>PR:</b> <code>$(x + y + z)^{2} = x^{2} + y^{2} + z^{2} + 2xy + 2yz + 2zx$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>87</td>
+        <td>b times 2</td>
+        <td>$b \times 2$</td>
+        <td>$b \ times 2$</td>
+        <td>$b \times 2$</td>
+        <td>
+          <div><b>GT:</b> <code>$b \times 2$</code></div>
+          <div><b>PR:</b> <code>$b \times 2$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>88</td>
+        <td>product of 5 and 7</td>
+        <td>$5 \times 7$</td>
+        <td>$5 \ times 7$</td>
+        <td>$5 \times 7$</td>
+        <td>
+          <div><b>GT:</b> <code>$5 \times 7$</code></div>
+          <div><b>PR:</b> <code>$5 \times 7$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>89</td>
+        <td>sum of 37 and 33</td>
+        <td>$37 + 33$</td>
+        <td>$37 + 33$</td>
+        <td>$37 + 33$</td>
+        <td>
+          <div><b>GT:</b> <code>$37 + 33$</code></div>
+          <div><b>PR:</b> <code>$37 + 33$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>90</td>
+        <td>p times 7</td>
+        <td>$p \times 7$</td>
+        <td>$p \ times 7$</td>
+        <td>$p \times 7$</td>
+        <td>
+          <div><b>GT:</b> <code>$p \times 7$</code></div>
+          <div><b>PR:</b> <code>$p \times 7$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>91</td>
+        <td>48 less than 15</td>
+        <td>$15 - 48$</td>
+        <td>$15 - 48$</td>
+        <td>$15 - 48$</td>
+        <td>
+          <div><b>GT:</b> <code>$15 - 48$</code></div>
+          <div><b>PR:</b> <code>$15 - 48$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>92</td>
+        <td>quotient of 15 and 12</td>
+        <td>$\frac{15}{12}$</td>
+        <td>$\ frac{ 15}{ 12} $</td>
+        <td>$\frac{15}{12}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\frac{15}{12}$</code></div>
+          <div><b>PR:</b> <code>$\frac{15}{12}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>93</td>
+        <td>log of r^2 with base 3</td>
+        <td>$\log_{3}{r^2}$</td>
+        <td>$\ log_{ 3}{ r^ 2} $</td>
+        <td>$\log_{3}{r^{2}}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\log_{3}{r^2}$</code></div>
+          <div><b>PR:</b> <code>$\log_{3}{r^{2}}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>94</td>
+        <td>e to the power of -12c</td>
+        <td>$e^{-12c}$</td>
+        <td>$e^{ -12c} $</td>
+        <td>$e^{-12c}$</td>
+        <td>
+          <div><b>GT:</b> <code>$e^{-12c}$</code></div>
+          <div><b>PR:</b> <code>$e^{-12c}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>95</td>
+        <td>add 37 to 33</td>
+        <td>$37 + 33$</td>
+        <td>$37 + 33$</td>
+        <td>$37 + 33$</td>
+        <td>
+          <div><b>GT:</b> <code>$37 + 33$</code></div>
+          <div><b>PR:</b> <code>$37 + 33$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>96</td>
+        <td>einstein&#x27;s mass energy relation is E equals m c squared</td>
+        <td>$E = mc^2$</td>
+        <td>$E = mc^ 2$</td>
+        <td>$E = mc^{2}$</td>
+        <td>
+          <div><b>GT:</b> <code>$E = mc^2$</code></div>
+          <div><b>PR:</b> <code>$E = mc^{2}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>97</td>
+        <td>if p then q</td>
+        <td>$p \implies q$</td>
+        <td>$p \ lor q$</td>
+        <td>$p \lor q$</td>
+        <td>
+          <div><b>GT:</b> <code>$p \implies q$</code></div>
+          <div><b>PR:</b> <code>$p \lor q$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>98</td>
+        <td>log of 56 with base 10</td>
+        <td>$\log_{10}{56}$</td>
+        <td>$\ log_{ 10}{ 56} $</td>
+        <td>$\log_{10}{56}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\log_{10}{56}$</code></div>
+          <div><b>PR:</b> <code>$\log_{10}{56}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>99</td>
+        <td>49 decreased by 3</td>
+        <td>$49 - 3$</td>
+        <td>$49 - 3$</td>
+        <td>$49 - 3$</td>
+        <td>
+          <div><b>GT:</b> <code>$49 - 3$</code></div>
+          <div><b>PR:</b> <code>$49 - 3$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>100</td>
+        <td>sum from q equals 4 to 6 of q^3</td>
+        <td>$\sum_{q=4}^{6} q^3$</td>
+        <td>$\ sum_{ q=4}^{ 6} q^ 3$</td>
+        <td>$\sum_{q=4}^{6} q^{3}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\sum_{q=4}^{6} q^3$</code></div>
+          <div><b>PR:</b> <code>$\sum_{q=4}^{6} q^{3}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>101</td>
+        <td>u prime is one over x</td>
+        <td>$u^{\prime}= 1/x$</td>
+        <td>$u^{\ prime} =\ frac{ 1}{ x} $</td>
+        <td>$u^{\prime} =\frac{1}{x}$</td>
+        <td>
+          <div><b>GT:</b> <code>$u^{\prime}= 1/x$</code></div>
+          <div><b>PR:</b> <code>$u^{\prime} =\frac{1}{x}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>102</td>
+        <td>u to the n plus one</td>
+        <td>$\mathcal{u}^{n+1}$</td>
+        <td>$u^{ n+1} $</td>
+        <td>$u^{n+1}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\mathcal{u}^{n+1}$</code></div>
+          <div><b>PR:</b> <code>$u^{n+1}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>103</td>
+        <td>sine of two theta is two times sine theta times cosine theta</td>
+        <td>$\sin(2\theta) = 2\sin\theta\cos\theta$</td>
+        <td>\ sin 2\ theta = 2 \ sin\ theta \ cos\ theta</td>
+        <td>$\sin 2\theta = 2 \sin\theta \cos\theta$</td>
+        <td>
+          <div><b>GT:</b> <code>$\sin(2\theta) = 2\sin\theta\cos\theta$</code></div>
+          <div><b>PR:</b> <code>$\sin 2\theta = 2 \sin\theta \cos\theta$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>104</td>
+        <td>log of 61 with base 10</td>
+        <td>$\log_{10}{61}$</td>
+        <td>$\ log_{ 10}{ 61} $</td>
+        <td>$\log_{10}{61}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\log_{10}{61}$</code></div>
+          <div><b>PR:</b> <code>$\log_{10}{61}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>105</td>
+        <td>a times a</td>
+        <td>$a \times a$</td>
+        <td>$a \ times a$</td>
+        <td>$a \times a$</td>
+        <td>
+          <div><b>GT:</b> <code>$a \times a$</code></div>
+          <div><b>PR:</b> <code>$a \times a$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>106</td>
+        <td>log of m divided by n equals log m minus log n</td>
+        <td>$\log\left(\frac{m}{n}\right) = \log m - \log n$</td>
+        <td>$\ frac{\ log(m)}{ n} = \ log m - \ log n$</td>
+        <td>$\frac{\log(m)}{n} = \log m - \log n$</td>
+        <td>
+          <div><b>GT:</b> <code>$\log\left(\frac{m}{n}\right) = \log m - \log n$</code></div>
+          <div><b>PR:</b> <code>$\frac{\log(m)}{n} = \log m - \log n$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>107</td>
+        <td>c minus 7</td>
+        <td>$c - 7$</td>
+        <td>$c - 7$</td>
+        <td>$c - 7$</td>
+        <td>
+          <div><b>GT:</b> <code>$c - 7$</code></div>
+          <div><b>PR:</b> <code>$c - 7$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>108</td>
+        <td>sin of q multiplied by 12</td>
+        <td>$12 \sin(q)$</td>
+        <td>$12 \ sin(q)$</td>
+        <td>$12 \sin(q)$</td>
+        <td>
+          <div><b>GT:</b> <code>$12 \sin(q)$</code></div>
+          <div><b>PR:</b> <code>$12 \sin(q)$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>109</td>
+        <td>27 divided by 9</td>
+        <td>$\frac{27}{9}$</td>
+        <td>$\ frac{ 27}{ 9} $</td>
+        <td>$\frac{27}{9}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\frac{27}{9}$</code></div>
+          <div><b>PR:</b> <code>$\frac{27}{9}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>110</td>
+        <td>25 added with 30</td>
+        <td>$25 + 30$</td>
+        <td>$25 + 30$</td>
+        <td>$25 + 30$</td>
+        <td>
+          <div><b>GT:</b> <code>$25 + 30$</code></div>
+          <div><b>PR:</b> <code>$25 + 30$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>111</td>
+        <td>logarithm to the base 7 of n</td>
+        <td>$\log_{7}{n}$</td>
+        <td>$\ log_{ 7}{ n} $</td>
+        <td>$\log_{7}{n}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\log_{7}{n}$</code></div>
+          <div><b>PR:</b> <code>$\log_{7}{n}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>112</td>
+        <td>k minus 0</td>
+        <td>$k - 0$</td>
+        <td>$k - 0$</td>
+        <td>$k - 0$</td>
+        <td>
+          <div><b>GT:</b> <code>$k - 0$</code></div>
+          <div><b>PR:</b> <code>$k - 0$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>113</td>
+        <td>e to the power of 2z</td>
+        <td>$e^{2z}$</td>
+        <td>$e^{ 2z} $</td>
+        <td>$e^{2z}$</td>
+        <td>
+          <div><b>GT:</b> <code>$e^{2z}$</code></div>
+          <div><b>PR:</b> <code>$e^{2z}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>114</td>
+        <td>product of 8 and -8</td>
+        <td>$8 \times -8$</td>
+        <td>$8 \ times -8$</td>
+        <td>$8 \times -8$</td>
+        <td>
+          <div><b>GT:</b> <code>$8 \times -8$</code></div>
+          <div><b>PR:</b> <code>$8 \times -8$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>115</td>
+        <td>quotient of 88 and 10</td>
+        <td>$\frac{88}{10}$</td>
+        <td>$\ frac{ 88}{ 10} $</td>
+        <td>$\frac{88}{10}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\frac{88}{10}$</code></div>
+          <div><b>PR:</b> <code>$\frac{88}{10}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>116</td>
+        <td>18 plus 40</td>
+        <td>$18 + 40$</td>
+        <td>$18 + 40$</td>
+        <td>$18 + 40$</td>
+        <td>
+          <div><b>GT:</b> <code>$18 + 40$</code></div>
+          <div><b>PR:</b> <code>$18 + 40$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>117</td>
+        <td>KL divergence from p to q equals sum over x of p of x times log of p over q</td>
+        <td>$D_{KL}(P||Q) = \sum_x P(x) \log \frac{P(x)}{Q(x)}$</td>
+        <td>$\ frac{ d}{ dx} (p,q) = \ sum_{ x} p(x) \ log \ frac{ p}{ q} $</td>
+        <td>$\frac{d}{dx} (p,q) = \sum_{x} p(x) \log \frac{p}{q}$</td>
+        <td>
+          <div><b>GT:</b> <code>$D_{KL}(P||Q) = \sum_x P(x) \log \frac{P(x)}{Q(x)}$</code></div>
+          <div><b>PR:</b> <code>$\frac{d}{dx} (p,q) = \sum_{x} p(x) \log \frac{p}{q}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>118</td>
+        <td>11 minus 11</td>
+        <td>$11 - 11$</td>
+        <td>$11 - 11$</td>
+        <td>$11 - 11$</td>
+        <td>
+          <div><b>GT:</b> <code>$11 - 11$</code></div>
+          <div><b>PR:</b> <code>$11 - 11$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>119</td>
+        <td>logarithm base 7 of 49</td>
+        <td>$\log_{7}{49}$</td>
+        <td>$\ log_{ 7}{ 49} $</td>
+        <td>$\log_{7}{49}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\log_{7}{49}$</code></div>
+          <div><b>PR:</b> <code>$\log_{7}{49}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>120</td>
+        <td>probability of Z equals 0.39</td>
+        <td>$P(Z) = 0.39$</td>
+        <td>$P(Z) = 0.39$</td>
+        <td>$P(Z) = 0.39$</td>
+        <td>
+          <div><b>GT:</b> <code>$P(Z) = 0.39$</code></div>
+          <div><b>PR:</b> <code>$P(Z) = 0.39$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>121</td>
+        <td>P Y equals 0.39</td>
+        <td>$P(Y) = 0.39$</td>
+        <td>$P(Y) = 0.39$</td>
+        <td>$P(Y) = 0.39$</td>
+        <td>
+          <div><b>GT:</b> <code>$P(Y) = 0.39$</code></div>
+          <div><b>PR:</b> <code>$P(Y) = 0.39$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>122</td>
+        <td>sum of 50 and 16</td>
+        <td>$50 + 16$</td>
+        <td>$50 + 16$</td>
+        <td>$50 + 16$</td>
+        <td>
+          <div><b>GT:</b> <code>$50 + 16$</code></div>
+          <div><b>PR:</b> <code>$50 + 16$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>123</td>
+        <td>cube of k^2</td>
+        <td>$\left(k^2\right)^3$</td>
+        <td>$\ left(k^ 2\ right)^ 3$</td>
+        <td>$\left(k^{2}\right)^{3}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\left(k^2\right)^3$</code></div>
+          <div><b>PR:</b> <code>$\left(k^{2}\right)^{3}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>124</td>
+        <td>first order condition for convexity</td>
+        <td>$f(y) \geq f(x) + \nabla f(x)^T (y - x)$</td>
+        <td>$\ vec{ 1} \ cdot \ vec{ 1} \ vec{ 1} \ vec{ 1} \ vec{ 1} \ cdot \ vec{ 1} \ vec{ 1} \ cdot \ vec{ 1} \ vec{ 1} \ cdot \ vec{ 1} \ vec{ 1} \ cdot \ ve</td>
+        <td>$\vec{1} \cdot \vec{1} \vec{1} \vec{1} \vec{1} \cdot \vec{1} \vec{1} \cdot \vec{1} \vec{1} \cdot \vec{1} \vec{1} \cdot \ve$</td>
+        <td>
+          <div><b>GT:</b> <code>$f(y) \geq f(x) + \nabla f(x)^T (y - x)$</code></div>
+          <div><b>PR:</b> <code>$\vec{1} \cdot \vec{1} \vec{1} \vec{1} \vec{1} \cdot \vec{1} \vec{1} \cdot \vec{1} \vec{1} \cdot \vec{1} \vec{1} \cdot \ve$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>125</td>
+        <td>15 minus y</td>
+        <td>$15 - y$</td>
+        <td>$15 - y$</td>
+        <td>$15 - y$</td>
+        <td>
+          <div><b>GT:</b> <code>$15 - y$</code></div>
+          <div><b>PR:</b> <code>$15 - y$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>126</td>
+        <td>6 plus 10 times 11</td>
+        <td>$6 + 10 \times 11$</td>
+        <td>$6 + 10 \ times 11$</td>
+        <td>$6 + 10 \times 11$</td>
+        <td>
+          <div><b>GT:</b> <code>$6 + 10 \times 11$</code></div>
+          <div><b>PR:</b> <code>$6 + 10 \times 11$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>127</td>
+        <td>4 minus -19 times -12</td>
+        <td>$4 - -19 \times -12$</td>
+        <td>$4 - -19 \ times -12$</td>
+        <td>$4 - -19 \times -12$</td>
+        <td>
+          <div><b>GT:</b> <code>$4 - -19 \times -12$</code></div>
+          <div><b>PR:</b> <code>$4 - -19 \times -12$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>128</td>
+        <td>sigma t from 3 to 7 of t^2</td>
+        <td>$\sum_{t=3}^{7} t^2$</td>
+        <td>$\ sum_{ t=3}^{ 7} t^ 2$</td>
+        <td>$\sum_{t=3}^{7} t^{2}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\sum_{t=3}^{7} t^2$</code></div>
+          <div><b>PR:</b> <code>$\sum_{t=3}^{7} t^{2}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>129</td>
+        <td>18 minus q</td>
+        <td>$18 - q$</td>
+        <td>$18 - q$</td>
+        <td>$18 - q$</td>
+        <td>
+          <div><b>GT:</b> <code>$18 - q$</code></div>
+          <div><b>PR:</b> <code>$18 - q$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>130</td>
+        <td>4v squared plus 6v minus -6 equals 0</td>
+        <td>$4v^2 + 6v - -6 = 0$</td>
+        <td>$4v^ 2 + 6v - -6 = 0$</td>
+        <td>$4v^{2} + 6v - -6 = 0$</td>
+        <td>
+          <div><b>GT:</b> <code>$4v^2 + 6v - -6 = 0$</code></div>
+          <div><b>PR:</b> <code>$4v^{2} + 6v - -6 = 0$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>131</td>
+        <td>-12 tan of a</td>
+        <td>$-12 \tan(a)$</td>
+        <td>$-12 \ tan(a)$</td>
+        <td>$-12 \tan(a)$</td>
+        <td>
+          <div><b>GT:</b> <code>$-12 \tan(a)$</code></div>
+          <div><b>PR:</b> <code>$-12 \tan(a)$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>132</td>
+        <td>dA dt is equal to a half r squared d theta dt</td>
+        <td>$\frac{dA}{dt}=\frac{1}{2}r^{2}\frac{d\theta}{dt}$</td>
+        <td>$dAdt=\ frac{ 1}{ 2} r^{ 2} d\ thetadt$</td>
+        <td>$dAdt=\frac{1}{2} r^{2} d\thetadt$</td>
+        <td>
+          <div><b>GT:</b> <code>$\frac{dA}{dt}=\frac{1}{2}r^{2}\frac{d\theta}{dt}$</code></div>
+          <div><b>PR:</b> <code>$dAdt=\frac{1}{2} r^{2} d\thetadt$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>133</td>
+        <td>10 minus 11 times 10</td>
+        <td>$10 - 11 \times 10$</td>
+        <td>$10 - 11 \ times 10$</td>
+        <td>$10 - 11 \times 10$</td>
+        <td>
+          <div><b>GT:</b> <code>$10 - 11 \times 10$</code></div>
+          <div><b>PR:</b> <code>$10 - 11 \times 10$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>134</td>
+        <td>86 per 1</td>
+        <td>$\frac{86}{1}$</td>
+        <td>$\ frac{ 86}{ 1} $</td>
+        <td>$\frac{86}{1}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\frac{86}{1}$</code></div>
+          <div><b>PR:</b> <code>$\frac{86}{1}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>135</td>
+        <td>t times t</td>
+        <td>$t \times t$</td>
+        <td>$t \ times t$</td>
+        <td>$t \times t$</td>
+        <td>
+          <div><b>GT:</b> <code>$t \times t$</code></div>
+          <div><b>PR:</b> <code>$t \times t$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>136</td>
+        <td>P equals voltage times current</td>
+        <td>$P = VI$</td>
+        <td>$P = VCC$</td>
+        <td>$P = VCC$</td>
+        <td>
+          <div><b>GT:</b> <code>$P = VI$</code></div>
+          <div><b>PR:</b> <code>$P = VCC$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>137</td>
+        <td>e power -17t^2</td>
+        <td>$e^{-17t^2}$</td>
+        <td>$e^{ -17t^ 2} $</td>
+        <td>$e^{-17t^{2}}$</td>
+        <td>
+          <div><b>GT:</b> <code>$e^{-17t^2}$</code></div>
+          <div><b>PR:</b> <code>$e^{-17t^{2}}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>138</td>
+        <td>tan y times 3</td>
+        <td>$3 \tan(y)$</td>
+        <td>$3 \ tan(y)$</td>
+        <td>$3 \tan(y)$</td>
+        <td>
+          <div><b>GT:</b> <code>$3 \tan(y)$</code></div>
+          <div><b>PR:</b> <code>$3 \tan(y)$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>139</td>
+        <td>divide 90 by 7</td>
+        <td>$\frac{90}{7}$</td>
+        <td>$\ frac{ 90}{ 7} $</td>
+        <td>$\frac{90}{7}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\frac{90}{7}$</code></div>
+          <div><b>PR:</b> <code>$\frac{90}{7}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>140</td>
+        <td>-20 added to -19</td>
+        <td>$-20 + -19$</td>
+        <td>$-20 + -19$</td>
+        <td>$-20 + -19$</td>
+        <td>
+          <div><b>GT:</b> <code>$-20 + -19$</code></div>
+          <div><b>PR:</b> <code>$-20 + -19$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>141</td>
+        <td>number of permutations of n items taken r at a time equals n factorial over n minus r factorial</td>
+        <td>$P(n,r) = \frac{n!}{(n-r)!}$</td>
+        <td>$P(n,r) = \ frac{ n!}{ n-r!} $</td>
+        <td>$P(n,r) = \frac{n!}{n-r!}$</td>
+        <td>
+          <div><b>GT:</b> <code>$P(n,r) = \frac{n!}{(n-r)!}$</code></div>
+          <div><b>PR:</b> <code>$P(n,r) = \frac{n!}{n-r!}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>142</td>
+        <td>optimal triangulated point minimizes sum of reprojection error squares</td>
+        <td>$X = \arg\min_X \sum_i \|x_i - P_i X\|^2$</td>
+        <td>$\ max_{ i=1}^ T \ sum_{ i=1}^ T \ sum_{ i=1}^ T \ sum_{ j=1}^ T \ sum_{ j=1}^ T \ sum_{ j=1}^ T \ sum_{ j=1}^ T \ sum_{ j=1}^ T \ sum_{ j=1}^ T \ sum_{ j=1}^ T \ sum_{ j</td>
+        <td>$\max_{i=1}^{T} \sum_{i=1}^{T} \sum_{i=1}^{T} \sum_{j=1}^{T} \sum_{j=1}^{T} \sum_{j=1}^{T} \sum_{j=1}^{T} \sum_{j=1}^{T} \sum_{j=1}^{T} \sum_{j=1}^{T} \sum_{j}$</td>
+        <td>
+          <div><b>GT:</b> <code>$X = \arg\min_X \sum_i \|x_i - P_i X\|^2$</code></div>
+          <div><b>PR:</b> <code>$\max_{i=1}^{T} \sum_{i=1}^{T} \sum_{i=1}^{T} \sum_{j=1}^{T} \sum_{j=1}^{T} \sum_{j=1}^{T} \sum_{j=1}^{T} \sum_{j=1}^{T} \sum_{j=1}^{T} \sum_{j=1}^{T} \sum_{j}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>143</td>
+        <td>12 times csc of c</td>
+        <td>$12 \csc(c)$</td>
+        <td>$12 \ csc(c)$</td>
+        <td>$12 \csc(c)$</td>
+        <td>
+          <div><b>GT:</b> <code>$12 \csc(c)$</code></div>
+          <div><b>PR:</b> <code>$12 \csc(c)$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>144</td>
+        <td>alpha cubed plus beta cubed equals alpha plus beta whole cubed minus 3 alpha beta times alpha plus beta</td>
+        <td>$\alpha^3 + \beta^3 = (\alpha + \beta)^3 - 3\alpha \beta(\alpha + \beta)$</td>
+        <td>$\ alpha^ 3 + \ beta^ 3 = (\ alpha + \ beta)^ 3 - 3\ alpha\ beta(\ alpha + \ beta)$</td>
+        <td>$\alpha^{3} + \beta^{3} = (\alpha + \beta)^{3} - 3\alpha\beta(\alpha + \beta)$</td>
+        <td>
+          <div><b>GT:</b> <code>$\alpha^3 + \beta^3 = (\alpha + \beta)^3 - 3\alpha \beta(\alpha + \beta)$</code></div>
+          <div><b>PR:</b> <code>$\alpha^{3} + \beta^{3} = (\alpha + \beta)^{3} - 3\alpha\beta(\alpha + \beta)$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>145</td>
+        <td>m plus -17</td>
+        <td>$m + -17$</td>
+        <td>$m + -17$</td>
+        <td>$m + -17$</td>
+        <td>
+          <div><b>GT:</b> <code>$m + -17$</code></div>
+          <div><b>PR:</b> <code>$m + -17$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>146</td>
+        <td>20 divided by 4</td>
+        <td>$\frac{20}{4}$</td>
+        <td>$\ frac{ 20}{ 4} $</td>
+        <td>$\frac{20}{4}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\frac{20}{4}$</code></div>
+          <div><b>PR:</b> <code>$\frac{20}{4}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>147</td>
+        <td>pi over 2</td>
+        <td>$\frac{\pi}{2}$</td>
+        <td>$\ frac{\ pi}{ 2} $</td>
+        <td>$\frac{\pi}{2}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\frac{\pi}{2}$</code></div>
+          <div><b>PR:</b> <code>$\frac{\pi}{2}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>148</td>
+        <td>product rule says derivative of u times v is u dash v plus u v dash</td>
+        <td>$\frac{d}{dx}(uv) = u'v + uv'$</td>
+        <td>\ frac{ d}{ dx} u v = u'v + uv'</td>
+        <td>$\frac{d}{dx} u v = u'v + uv'$</td>
+        <td>
+          <div><b>GT:</b> <code>$\frac{d}{dx}(uv) = u&#x27;v + uv&#x27;$</code></div>
+          <div><b>PR:</b> <code>$\frac{d}{dx} u v = u&#x27;v + uv&#x27;$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>149</td>
+        <td>sec of b multiplied by -6</td>
+        <td>$-6 \sec(b)$</td>
+        <td>$-6 \ sec(b)$</td>
+        <td>$-6 \sec(b)$</td>
+        <td>
+          <div><b>GT:</b> <code>$-6 \sec(b)$</code></div>
+          <div><b>PR:</b> <code>$-6 \sec(b)$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>150</td>
+        <td>10 plus -14 times 1</td>
+        <td>$10 + -14 \times 1$</td>
+        <td>$10 + -14 \ times 1$</td>
+        <td>$10 + -14 \times 1$</td>
+        <td>
+          <div><b>GT:</b> <code>$10 + -14 \times 1$</code></div>
+          <div><b>PR:</b> <code>$10 + -14 \times 1$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>151</td>
+        <td>divide 69 by 9</td>
+        <td>$\frac{69}{9}$</td>
+        <td>$\ frac{ 69}{ 9} $</td>
+        <td>$\frac{69}{9}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\frac{69}{9}$</code></div>
+          <div><b>PR:</b> <code>$\frac{69}{9}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>152</td>
+        <td>18 less than 81</td>
+        <td>$81 - 18$</td>
+        <td>$81 - 18$</td>
+        <td>$81 - 18$</td>
+        <td>
+          <div><b>GT:</b> <code>$81 - 18$</code></div>
+          <div><b>PR:</b> <code>$81 - 18$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>153</td>
+        <td>rydberg formula is one over lambda equals R times one over n1 squared minus one over n2 squared</td>
+        <td>$\frac{1}{\lambda} = R\left(\frac{1}{n_1^2} - \frac{1}{n_2^2}\right)$</td>
+        <td>$\ frac{ 1}{\ lambda} = R\ left(\ frac{ 1}{ n_1^ 2} - \ frac{ 1}{ n_2^ 2}\ right)$</td>
+        <td>$\frac{1}{\lambda} = R\left(\frac{1}{n_{1}^{2}} - \frac{1}{n_{2}^{2}}\right)$</td>
+        <td>
+          <div><b>GT:</b> <code>$\frac{1}{\lambda} = R\left(\frac{1}{n_1^2} - \frac{1}{n_2^2}\right)$</code></div>
+          <div><b>PR:</b> <code>$\frac{1}{\lambda} = R\left(\frac{1}{n_{1}^{2}} - \frac{1}{n_{2}^{2}}\right)$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>154</td>
+        <td>ratio of -14 to 5</td>
+        <td>$\frac{-14}{5}$</td>
+        <td>$\ frac{ -14}{ 5} $</td>
+        <td>$\frac{-14}{5}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\frac{-14}{5}$</code></div>
+          <div><b>PR:</b> <code>$\frac{-14}{5}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>155</td>
+        <td>5 base logarithm of 46</td>
+        <td>$\log_{5}{46}$</td>
+        <td>$\ log_{ 5}{ 46} $</td>
+        <td>$\log_{5}{46}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\log_{5}{46}$</code></div>
+          <div><b>PR:</b> <code>$\log_{5}{46}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>156</td>
+        <td>8 added with 12</td>
+        <td>$8 + 12$</td>
+        <td>$8 + 12$</td>
+        <td>$8 + 12$</td>
+        <td>
+          <div><b>GT:</b> <code>$8 + 12$</code></div>
+          <div><b>PR:</b> <code>$8 + 12$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>157</td>
+        <td>y to the fourth plus xy squared minus two is equal to zero</td>
+        <td>$y^{4}+xy^{2}-2=0$</td>
+        <td>$y^{ 4} +xy^{ 2} -2=0$</td>
+        <td>$y^{4} +xy^{2} -2=0$</td>
+        <td>
+          <div><b>GT:</b> <code>$y^{4}+xy^{2}-2=0$</code></div>
+          <div><b>PR:</b> <code>$y^{4} +xy^{2} -2=0$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>158</td>
+        <td>chance of Z equals 0.46</td>
+        <td>$P(Z) = 0.46$</td>
+        <td>$P(Z) = 0.46$</td>
+        <td>$P(Z) = 0.46$</td>
+        <td>
+          <div><b>GT:</b> <code>$P(Z) = 0.46$</code></div>
+          <div><b>PR:</b> <code>$P(Z) = 0.46$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>159</td>
+        <td>ratio of -15 to 20</td>
+        <td>$\frac{-15}{20}$</td>
+        <td>$\ frac{ -15}{ 20} $</td>
+        <td>$\frac{-15}{20}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\frac{-15}{20}$</code></div>
+          <div><b>PR:</b> <code>$\frac{-15}{20}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>160</td>
+        <td>10z squared minus 6z plus 3 equals 0</td>
+        <td>$10z^2 - 6z + 3 = 0$</td>
+        <td>$10z^ 2 - 6z + 3 = 0$</td>
+        <td>$10z^{2} - 6z + 3 = 0$</td>
+        <td>
+          <div><b>GT:</b> <code>$10z^2 - 6z + 3 = 0$</code></div>
+          <div><b>PR:</b> <code>$10z^{2} - 6z + 3 = 0$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>161</td>
+        <td>10t minus 1 equals 0</td>
+        <td>$10t - 1 = 0$</td>
+        <td>$10t - 1 = 0$</td>
+        <td>$10t - 1 = 0$</td>
+        <td>
+          <div><b>GT:</b> <code>$10t - 1 = 0$</code></div>
+          <div><b>PR:</b> <code>$10t - 1 = 0$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>162</td>
+        <td>e power -5v</td>
+        <td>$e^{-5v}$</td>
+        <td>$e^{ -5v} $</td>
+        <td>$e^{-5v}$</td>
+        <td>
+          <div><b>GT:</b> <code>$e^{-5v}$</code></div>
+          <div><b>PR:</b> <code>$e^{-5v}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>163</td>
+        <td>4 sin of z</td>
+        <td>$4 \sin(z)$</td>
+        <td>$4 \ sin(z)$</td>
+        <td>$4 \sin(z)$</td>
+        <td>
+          <div><b>GT:</b> <code>$4 \sin(z)$</code></div>
+          <div><b>PR:</b> <code>$4 \sin(z)$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>164</td>
+        <td>raise e to 2k</td>
+        <td>$e^{2k}$</td>
+        <td>$e^{ 2k} $</td>
+        <td>$e^{2k}$</td>
+        <td>
+          <div><b>GT:</b> <code>$e^{2k}$</code></div>
+          <div><b>PR:</b> <code>$e^{2k}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>165</td>
+        <td>10 plus 41</td>
+        <td>$10 + 41$</td>
+        <td>$10 + 41$</td>
+        <td>$10 + 41$</td>
+        <td>
+          <div><b>GT:</b> <code>$10 + 41$</code></div>
+          <div><b>PR:</b> <code>$10 + 41$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>166</td>
+        <td>f of x y equals one minus x squared minus y squared</td>
+        <td>$f(x,y)=1-x^{2}-y^{2}$</td>
+        <td>$f(x,y)=1-x^{ 2} -y^{ 2} $</td>
+        <td>$f(x,y)=1-x^{2} -y^{2}$</td>
+        <td>
+          <div><b>GT:</b> <code>$f(x,y)=1-x^{2}-y^{2}$</code></div>
+          <div><b>PR:</b> <code>$f(x,y)=1-x^{2} -y^{2}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>167</td>
+        <td>16 times 16</td>
+        <td>$16 \times 16$</td>
+        <td>$16 \ times 16$</td>
+        <td>$16 \times 16$</td>
+        <td>
+          <div><b>GT:</b> <code>$16 \times 16$</code></div>
+          <div><b>PR:</b> <code>$16 \times 16$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>168</td>
+        <td>probability that A is 0.62</td>
+        <td>$P(A) = 0.62$</td>
+        <td>$P(A) = 0.62$</td>
+        <td>$P(A) = 0.62$</td>
+        <td>
+          <div><b>GT:</b> <code>$P(A) = 0.62$</code></div>
+          <div><b>PR:</b> <code>$P(A) = 0.62$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>169</td>
+        <td>probability of X equals 0.51</td>
+        <td>$P(X) = 0.51$</td>
+        <td>$P(X) = 0.51$</td>
+        <td>$P(X) = 0.51$</td>
+        <td>
+          <div><b>GT:</b> <code>$P(X) = 0.51$</code></div>
+          <div><b>PR:</b> <code>$P(X) = 0.51$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>170</td>
+        <td>sum of squares of roots equals square of sum of roots minus 2 times product of roots</td>
+        <td>$\alpha^2 + \beta^2 = (\alpha + \beta)^2 - 2\alpha \beta$</td>
+        <td>$\ sum_{ i=1}^ n (y_i - \ hat{ y} _i)^ 2 = \ sqrt{\ sum_{ i=2}^ n (y_i - \ hat{ y} _i)} $</td>
+        <td>$\sum_{i=1}^{n} (y_{i} - \hat{y}_{i})^{2} = \sqrt{\sum_{i=2}^{n} (y_{i} - \hat{y}_{i})}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\alpha^2 + \beta^2 = (\alpha + \beta)^2 - 2\alpha \beta$</code></div>
+          <div><b>PR:</b> <code>$\sum_{i=1}^{n} (y_{i} - \hat{y}_{i})^{2} = \sqrt{\sum_{i=2}^{n} (y_{i} - \hat{y}_{i})}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>171</td>
+        <td>5n squared plus 10n minus 5 equals 0</td>
+        <td>$5n^2 + 10n - 5 = 0$</td>
+        <td>$5n^ 2 + 10n - 5 = 0$</td>
+        <td>$5n^{2} + 10n - 5 = 0$</td>
+        <td>
+          <div><b>GT:</b> <code>$5n^2 + 10n - 5 = 0$</code></div>
+          <div><b>PR:</b> <code>$5n^{2} + 10n - 5 = 0$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>172</td>
+        <td>3 minus -8</td>
+        <td>$3 - -8$</td>
+        <td>$3 - -8$</td>
+        <td>$3 - -8$</td>
+        <td>
+          <div><b>GT:</b> <code>$3 - -8$</code></div>
+          <div><b>PR:</b> <code>$3 - -8$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>173</td>
+        <td>5a plus 5 equals 0</td>
+        <td>$5a + 5 = 0$</td>
+        <td>$5a + 5 = 0$</td>
+        <td>$5a + 5 = 0$</td>
+        <td>
+          <div><b>GT:</b> <code>$5a + 5 = 0$</code></div>
+          <div><b>PR:</b> <code>$5a + 5 = 0$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>174</td>
+        <td>csc q times 19</td>
+        <td>$19 \csc(q)$</td>
+        <td>$19 \ csc(q)$</td>
+        <td>$19 \csc(q)$</td>
+        <td>
+          <div><b>GT:</b> <code>$19 \csc(q)$</code></div>
+          <div><b>PR:</b> <code>$19 \csc(q)$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>175</td>
+        <td>ratio of -10 to 5</td>
+        <td>$\frac{-10}{5}$</td>
+        <td>$\ frac{ -10}{ 5} $</td>
+        <td>$\frac{-10}{5}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\frac{-10}{5}$</code></div>
+          <div><b>PR:</b> <code>$\frac{-10}{5}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>176</td>
+        <td>1 sin of b</td>
+        <td>$1 \sin(b)$</td>
+        <td>$1 \ sin(b)$</td>
+        <td>$1 \sin(b)$</td>
+        <td>
+          <div><b>GT:</b> <code>$1 \sin(b)$</code></div>
+          <div><b>PR:</b> <code>$1 \sin(b)$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>177</td>
+        <td>fraction of 3 by 10</td>
+        <td>$\frac{3}{10}$</td>
+        <td>$\ frac{ 3}{ 10} $</td>
+        <td>$\frac{3}{10}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\frac{3}{10}$</code></div>
+          <div><b>PR:</b> <code>$\frac{3}{10}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>178</td>
+        <td>delta x delta p greater than or equal to h by 4 pi</td>
+        <td>$\Delta x\Delta p \ge \frac{h}{4\pi}$</td>
+        <td>$\ Delta x\ Delta p \ geq \ frac{ h}{ 4\ pi} $</td>
+        <td>$\Delta x\Delta p \geq \frac{h}{4\pi}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\Delta x\Delta p \ge \frac{h}{4\pi}$</code></div>
+          <div><b>PR:</b> <code>$\Delta x\Delta p \geq \frac{h}{4\pi}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>179</td>
+        <td>1c squared plus 8c minus 9 equals 0</td>
+        <td>$1c^2 + 8c - 9 = 0$</td>
+        <td>$1c^ 2 + 8c - 9 = 0$</td>
+        <td>$1c^{2} + 8c - 9 = 0$</td>
+        <td>
+          <div><b>GT:</b> <code>$1c^2 + 8c - 9 = 0$</code></div>
+          <div><b>PR:</b> <code>$1c^{2} + 8c - 9 = 0$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>180</td>
+        <td>quotient of 27 and 9</td>
+        <td>$\frac{27}{9}$</td>
+        <td>$\ frac{ 27}{ 9} $</td>
+        <td>$\frac{27}{9}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\frac{27}{9}$</code></div>
+          <div><b>PR:</b> <code>$\frac{27}{9}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>181</td>
+        <td>11 over 9</td>
+        <td>$\frac{11}{9}$</td>
+        <td>$\ frac{ 11}{ 9} $</td>
+        <td>$\frac{11}{9}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\frac{11}{9}$</code></div>
+          <div><b>PR:</b> <code>$\frac{11}{9}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>182</td>
+        <td>a mod b</td>
+        <td>$a \bmod b$</td>
+        <td>$a \ mod b$</td>
+        <td>$a \mod b$</td>
+        <td>
+          <div><b>GT:</b> <code>$a \bmod b$</code></div>
+          <div><b>PR:</b> <code>$a \mod b$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>183</td>
+        <td>5z squared minus 5z plus 6 equals 0</td>
+        <td>$5z^2 - 5z + 6 = 0$</td>
+        <td>$5z^ 2 - 5z + 6 = 0$</td>
+        <td>$5z^{2} - 5z + 6 = 0$</td>
+        <td>
+          <div><b>GT:</b> <code>$5z^2 - 5z + 6 = 0$</code></div>
+          <div><b>PR:</b> <code>$5z^{2} - 5z + 6 = 0$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>184</td>
+        <td>e power 1c</td>
+        <td>$e^{1c}$</td>
+        <td>$e^{ 1c} $</td>
+        <td>$e^{1c}$</td>
+        <td>
+          <div><b>GT:</b> <code>$e^{1c}$</code></div>
+          <div><b>PR:</b> <code>$e^{1c}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>185</td>
+        <td>sin p times 17</td>
+        <td>$17 \sin(p)$</td>
+        <td>$17 \ sin(p)$</td>
+        <td>$17 \sin(p)$</td>
+        <td>
+          <div><b>GT:</b> <code>$17 \sin(p)$</code></div>
+          <div><b>PR:</b> <code>$17 \sin(p)$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>186</td>
+        <td>angle at B in triangle ABC is 90 degrees</td>
+        <td>$\angle ABC = 90^\circ$</td>
+        <td>$\ angle B \ in triangle ABC = 90} $</td>
+        <td>$\angle B \in triangle ABC = 90}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\angle ABC = 90^\circ$</code></div>
+          <div><b>PR:</b> <code>$\angle B \in triangle ABC = 90}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>187</td>
+        <td>e squared over two</td>
+        <td>$\frac{e^{2}}{2}$</td>
+        <td>$e^{ 2} /2$</td>
+        <td>$e^{2} /2$</td>
+        <td>
+          <div><b>GT:</b> <code>$\frac{e^{2}}{2}$</code></div>
+          <div><b>PR:</b> <code>$e^{2} /2$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>188</td>
+        <td>add 50 to 10</td>
+        <td>$50 + 10$</td>
+        <td>$50 + 10$</td>
+        <td>$50 + 10$</td>
+        <td>
+          <div><b>GT:</b> <code>$50 + 10$</code></div>
+          <div><b>PR:</b> <code>$50 + 10$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>189</td>
+        <td>variance of x equals expected value of x squared minus mean squared</td>
+        <td>$Var(X) = E[X^2] - (E[X])^2$</td>
+        <td>$Var(x) = E[x^ 2] - M^ 2$</td>
+        <td>$Var(x) = E[x^{2}] - M^{2}$</td>
+        <td>
+          <div><b>GT:</b> <code>$Var(X) = E[X^2] - (E[X])^2$</code></div>
+          <div><b>PR:</b> <code>$Var(x) = E[x^{2}] - M^{2}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>190</td>
+        <td>x squared plus px plus q equals zero has roots minus p plus or minus square root of p squared minus 4q over 2</td>
+        <td>$x = \frac{-p \pm \sqrt{p^2 - 4q}}{2}$</td>
+        <td>$x^ 2 + px + q = \ sqrt{ -p} + \ sqrt{ p^ 2 - 4q}}{ 2} $</td>
+        <td>$x^{2} + px + q = \sqrt{-p} + \sqrt{p^{2} - 4q}}{2}$</td>
+        <td>
+          <div><b>GT:</b> <code>$x = \frac{-p \pm \sqrt{p^2 - 4q}}{2}$</code></div>
+          <div><b>PR:</b> <code>$x^{2} + px + q = \sqrt{-p} + \sqrt{p^{2} - 4q}}{2}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>191</td>
+        <td>product of 19 and -7</td>
+        <td>$19 \times -7$</td>
+        <td>$19 \ times -7$</td>
+        <td>$19 \times -7$</td>
+        <td>
+          <div><b>GT:</b> <code>$19 \times -7$</code></div>
+          <div><b>PR:</b> <code>$19 \times -7$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>192</td>
+        <td>logarithm to the base 10 of 64</td>
+        <td>$\log_{10}{64}$</td>
+        <td>$\ log_{ 10}{ 64} $</td>
+        <td>$\log_{10}{64}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\log_{10}{64}$</code></div>
+          <div><b>PR:</b> <code>$\log_{10}{64}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>193</td>
+        <td>poisson probability equals lambda to the x times e to minus lambda over x factorial</td>
+        <td>$P(X = x) = \frac{\lambda^x e^{-\lambda}}{x!}$</td>
+        <td>$P(x) = \ frac{\ lambda^ x e^{ -\ lambda}}{ x!} $</td>
+        <td>$P(x) = \frac{\lambda^{x} e^{-\lambda}}{x!}$</td>
+        <td>
+          <div><b>GT:</b> <code>$P(X = x) = \frac{\lambda^x e^{-\lambda}}{x!}$</code></div>
+          <div><b>PR:</b> <code>$P(x) = \frac{\lambda^{x} e^{-\lambda}}{x!}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>194</td>
+        <td>8 base logarithm of y</td>
+        <td>$\log_{8}{y}$</td>
+        <td>$\ log_{ 8}{ y} $</td>
+        <td>$\log_{8}{y}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\log_{8}{y}$</code></div>
+          <div><b>PR:</b> <code>$\log_{8}{y}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>195</td>
+        <td>10 base logarithm of 56</td>
+        <td>$\log_{10}{56}$</td>
+        <td>$\ log_{ 10}{ 56} $</td>
+        <td>$\log_{10}{56}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\log_{10}{56}$</code></div>
+          <div><b>PR:</b> <code>$\log_{10}{56}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>196</td>
+        <td>9m plus 6 equals 0</td>
+        <td>$9m + 6 = 0$</td>
+        <td>$9m + 6 = 0$</td>
+        <td>$9m + 6 = 0$</td>
+        <td>
+          <div><b>GT:</b> <code>$9m + 6 = 0$</code></div>
+          <div><b>PR:</b> <code>$9m + 6 = 0$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>197</td>
+        <td>divide -11 by 16</td>
+        <td>$\frac{-11}{16}$</td>
+        <td>$\ frac{ -11}{ 16} $</td>
+        <td>$\frac{-11}{16}$</td>
+        <td>
+          <div><b>GT:</b> <code>$\frac{-11}{16}$</code></div>
+          <div><b>PR:</b> <code>$\frac{-11}{16}$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>198</td>
+        <td>-3 added to -5</td>
+        <td>$-3 + -5$</td>
+        <td>$-3 + -5$</td>
+        <td>$-3 + -5$</td>
+        <td>
+          <div><b>GT:</b> <code>$-3 + -5$</code></div>
+          <div><b>PR:</b> <code>$-3 + -5$</code></div>
+        </td>
+      </tr>
+
+      <tr class="ok">
+        <td>199</td>
+        <td>add 18 to 40</td>
+        <td>$18 + 40$</td>
+        <td>$18 + 40$</td>
+        <td>$18 + 40$</td>
+        <td>
+          <div><b>GT:</b> <code>$18 + 40$</code></div>
+          <div><b>PR:</b> <code>$18 + 40$</code></div>
+        </td>
+      </tr>
+
+      <tr class="bad">
+        <td>200</td>
+        <td>transformer attention equals softmax of dot product of queries and keys scaled by sqrt dk multiplied with values</td>
+        <td>$Attention(Q, K, V) = softmax\left(\frac{QK^T}{\sqrt{d_k}}\right)V$</td>
+        <td>$A(s,a) = \ softmax\ left(\ frac{ Q(s,a)}{\ sqrt{ dk}}\ right)$</td>
+        <td>$A(s,a) = \softmax\left(\frac{Q(s,a)}{\sqrt{dk}}\right)$</td>
+        <td>
+          <div><b>GT:</b> <code>$Attention(Q, K, V) = softmax\left(\frac{QK^T}{\sqrt{d_k}}\right)V$</code></div>
+          <div><b>PR:</b> <code>$A(s,a) = \softmax\left(\frac{Q(s,a)}{\sqrt{dk}}\right)$</code></div>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+</body>
+</html>

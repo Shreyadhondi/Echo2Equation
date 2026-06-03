@@ -1,1 +1,36 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
 venv/
+
+# Environment files
+.env
+
+# Logs and temporary/generated files
+logs/
+*.log
+tmp_eval/
+checkpoints/
+storage/
+
+# MLflow local runs
+mlruns/
+
+# DVC-tracked large folders
+data/
+models/
+
+# OS/editor
+.DS_Store
+.vscode/
+.idea/
+
+# Cache
+.cache/
+huggingface/
+/data
+/models
+data_backup_before_cleanup/

@@ -1,0 +1,154 @@
+:root{
+  --bg:#0b1220; --card:#0f172a; --soft:#0d1528; --border:#1f2937;
+  --text:#f5f7fb; --muted:#b8c1cf; --accent:#20c7c7;
+  --shadow:0 10px 40px rgba(0,0,0,.4);
+  --r-lg:24px; --r-md:16px; --r-sm:12px;
+}
+
+*{box-sizing:border-box}
+html,body{
+  margin:0; padding:0;
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  background:var(--bg); color:var(--text); line-height:1.5;
+}
+
+.hidden{display:none!important}
+.visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
+
+/* HERO */
+.hero{ text-align:center; padding:56px 16px 28px; }
+.hero__logo{ height:96px; width:auto; display:block; margin:0 auto 18px; filter:drop-shadow(0 12px 30px rgba(0,0,0,.35)); }
+.hero__title{ margin:0; font-weight:800; font-size:clamp(28px,5vw,56px); }
+.hero__subtitle{ margin:10px 0 0; color:var(--muted); font-size:clamp(12px,2.6vw,18px); letter-spacing:.28em }
+
+/* LAYOUT */
+main{ max-width:920px; margin:0 auto; padding:0 16px 48px; }
+.card{
+  background:transparent; border:1px solid rgba(255,255,255,.06);
+  border-radius:var(--r-lg); padding:24px; box-shadow:var(--shadow);
+}
+
+/* INPUT ROW */
+.input-row{
+  display:grid; grid-template-columns:56px 1fr 220px; gap:12px; align-items:center;
+  background:var(--card); border:1px solid var(--border); border-radius:28px;
+  padding:12px 12px 12px 16px; margin-bottom:20px;
+}
+.input-row__left{
+  display:flex; align-items:center; justify-content:center; height:40px; width:40px;
+  border-radius:50%; background:rgba(255,255,255,.04); border:1px solid var(--border);
+  color: var(--accent);
+}
+.mic-svg{ display:block }
+.input-row__center{ min-width:0; }
+
+/* status “pill” (used by input too) */
+.status{
+  color:var(--muted); display:block; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+  padding:8px 12px; background:var(--soft); border:1px solid var(--border);
+  border-radius:999px;
+}
+
+/* EDITABLE transcript input */
+.input-text{
+  width:100%;
+  height:40px;
+  color:var(--text);
+  background:var(--soft);
+  border:1px solid var(--border);
+  border-radius:999px;
+  padding:8px 12px;
+  outline:none;
+}
+.input-text::placeholder{ color:var(--muted); }
+.input-text:focus{
+  border-color:var(--accent);
+  box-shadow:0 0 0 2px rgba(32,199,199,.15);
+}
+
+.input-row__right{ display:flex; justify-content:flex-end; gap:10px; }
+
+.btn{
+  appearance:none; border:1px solid var(--border); background:#111a2e; color:var(--text);
+  padding:10px 14px; border-radius:var(--r-sm); cursor:pointer;
+  transition:transform .06s ease, background .15s ease, border-color .15s ease;
+  font-weight:600;
+}
+.btn:hover{ background:#12203a } .btn:active{ transform:translateY(1px) }
+.btn[disabled]{ opacity:.6; cursor:not-allowed }
+.btn.ghost{ background:transparent; display:flex; align-items:center; gap:8px }
+.btn .btn-mic{ color:var(--accent); display:inline-flex }
+.btn.go{
+  background:transparent; border-radius:999px; height:46px; width:66px;
+  border:2px solid var(--accent); color:var(--text); font-weight:700;
+}
+
+/* BLOCKS / PANELS */
+.block{ margin:18px 0 }
+.block__label{ color:var(--muted); margin:8px 8px 10px }
+.panel{
+  border:1px solid var(--border); border-radius:var(--r-lg); padding:18px;
+}
+.panel--soft{ background:var(--soft); }
+.panel--emph{ background:#0c1426; color:var(--accent) }
+
+/* READ-ONLY code style (kept for reference if used elsewhere) */
+.code-block{
+  background:#0c1426; color:var(--text);
+  border-radius:var(--r-md); padding:12px 14px; min-height:44px; overflow-x:auto;
+  font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+/* EDITABLE LaTeX textarea — blend into the panel (no white box) */
+.code-input{
+  width:100%;
+  min-height:64px;
+  resize:vertical;             /* keep the resize handle */
+  background:transparent;      /* inherit panel background */
+  color:var(--text);
+  border:0;                    /* no inner border; panel provides the frame */
+  border-radius:0;             /* use panel’s rounded corner */
+  padding:0;                   /* rely on panel padding for spacing */
+  font: inherit;
+  font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  outline:none;
+}
+.code-input::placeholder{ color:var(--muted); }
+.code-input:focus{
+  outline:none;
+  box-shadow:none;             /* no extra glow; clean look */
+}
+
+/* Rendered LaTeX */
+.latex-render{
+  min-height:160px; display:flex; align-items:center; justify-content:center;
+  font-size:clamp(28px,5vw,64px);
+}
+
+/* ACTIONS */
+.actions{ display:flex; gap:14px; flex-wrap:wrap; margin-top:8px }
+.actions--center{ justify-content:center }
+.btn.pill{ background:#111a2e; border-color:var(--border); border-radius:999px; padding:12px 18px }
+.btn.accent{ background:var(--accent); border-color:transparent; color:#062b2b }
+
+/* ALERTS */
+.alert{
+  margin-top:16px; background:#2b1f06; color:#ffe3a3; border:1px solid #4b3b0f;
+  border-radius:var(--r-md); padding:12px 14px;
+}
+
+/* STATES */
+body[data-state="listening"] .btn.ghost{
+  background:#a61e1e; color:#fff; border-color:transparent
+}
+body[data-state="error"] #error-box{ display:block }
+
+/* RESPONSIVE */
+@media (max-width:720px){
+  .input-row{ grid-template-columns:44px 1fr 180px }
+  .btn.go{ height:42px; width:60px }
+}
+@media (max-width:560px){
+  .input-row{ grid-template-columns:44px 1fr 140px; padding:10px 10px 10px 12px }
+  .actions .btn{ flex:1 1 auto; text-align:center }
+}

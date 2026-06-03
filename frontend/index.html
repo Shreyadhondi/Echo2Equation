@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Echo2Equation</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$','$$'], ['\\[','\\]']],
+        packages: {'[+]': ['ams']}
+      },
+      loader: { load: ['[tex]/ams'] }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  <script defer src="script.js"></script>
+</head>
+
+<body data-state="idle">
+  <!-- HERO -->
+  <header class="hero" role="banner">
+    <img src="assets/logo.png" alt="Echo2Equation logo" class="hero__logo" />
+    <h1 class="hero__title">Echo2Equation</h1>
+    <p class="hero__subtitle">FROM VOICE TO VISUALS</p>
+  </header>
+
+  <!-- CARD -->
+  <main id="main" role="main">
+    <section class="card">
+
+      <!-- Input row (mic + transcript text + GO) -->
+      <div class="input-row">
+        <div class="input-row__left" aria-hidden="true">
+          <!-- SVG mic icon -->
+          <svg class="mic-svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 14a3 3 0 0 0 3-3V7a3 3 0 0 0-6 0v4a3 3 0 0 0 3 3z"/>
+            <path d="M19 11a7 7 0 0 1-14 0"/>
+            <path d="M12 19v3"/>
+          </svg>
+        </div>
+
+        <!-- Transcript text lives here (EDITABLE) -->
+        <div class="input-row__center">
+          <input
+            id="asr-input"
+            class="status input-text"
+            type="text"
+            placeholder="Ready. Click Mic to speak…"
+            aria-label="Transcript (editable)" />
+        </div>
+
+        <div class="input-row__right">
+          <button id="btn-record" class="btn ghost" aria-pressed="false" title="Start/Stop Recording">
+            <span class="btn-mic">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 14a3 3 0 0 0 3-3V7a3 3 0 0 0-6 0v4a3 3 0 0 0 3 3z"/>
+                <path d="M19 11a7 7 0 0 1-14 0"/>
+                <path d="M12 19v3"/>
+              </svg>
+            </span>
+            <span class="btn-label">Start Recording</span>
+          </button>
+          <button id="btn-predict" class="btn go" title="Predict" disabled>GO</button>
+        </div>
+      </div>
+
+      <!-- LaTeX label -->
+      <div class="block">
+        <div class="block__label">LaTeX</div>
+      </div>
+
+      <!-- Raw LaTeX (top box) — EDITABLE -->
+      <div class="block">
+        <div class="panel panel--soft">
+          <textarea
+            id="latex-raw"
+            class="code-input"
+            rows="3"
+            aria-label="LaTeX (editable)"
+            placeholder="Model output will appear here. You can edit it before rendering…"></textarea>
+        </div>
+      </div>
+
+      <!-- Rendered visuals (bottom box) -->
+      <div class="block">
+        <div id="latex-render" class="panel panel--emph latex-render"></div>
+      </div>
+
+      <!-- Actions centered -->
+      <div class="actions actions--center">
+        <button id="btn-correct" class="btn pill">CORRECT</button>
+        <button id="btn-retry" class="btn pill">RETRY</button>
+        <button id="btn-record-again" class="btn pill">RECORD AGAIN</button>
+      </div>
+
+      <!-- Error box -->
+      <section id="error-box" class="alert hidden" role="alert" aria-live="assertive">
+        <strong>Sorry!</strong>
+        <span id="error-text">
+          We couldn’t produce a valid LaTeX output. Please press <em>Retry</em> or <em>Record Again</em>.
+        </span>
+      </section>
+
+      <!-- Correction panel (kept for later) -->
+      <section id="correction-panel" class="hidden block">
+        <div class="block__label">Correct the LaTeX</div>
+        <textarea id="correction-input" rows="5" class="code-input" placeholder="Edit LaTeX here..."></textarea>
+        <div class="actions actions--center">
+          <button id="btn-preview-correction" class="btn pill">Preview</button>
+          <button id="btn-submit-correction" class="btn pill accent">Submit</button>
+          <button id="btn-cancel-correction" class="btn pill">Cancel</button>
+        </div>
+        <div id="correction-render" class="panel panel--emph latex-render"></div>
+      </section>
+
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <small>© Echo2Equation</small>
+  </footer>
+</body>
+</html>

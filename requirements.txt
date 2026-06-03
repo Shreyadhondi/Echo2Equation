@@ -1,0 +1,56 @@
+# =========================
+# Echo2Equation MLOps
+# Core runtime + training dependencies
+# =========================
+
+# Web API
+fastapi==0.116.1
+uvicorn[standard]==0.35.0
+python-multipart==0.0.20
+pydantic==2.11.7
+python-dotenv==1.1.1
+
+# ML / Deep Learning
+torch==2.7.1
+transformers==4.41.1
+datasets==4.0.0
+accelerate==1.9.0
+tokenizers==0.19.1
+safetensors==0.5.3
+sentencepiece==0.2.0
+evaluate==0.4.5
+
+# Experiment tracking and versioning
+mlflow==3.1.4
+dvc==3.61.0
+dvc-http==2.32.0
+
+# Data and utilities
+numpy==2.2.6
+pandas==2.3.1
+scikit-learn==1.7.1
+scipy==1.15.3
+PyYAML==6.0.2
+tqdm==4.67.1
+matplotlib==3.10.5
+psutil==7.0.0
+RapidFuzz==3.13.0
+
+# Database
+psycopg2-binary==2.9.10
+SQLAlchemy==2.0.42
+
+# Speech/audio
+faster-whisper==1.2.0
+ffmpeg-python==0.2.0
+sounddevice==0.5.2
+soundfile==0.13.1
+
+# Monitoring
+prometheus-client==0.22.1
+prometheus-fastapi-instrumentator==7.1.0
+
+# Testing
+pytest==8.4.1
+httpx==0.28.1
+pathspec==0.12.1
