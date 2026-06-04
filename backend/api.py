@@ -1,127 +1,158 @@
 """
-FastAPI backend
+FastAPI backend for Echo2Equation.
 
-Exposes four endpoints for the frontend:
-  1) POST /transcribe        -> run Whisper on uploaded audio (multipart/form-data)
-  2) POST /to_latex          -> run MathT5 on transcript text (JSON)
-  3) GET  /corpus/search     -> search seeded corpus in Postgres (retry helper)
-  4) POST /feedback          -> record user's feedback flags in Postgres (JSON)
+Endpoints:
+----------
+1) POST /transcribe
+   - Accepts uploaded audio.
+   - Runs Whisper transcription.
+   - Returns transcript text.
 
-Design notes:
-- Models (Whisper + MathT5) are loaded once at startup and reused for all requests.
-- DB connections use a small psycopg2 pool.
-- All responses are JSON; LaTeX returned from /to_latex is already cleaned.
-- Keep endpoints small and deterministic; the frontend owns the UI/UX state machine.
+2) POST /to_latex
+   - Accepts spoken-style math text.
+   - Runs MathT5.
+   - Returns raw and cleaned LaTeX.
 
-You can safely modify any default paths/ports below via environment variables.
+3) GET /corpus/search
+   - Searches the seeded corpus table.
+   - Kept for optional future suggestion/retry features.
+
+4) POST /feedback
+   - Stores user feedback in PostgreSQL.
+   - Supports correct/incorrect feedback.
+   - Stores corrected LaTeX if user provides it.
+   - Adds accepted/corrected examples into the corpus for future reuse.
+
+Important design:
+-----------------
+The frontend and backend are loosely coupled.
+The frontend talks to this backend only through REST API calls.
 """
 
 from __future__ import annotations
 
-import os
-import io
 import re
 import time
 import uuid
-import json
-import shutil
+from contextlib import asynccontextmanager
 from pathlib import Path
 from typing import List, Optional
 
 import torch
-from fastapi import FastAPI, File, UploadFile, Form, Query, HTTPException
+from fastapi import FastAPI, File, Form, HTTPException, Query, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
-from contextlib import asynccontextmanager
 
-# DB
+# Database
 import psycopg2
 from psycopg2.pool import SimpleConnectionPool
 
-# HF / Transformers
-from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
+# HuggingFace / Transformers
+from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 from transformers.utils import logging as hf_logging
 
-# Our LaTeX cleaner (already in your repo)
+# Local LaTeX cleaner
 from backend.latex_parser.latex_clean import clean_latex
 
 
 # -----------------------------------------------------------------------------
-# Configuration (env with sensible defaults for local dev)
+# Configuration
 # -----------------------------------------------------------------------------
+
 API_TITLE = "Echo2Equation API"
 API_VERSION = "0.1.0"
 
-# Frontend origins for CORS (adjust if you use a different port)
 FRONTEND_ORIGINS = {
-    os.getenv("FRONTEND_ORIGIN_1", "http://127.0.0.1:5500"),
-    os.getenv("FRONTEND_ORIGIN_2", "http://localhost:5500"),
+    "http://127.0.0.1:5500",
+    "http://localhost:5500",
 }
 
-# Storage locations
-STORAGE_DIR = Path(os.getenv("STORAGE_DIR", "storage"))
+STORAGE_DIR = Path("storage")
 AUDIO_DIR = STORAGE_DIR / "audio"
 AUDIO_DIR.mkdir(parents=True, exist_ok=True)
 
-# Database (matches your docker-compose/.env; you can export these locally)
-DB_HOST = os.getenv("DB_HOST", "localhost")
-DB_PORT = int(os.getenv("DB_PORT", "5432"))
-DB_NAME = os.getenv("DB_NAME", "echo2eq_db")
-DB_USER = os.getenv("DB_USER", "echo2eq")
-DB_PASS = os.getenv("DB_PASS", "echo2eq_pw")
+DB_HOST = "localhost"
+DB_PORT = 5432
+DB_NAME = "echo2eq_db"
+DB_USER = "echo2eq"
+DB_PASS = "echo2eq_pw"
 
-# MathT5 model location (your trained weights)
+# These values are overridden inside Docker using environment variables
+# if you set them in docker-compose.yml.
+import os
+
+DB_HOST = os.getenv("DB_HOST", DB_HOST)
+DB_PORT = int(os.getenv("DB_PORT", str(DB_PORT)))
+DB_NAME = os.getenv("DB_NAME", DB_NAME)
+DB_USER = os.getenv("DB_USER", DB_USER)
+DB_PASS = os.getenv("DB_PASS", DB_PASS)
+
 MATHT5_BASE = Path(os.getenv("MATHT5_DIR", "models/matht5_model"))
+WHISPER_MODEL_DIR = Path(
+    os.getenv(
+        "WHISPER_MODEL_DIR",
+        "models/whisper/models--Systran--faster-whisper-base.en",
+    )
+)
 
-# Whisper model location
-# If you have the faster-whisper CTranslate2 model locally, point WHISPER_MODEL_DIR to that folder.
-# Otherwise, we fall back to the model name "base.en" (downloaded automatically).
-WHISPER_MODEL_DIR = Path(os.getenv("WHISPER_MODEL_DIR", "models/whisper/models--Systran--faster-whisper-base.en"))
-
-# Beam size & lengths for generation
 GEN_BEAMS = int(os.getenv("GEN_BEAMS", "5"))
 GEN_MAXLEN = int(os.getenv("GEN_MAXLEN", "128"))
 
 
 # -----------------------------------------------------------------------------
-# Optional: faster-whisper vs openai-whisper detection
+# Whisper backend detection
 # -----------------------------------------------------------------------------
+
 HAVE_FASTER_WHISPER = False
 HAVE_OPENAI_WHISPER = False
 
 try:
-    # pip install faster-whisper
     from faster_whisper import WhisperModel  # type: ignore
+
     HAVE_FASTER_WHISPER = True
 except Exception:
     pass
 
 if not HAVE_FASTER_WHISPER:
     try:
-        # pip install openai-whisper  (aka "whisper")
         import whisper  # type: ignore
+
         HAVE_OPENAI_WHISPER = True
     except Exception:
         pass
 
 
 # -----------------------------------------------------------------------------
-# Utility: resolve MathT5 directory (handles both "flat" and "run-subdir" layouts)
+# Utility: resolve trained MathT5 directory
 # -----------------------------------------------------------------------------
+
 def resolve_matht5_dir(base: Path) -> Path:
-    # Case 1: files directly under models/matht5_model
+    """
+    Resolve the actual trained MathT5 model folder.
+
+    Supports:
+    1. Flat layout:
+       models/matht5_model/config.json
+       models/matht5_model/model.safetensors
+
+    2. Older nested layout:
+       models/matht5_model/<run-folder>/
+    """
     if (base / "config.json").exists() and (base / "model.safetensors").exists():
         return base
-    # Case 2: older layout: choose most-recent subdir
-    subs = [p for p in base.glob("*") if p.is_dir()]
-    if not subs:
+
+    subdirs = [p for p in base.glob("*") if p.is_dir()]
+
+    if not subdirs:
         raise FileNotFoundError(f"No MathT5 model found in {base}")
-    return max(subs, key=lambda p: p.stat().st_mtime)
+
+    return max(subdirs, key=lambda p: p.stat().st_mtime)
 
 
 # -----------------------------------------------------------------------------
-# Pydantic Schemas
+# Pydantic schemas
 # -----------------------------------------------------------------------------
+
 class TranscribeResponse(BaseModel):
     transcript: str
     audio_path: Optional[str] = None
@@ -147,14 +178,31 @@ class CorpusHit(BaseModel):
 
 
 class FeedbackRequest(BaseModel):
+    """
+    Feedback sent by the frontend.
+
+    correct=True:
+        User accepted generated_latex.
+
+    correct=False + corrected_latex:
+        User rejected generated_latex and provided a correction.
+
+    correct=False + no corrected_latex:
+        User rejected output but skipped correction.
+    """
+
     transcript_text: Optional[str] = None
     generated_latex: Optional[str] = None
+    corrected_latex: Optional[str] = None
     correct: Optional[bool] = None
+
+    # Kept for compatibility/future features.
     retried: bool = False
     record_again: bool = False
+
     audio_path: Optional[str] = None
     visual_path: Optional[str] = None
-    corpus_id: Optional[str] = None  # UUID string referencing corpus(id)
+    corpus_id: Optional[str] = None
 
 
 class FeedbackResponse(BaseModel):
@@ -162,13 +210,17 @@ class FeedbackResponse(BaseModel):
 
 
 # -----------------------------------------------------------------------------
-# App lifespan: load models + create DB pool once, and reuse them
+# App lifespan
 # -----------------------------------------------------------------------------
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    hf_logging.set_verbosity_error()  # hush Transformers logs
+    """
+    Load models and create database connection pool once at startup.
+    """
+    hf_logging.set_verbosity_error()
 
-    # --- DB pool ---
+    # Database pool
     app.state.db_pool = SimpleConnectionPool(
         minconn=1,
         maxconn=6,
@@ -179,44 +231,53 @@ async def lifespan(app: FastAPI):
         password=DB_PASS,
     )
 
-    # --- MathT5 ---
+    # Ensure runtime DB schema is compatible.
+    ensure_runtime_schema()
+
+    # MathT5
     matht5_dir = resolve_matht5_dir(MATHT5_BASE)
     app.state.matht5_dir = matht5_dir
+
+    # use_fast=False avoids tokenizer loading issues for T5/SentencePiece.
     app.state.tok = AutoTokenizer.from_pretrained(
         str(matht5_dir),
         use_fast=False,
     )
+
     app.state.matht5 = AutoModelForSeq2SeqLM.from_pretrained(str(matht5_dir))
     app.state.device = "cuda" if torch.cuda.is_available() else "cpu"
     app.state.matht5.to(app.state.device).eval()
 
-    # --- Whisper (prefer faster-whisper if available) ---
+    # Whisper
     app.state.whisper_kind = None
+
     if HAVE_FASTER_WHISPER:
-        # You can tailor compute_type depending on your hardware
         model_path = str(WHISPER_MODEL_DIR) if WHISPER_MODEL_DIR.exists() else "base.en"
+
         app.state.whisper = WhisperModel(
             model_path,
             device=app.state.device,
             compute_type="int8_float16" if app.state.device == "cuda" else "int8",
         )
         app.state.whisper_kind = "faster-whisper"
+
     elif HAVE_OPENAI_WHISPER:
         app.state.whisper = whisper.load_model("base.en", device=app.state.device)
         app.state.whisper_kind = "openai-whisper"
+
     else:
         app.state.whisper = None
         app.state.whisper_kind = "none"
 
     print(
         f"[startup] DB=postgres://{DB_USER}@{DB_HOST}:{DB_PORT}/{DB_NAME} | "
-        f"MathT5={matht5_dir} | Whisper={app.state.whisper_kind} | Device={app.state.device}"
+        f"MathT5={matht5_dir} | Whisper={app.state.whisper_kind} | "
+        f"Device={app.state.device}"
     )
 
     try:
         yield
     finally:
-        # Close DB pool on shutdown
         pool = app.state.db_pool
         if pool:
             pool.closeall()
@@ -224,7 +285,6 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(title=API_TITLE, version=API_VERSION, lifespan=lifespan)
 
-# CORS: allow your dev frontend
 app.add_middleware(
     CORSMiddleware,
     allow_origins=list(FRONTEND_ORIGINS),
@@ -235,170 +295,300 @@ app.add_middleware(
 
 
 # -----------------------------------------------------------------------------
-# Helpers
+# Database helpers
 # -----------------------------------------------------------------------------
+
 def db_conn():
-    """Get a connection from the pool (remember to close it)."""
+    """
+    Get a database connection from the pool.
+    """
     return app.state.db_pool.getconn()
 
 
-def db_put(conn):
-    """Return a connection to the pool."""
+def db_put(conn) -> None:
+    """
+    Return a database connection to the pool.
+    """
     app.state.db_pool.putconn(conn)
 
 
-# Very light "search token" sanitizer: drop digits, single letters, and common math words
+def ensure_runtime_schema() -> None:
+    """
+    Make sure feedback/corpus tables have the columns required by the app.
+
+    This protects the app when an old database volume already exists.
+    It does not delete any existing data.
+    """
+    conn = app.state.db_pool.getconn()
+
+    try:
+        with conn.cursor() as cur:
+            cur.execute(
+                """
+                CREATE TABLE IF NOT EXISTS corpus (
+                  id UUID PRIMARY KEY,
+                  text TEXT NOT NULL,
+                  latex TEXT NOT NULL,
+                  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+                  UNIQUE (text, latex)
+                );
+                """
+            )
+
+            cur.execute(
+                """
+                CREATE TABLE IF NOT EXISTS feedback (
+                  id UUID PRIMARY KEY,
+                  transcript_text TEXT,
+                  generated_latex TEXT,
+                  corrected_latex TEXT,
+                  correct BOOLEAN,
+                  retried BOOLEAN NOT NULL DEFAULT FALSE,
+                  record_again BOOLEAN NOT NULL DEFAULT FALSE,
+                  audio_path TEXT,
+                  visual_path TEXT,
+                  corpus_id UUID,
+                  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+                );
+                """
+            )
+
+            cur.execute(
+                """
+                ALTER TABLE feedback
+                ADD COLUMN IF NOT EXISTS corrected_latex TEXT,
+                ADD COLUMN IF NOT EXISTS audio_path TEXT,
+                ADD COLUMN IF NOT EXISTS visual_path TEXT,
+                ADD COLUMN IF NOT EXISTS corpus_id UUID;
+                """
+            )
+
+        conn.commit()
+
+    except Exception:
+        conn.rollback()
+        raise
+
+    finally:
+        app.state.db_pool.putconn(conn)
+
+
+def insert_into_corpus(cur, text: Optional[str], latex: Optional[str]) -> None:
+    """
+    Insert a verified spoken-text-to-LaTeX pair into the corpus.
+
+    Used when:
+    1. User clicks Correct.
+    2. User clicks Incorrect and provides corrected LaTeX.
+
+    ON CONFLICT prevents duplicate pairs.
+    """
+    clean_text = (text or "").strip()
+    clean_output = (latex or "").strip()
+
+    if not clean_text or not clean_output:
+        return
+
+    cur.execute(
+        """
+        INSERT INTO corpus (id, text, latex)
+        VALUES (%s, %s, %s)
+        ON CONFLICT (text, latex) DO NOTHING;
+        """,
+        (str(uuid.uuid4()), clean_text, clean_output),
+    )
+
+
+# -----------------------------------------------------------------------------
+# Corpus search helpers
+# -----------------------------------------------------------------------------
+
 STOP_WORDS = {
-    "log", "ln", "sin", "cos", "tan", "csc", "sec", "cot",
-    "sqrt", "frac", "sum", "int", "pi", "exp", "times", "over",
-    "plus", "minus", "equals", "equal", "of", "the", "and",
+    "log",
+    "ln",
+    "sin",
+    "cos",
+    "tan",
+    "csc",
+    "sec",
+    "cot",
+    "sqrt",
+    "frac",
+    "sum",
+    "int",
+    "pi",
+    "exp",
+    "times",
+    "over",
+    "plus",
+    "minus",
+    "equals",
+    "equal",
+    "of",
+    "the",
+    "and",
 }
 
+
 def normalize_query(q: str) -> List[str]:
+    """
+    Convert a search query into simple searchable tokens.
+    """
     tokens = re.findall(r"[A-Za-z]+", q.lower())
-    filt = [t for t in tokens if len(t) > 1 and t not in STOP_WORDS]
-    # Deduplicate but keep order
+    filtered = [t for t in tokens if len(t) > 1 and t not in STOP_WORDS]
+
     seen = set()
-    out = []
-    for t in filt:
-        if t not in seen:
-            seen.add(t)
-            out.append(t)
-    return out
+    output = []
+
+    for token in filtered:
+        if token not in seen:
+            seen.add(token)
+            output.append(token)
+
+    return output
 
 
 # -----------------------------------------------------------------------------
-# Endpoint: /transcribe  (POST, multipart/form-data)
+# Endpoint: /transcribe
 # -----------------------------------------------------------------------------
+
 @app.post("/transcribe", response_model=TranscribeResponse)
 async def transcribe(
     audio: UploadFile = File(..., description="Recorded audio blob"),
     ext: Optional[str] = Form(None),
 ):
     """
-    Accepts an uploaded audio file and returns Whisper transcript.
-
-    - Saves the file under storage/audio/<timestamp>_<uuid>.<ext>
-    - Supports webm/opus and wav (others may work if ffmpeg is available)
-    - Uses faster-whisper if installed, otherwise openai-whisper; if neither is
-      available, returns HTTP 503 with an explanatory message.
+    Accept uploaded audio and return Whisper transcript.
     """
     if app.state.whisper is None:
-        raise HTTPException(status_code=503, detail="Whisper is not available on the server.")
+        raise HTTPException(
+            status_code=503,
+            detail="Whisper is not available on the server.",
+        )
 
-    # Infer extension from filename or form field
-    suggested_ext = (ext or Path(audio.filename or "").suffix.lstrip(".") or "webm").lower()
+    suggested_ext = (
+        ext or Path(audio.filename or "").suffix.lstrip(".") or "webm"
+    ).lower()
+
     if suggested_ext not in {"webm", "wav", "mp3", "m4a"}:
         suggested_ext = "webm"
 
-    # Save to disk
     uid = uuid.uuid4().hex[:8]
     out_path = AUDIO_DIR / f"rec_{int(time.time())}_{uid}.{suggested_ext}"
+
     with out_path.open("wb") as f:
-        # UploadFile is async, but file chunks are small; reading all at once is fine here
         f.write(await audio.read())
 
-    # Transcribe
-    t0 = time.perf_counter()
     transcript = ""
     duration_ms: Optional[int] = None
 
     try:
         if app.state.whisper_kind == "faster-whisper":
-            # faster-whisper returns an iterator over segments + info
             segments, info = app.state.whisper.transcribe(
                 str(out_path),
                 beam_size=5,
                 vad_filter=True,
             )
+
             transcript = " ".join(seg.text for seg in segments).strip()
+
             if info and getattr(info, "duration", None) is not None:
                 duration_ms = int(info.duration * 1000)
+
         elif app.state.whisper_kind == "openai-whisper":
             result = app.state.whisper.transcribe(str(out_path))
             transcript = (result.get("text") or "").strip()
-            # openai-whisper doesn't provide duration here; leave None
+
         else:
             raise RuntimeError("No Whisper backend configured.")
-    except Exception as e:
-        # If decoding fails (e.g., ffmpeg missing), surface a friendly error
-        raise HTTPException(status_code=500, detail=f"Whisper transcription error: {e!s}")
 
-    # Done
-    _ = (time.perf_counter() - t0) * 1000.0
-    return TranscribeResponse(transcript=transcript, audio_path=str(out_path), duration_ms=duration_ms)
-
-
-# -----------------------------------------------------------------------------
-# Endpoint: /to_latex  (POST, JSON)
-# -----------------------------------------------------------------------------
-@app.post("/to_latex", response_model=ToLatexResponse)
-async def to_latex(req: ToLatexRequest):
-    """
-    Runs MathT5 to convert a spoken-style math sentence to LaTeX.
-
-    Returns both the raw model output and a cleaned version (wrapped in $...$),
-    along with a small metadata block.
-    """
-    text = (req.text or "").strip()
-    if not text:
-        raise HTTPException(status_code=422, detail="Field 'text' is required and cannot be empty.")
-
-    tok = app.state.tok
-    model = app.state.matht5
-    device = app.state.device
-
-    # Generate
-    enc = tok(text, return_tensors="pt", padding=True, truncation=True)
-    enc = {k: v.to(device) for k, v in enc.items()}
-    t0 = time.perf_counter()
-    with torch.no_grad():
-        out = model.generate(
-            **enc,
-            max_length=GEN_MAXLEN,
-            num_beams=GEN_BEAMS,
-            early_stopping=True,
+    except Exception as exc:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Whisper transcription error: {exc!s}",
         )
-    latency_ms = int((time.perf_counter() - t0) * 1000.0)
-    raw = tok.decode(out[0], skip_special_tokens=True).strip()
-    cleaned = clean_latex(raw, keep_dollars=True)
 
-    # model_version is helpful for debugging (e.g., folder name)
-    model_version = str(app.state.matht5_dir)
-
-    return ToLatexResponse(
-        raw_latex=raw,
-        cleaned_latex=cleaned,
-        latency_ms=latency_ms,
-        model_version=model_version,
+    return TranscribeResponse(
+        transcript=transcript,
+        audio_path=str(out_path),
+        duration_ms=duration_ms,
     )
 
 
 # -----------------------------------------------------------------------------
-# Endpoint: /corpus/search  (GET, query string)
+# Endpoint: /to_latex
 # -----------------------------------------------------------------------------
+
+@app.post("/to_latex", response_model=ToLatexResponse)
+async def to_latex(req: ToLatexRequest):
+    """
+    Convert spoken-style math text to LaTeX using MathT5.
+    """
+    text = (req.text or "").strip()
+
+    if not text:
+        raise HTTPException(
+            status_code=422,
+            detail="Field 'text' is required and cannot be empty.",
+        )
+
+    tokenizer = app.state.tok
+    model = app.state.matht5
+    device = app.state.device
+
+    encoded = tokenizer(
+        text,
+        return_tensors="pt",
+        padding=True,
+        truncation=True,
+    )
+    encoded = {k: v.to(device) for k, v in encoded.items()}
+
+    start_time = time.perf_counter()
+
+    with torch.no_grad():
+        output = model.generate(
+            **encoded,
+            max_length=GEN_MAXLEN,
+            num_beams=GEN_BEAMS,
+            early_stopping=True,
+        )
+
+    latency_ms = int((time.perf_counter() - start_time) * 1000.0)
+
+    raw_latex = tokenizer.decode(output[0], skip_special_tokens=True).strip()
+    cleaned_latex = clean_latex(raw_latex, keep_dollars=True)
+
+    return ToLatexResponse(
+        raw_latex=raw_latex,
+        cleaned_latex=cleaned_latex,
+        latency_ms=latency_ms,
+        model_version=str(app.state.matht5_dir),
+    )
+
+
+# -----------------------------------------------------------------------------
+# Endpoint: /corpus/search
+# -----------------------------------------------------------------------------
+
 @app.get("/corpus/search", response_model=List[CorpusHit])
 async def corpus_search(
     q: str = Query(..., min_length=1, description="Query string from transcript"),
     limit: int = Query(5, ge=1, le=25),
 ):
     """
-    Searches the 'corpus' table for similar entries.
+    Search the corpus table.
 
-    Server sanitizes `q`:
-      - removes digits
-      - removes single-letter variables
-      - removes common math words (STOP_WORDS)
-    Then performs a simple ILIKE AND-query across the remaining tokens.
-
-    If pg_trgm/tsvector is available later, you can upgrade this to a ranked query.
+    This endpoint is currently optional.
+    It can be used later for top-k suggestions.
     """
     tokens = normalize_query(q)
+
     if not tokens:
         return []
 
     where = " AND ".join(["LOWER(text) LIKE %s"] * len(tokens))
-    params = [f"%{t}%" for t in tokens]
+    params = [f"%{token}%" for token in tokens]
 
     sql = f"""
         SELECT id, text, latex
@@ -408,65 +598,87 @@ async def corpus_search(
     """
 
     conn = db_conn()
+
     try:
         with conn.cursor() as cur:
             cur.execute(sql, (*params, limit))
             rows = cur.fetchall()
+
     finally:
         db_put(conn)
 
-    # naive "score": fraction of tokens present (since we used AND, it's always 1.0)
-    hits = [
+    return [
         CorpusHit(
-            corpus_id=str(r[0]),
-            text=r[1],
-            latex=r[2],
+            corpus_id=str(row[0]),
+            text=row[1],
+            latex=row[2],
             score=1.0,
         )
-        for r in rows
+        for row in rows
     ]
-    return hits
 
 
 # -----------------------------------------------------------------------------
-# Endpoint: /feedback  (POST, JSON)
+# Endpoint: /feedback
 # -----------------------------------------------------------------------------
+
 @app.post("/feedback", response_model=FeedbackResponse)
 async def save_feedback(req: FeedbackRequest):
     """
-    Inserts a feedback row. Only a few fields are strictly required; others are optional.
-    The DB schema was created earlier via your migration/seed scripts.
+    Store user feedback and optionally add verified examples to the corpus.
 
-    Columns we write:
-      id (UUID PK),
-      transcript_text TEXT,
-      generated_latex TEXT,
-      correct BOOLEAN,
-      retried BOOLEAN,
-      record_again BOOLEAN,
-      audio_path TEXT,
-      visual_path TEXT,
-      corpus_id UUID (nullable, FK to corpus.id),
-      created_at TIMESTAMPTZ DEFAULT NOW()
+    Cases:
+    ------
+    1. User clicks Correct:
+       correct=True
+       generated_latex is inserted into corpus.
+
+    2. User clicks Incorrect and provides correction:
+       correct=False
+       corrected_latex is inserted into corpus.
+
+    3. User clicks Incorrect and skips correction:
+       correct=False
+       feedback is stored, but corpus is not updated.
     """
-    fid = str(uuid.uuid4())
+    feedback_id = str(uuid.uuid4())
 
-    sql = """
+    transcript = (req.transcript_text or "").strip() or None
+    generated_latex = (req.generated_latex or "").strip() or None
+    corrected_latex = (req.corrected_latex or "").strip() or None
+
+    # Clean corrected LaTeX before saving if user entered it.
+    if corrected_latex:
+        corrected_latex = clean_latex(corrected_latex, keep_dollars=True)
+
+    insert_feedback_sql = """
         INSERT INTO feedback
-          (id, transcript_text, generated_latex, correct, retried, record_again,
-           audio_path, visual_path, corpus_id)
-        VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s)
+          (
+            id,
+            transcript_text,
+            generated_latex,
+            corrected_latex,
+            correct,
+            retried,
+            record_again,
+            audio_path,
+            visual_path,
+            corpus_id
+          )
+        VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s);
     """
 
     conn = db_conn()
+
     try:
         with conn.cursor() as cur:
             cur.execute(
-                sql,
+                insert_feedback_sql,
                 (
-                    fid,
-                    req.transcript_text,
-                    req.generated_latex,
+                    feedback_id,
+                    transcript,
+                    generated_latex,
+                    corrected_latex,
                     req.correct,
                     req.retried,
                     req.record_again,
@@ -475,8 +687,23 @@ async def save_feedback(req: FeedbackRequest):
                     req.corpus_id,
                 ),
             )
+
+            # If user accepted the model output, add that pair to corpus.
+            if req.correct is True:
+                insert_into_corpus(cur, transcript, generated_latex)
+
+            # If user rejected model output but supplied correction,
+            # add corrected pair to corpus.
+            elif req.correct is False and corrected_latex:
+                insert_into_corpus(cur, transcript, corrected_latex)
+
         conn.commit()
+
+    except Exception:
+        conn.rollback()
+        raise
+
     finally:
         db_put(conn)
 
-    return FeedbackResponse(id=fid)
+    return FeedbackResponse(id=feedback_id)

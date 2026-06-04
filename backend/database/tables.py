@@ -25,14 +25,33 @@ class Corpus(Base):
 class Feedback(Base):
     """
     Stores user feedback for a given prediction.
-    Tracks what the model produced, and how the user responded.
+    Tracks what the model produced, what the user corrected,
+    and how the user responded.
     """
     __tablename__ = "feedback"
 
     id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
-    transcript_text = Column(Text, nullable=True)    # from Whisper
-    generated_latex = Column(Text, nullable=True)    # from MathT5
-    correct = Column(Boolean, nullable=True)         # True, False, or None (not clicked)
+
+    # User input / transcript
+    transcript_text = Column(Text, nullable=True)
+
+    # Model prediction
+    generated_latex = Column(Text, nullable=True)
+
+    # Human-provided correction, useful for future retraining
+    corrected_latex = Column(Text, nullable=True)
+
+    # True  = user accepted generated_latex
+    # False = user said generated_latex was wrong
+    # None  = no final correctness decision
+    correct = Column(Boolean, nullable=True)
+
     retried = Column(Boolean, default=False, nullable=False)
     record_again = Column(Boolean, default=False, nullable=False)
+
+    # Optional metadata
+    audio_path = Column(Text, nullable=True)
+    visual_path = Column(Text, nullable=True)
+    corpus_id = Column(UUID(as_uuid=True), nullable=True)
+
     created_at = Column(DateTime, default=datetime.utcnow, nullable=False)
