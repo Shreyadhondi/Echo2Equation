@@ -1,0 +1,23 @@
+stages:
+  split_dataset:
+    cmd: python backend/latex_parser/data_preparation.py
+    deps:
+      - backend/latex_parser/data_preparation.py
+      - data/full_dataset.jsonl
+    outs:
+      - data/splits/train.jsonl
+      - data/splits/val.jsonl
+      - data/splits/test.jsonl
+
+  tokenize_dataset:
+    cmd: python backend/latex_parser/tokenization.py
+    deps:
+      - backend/latex_parser/tokenization.py
+      - configs/config_matht5.yaml
+      - data/splits/train.jsonl
+      - data/splits/val.jsonl
+      - data/splits/test.jsonl
+    outs:
+      - data/tokenized_splits/tokenized_train.jsonl
+      - data/tokenized_splits/tokenized_val.jsonl
+      - data/tokenized_splits/tokenized_test.jsonl

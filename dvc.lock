@@ -1,0 +1,66 @@
+schema: '2.0'
+stages:
+  split_dataset:
+    cmd: python backend/latex_parser/data_preparation.py
+    deps:
+    - path: backend/latex_parser/data_preparation.py
+      hash: md5
+      md5: 4c7aa1c62eac6d6a1dd1f3f0090b028c
+      size: 1873
+      isexec: true
+    - path: data/full_dataset.jsonl
+      hash: md5
+      md5: a830ce24ecc681c14e931e036440cbb8
+      size: 981399
+      isexec: true
+    outs:
+    - path: data/splits/test.jsonl
+      hash: md5
+      md5: 66c1355c5f86085235afdc5a2c132ce0
+      size: 99079
+    - path: data/splits/train.jsonl
+      hash: md5
+      md5: 06845698b0333c1c8c7e1b2c2b0bd2b2
+      size: 782788
+    - path: data/splits/val.jsonl
+      hash: md5
+      md5: 75cadcf46857ba12e61e783780fe211b
+      size: 99532
+  tokenize_dataset:
+    cmd: python backend/latex_parser/tokenization.py
+    deps:
+    - path: backend/latex_parser/tokenization.py
+      hash: md5
+      md5: 0496de3de42255ada1ba613d4f06d534
+      size: 5980
+      isexec: true
+    - path: configs/config_matht5.yaml
+      hash: md5
+      md5: 70a52b7d8e070a4552131d14b3f224c7
+      size: 964
+      isexec: true
+    - path: data/splits/test.jsonl
+      hash: md5
+      md5: 66c1355c5f86085235afdc5a2c132ce0
+      size: 99079
+    - path: data/splits/train.jsonl
+      hash: md5
+      md5: 06845698b0333c1c8c7e1b2c2b0bd2b2
+      size: 782788
+    - path: data/splits/val.jsonl
+      hash: md5
+      md5: 75cadcf46857ba12e61e783780fe211b
+      size: 99532
+    outs:
+    - path: data/tokenized_splits/tokenized_test.jsonl
+      hash: md5
+      md5: 288d807468fbb2ef51942c4c05d2cfe3
+      size: 3245391
+    - path: data/tokenized_splits/tokenized_train.jsonl
+      hash: md5
+      md5: 965c39aaa7bc76f4b6ac3e241c81930b
+      size: 25934250
+    - path: data/tokenized_splits/tokenized_val.jsonl
+      hash: md5
+      md5: b07585528c53d4fb36cca677d99e7cc8
+      size: 3244181
