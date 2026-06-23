@@ -59,6 +59,38 @@ services:
     ports:
       - "5500:80"
 
+  airflow:
+    image: apache/airflow:2.10.5-python3.11
+    container_name: echo2eq-airflow
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      AIRFLOW__CORE__EXECUTOR: SequentialExecutor
+      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: sqlite:////opt/airflow/airflow.db
+      AIRFLOW__WEBSERVER__SECRET_KEY: echo2equation_airflow_secret
+      AIRFLOW_UID: 50000
+    volumes:
+      - ../airflow/dags:/opt/airflow/dags
+      - ../airflow/logs:/opt/airflow/logs
+      - ../airflow/plugins:/opt/airflow/plugins
+      - ..:/opt/airflow/project
+    ports:
+      - "8081:8080"
+    command: >
+      bash -c "
+      airflow db migrate &&
+      airflow users create
+      --username admin
+      --firstname Echo
+      --lastname Equation
+      --role Admin
+      --email admin@example.com
+      --password admin || true &&
+      airflow webserver
+      "
+
 volumes:
   pgdata:
   storage:
